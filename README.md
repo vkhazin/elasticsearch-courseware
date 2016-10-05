@@ -40,7 +40,6 @@ During this class, the instructor will:
 * Understanding nested objects and parent-child relationships
 * Aggregation queries
 
-
 ### Kibana ###
 * Discover
 * Visualize
@@ -50,7 +49,6 @@ During this class, the instructor will:
 * Discussion on capacity planning and data population
 * Performance tuning and monitoring
 * Hosted Elastic Search
-
 
 ### Running in Production ###
 * Installation, configuration, and hardware
