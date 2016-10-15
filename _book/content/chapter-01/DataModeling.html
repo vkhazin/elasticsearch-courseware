@@ -60,7 +60,7 @@
     <link rel="next" href="../chapter-05/Intro.html" />
     
     
-    <link rel="prev" href="Terminology.html" />
+    <link rel="prev" href="CapTheorem-2.html" />
     
 
     </head>
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="Terminology.html">
+        <li class="chapter " data-level="2.2" data-path="Terminology-1.html">
             
-                <a href="Terminology.html">
+                <a href="Terminology-1.html">
             
                     
                     Terminology
@@ -137,7 +137,46 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="DataModeling.html">
+        <li class="chapter " data-level="2.3" data-path="Terminology-2.html">
+            
+                <a href="Terminology-2.html">
+            
+                    
+                    Terminology Cont'd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="CapTheorem-1.html">
+            
+                <a href="CapTheorem-1.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="CapTheorem-2.html">
+            
+                <a href="CapTheorem-2.html">
+            
+                    
+                    CAP Theorem and Beyond
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="DataModeling.html">
             
                 <a href="DataModeling.html">
             
@@ -241,11 +280,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="data-modeling">Data Modeling</h1><ul><li>Document is a unit of storage, indexing, search, and aggregation - there are is Sql equivalent of joins
+                                <h1 id="data-modeling">Data Modeling</h1><ul><li>Document is a unit of storage, indexing, search, and aggregation
 </li>
-<li>3rd norm (or beyond) of <a href="https://en.wikipedia.org/wiki/Database_normalization" target="_blank">normalization</a> does not apply to ElasticSearch
+<li>3rd norm of <a href="https://en.wikipedia.org/wiki/Database_normalization" target="_blank">normalization</a> (or beyond)  does not apply to ElasticSearch
 </li>
-<li></li></ul>
+<li>ElasticSearch supports no join or its equivalents
+</li>
+<li>Document indexing, searching, and aggregation uses no locks
+</li>
+<li>ElasticSearch designed for scalability
+</li>
+<li>Application side joins: a no-no in a Rdbms world and is a common practice in NoSql world
+</li>
+<li>Data de-normalization: redundant copies of data in each document removes needs for join
+</li>
+<li>Nested objects: storing parent and child data in a single document
+</li>
+<li>Parent-Child Relationship: storing child documents separately and are associated with parent document
+</li>
+<li>ElasticSearch lacks built-in mechanism for de-normalized data maintenance, so are many other NoSql
+</li></ul>
 
                                 
                                 </section>
@@ -273,7 +327,7 @@
 
             
                 
-                <a href="Terminology.html" class="navigation navigation-prev " aria-label="Previous page: Terminology">
+                <a href="CapTheorem-2.html" class="navigation navigation-prev " aria-label="Previous page: CAP Theorem and Beyond">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -289,7 +343,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Data Modeling","level":"2.3","depth":1,"next":{"title":"Introduction","level":"3.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Terminology","level":"2.2","depth":1,"path":"content/chapter-01/Terminology.md","ref":"./content/chapter-01/Terminology.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/DataModeling.md","mtime":"2016-10-14T13:25:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-14T14:18:52.488Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Data Modeling","level":"2.6","depth":1,"next":{"title":"Introduction","level":"3.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"CAP Theorem and Beyond","level":"2.5","depth":1,"path":"content/chapter-01/CapTheorem-2.md","ref":"./content/chapter-01/CapTheorem-2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/DataModeling.md","mtime":"2016-10-15T22:50:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-15T22:24:54.508Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

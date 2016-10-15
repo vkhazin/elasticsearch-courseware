@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Terminology · GitBook</title>
+        <title>CAP Theorem and Beyond · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -60,7 +60,7 @@
     <link rel="next" href="DataModeling.html" />
     
     
-    <link rel="prev" href="Intro.html" />
+    <link rel="prev" href="CapTheorem-1.html" />
     
 
     </head>
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="Terminology.html">
+        <li class="chapter " data-level="2.2" data-path="Terminology-1.html">
             
-                <a href="Terminology.html">
+                <a href="Terminology-1.html">
             
                     
                     Terminology
@@ -137,7 +137,46 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="DataModeling.html">
+        <li class="chapter " data-level="2.3" data-path="Terminology-2.html">
+            
+                <a href="Terminology-2.html">
+            
+                    
+                    Terminology Cont'd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="CapTheorem-1.html">
+            
+                <a href="CapTheorem-1.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="CapTheorem-2.html">
+            
+                <a href="CapTheorem-2.html">
+            
+                    
+                    CAP Theorem and Beyond
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="DataModeling.html">
             
                 <a href="DataModeling.html">
             
@@ -226,7 +265,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Terminology</a>
+        <a href="../.." >CAP Theorem and Beyond</a>
     </h1>
 </div>
 
@@ -241,23 +280,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="terminology">Terminology</h1><ul><li>Elasticsearch is a near real time search platform - not ACID (Atomicity, Consistency, Isolation, Durability) compliant
+                                <h1 id="cap-theorem-and-beyond">CAP Theorem and Beyond</h1><h2 id="pick-two-out-of-three">Pick two out of three</h2><ul><li>Consistency - all nodes see all the data at the same time
 </li>
-<li>Cluster is a collection of one or more nodes storing, indexing, and searching data
+<li>Availability - any node can execute read/write operations
 </li>
-<li>Node is a single server in a cluster, nodes discover each other with unicast and by cluster name defined in /etc/elasticsearch/elasticsearch.yml
+<li>Partition tolerance - cluster continues to operate despite node(s) failure
+</li></ul>
+<h2 id="realistic-choices">Realistic choices</h2><ul><li>CP - Consistency/Partition Tolerance: wait for a response from the partitioned node which could result in a timeout error
 </li>
-<li>Node can be configured as master-eligible, data, client, tribe, or left default: master-eligible and data node
+<li>AP - Availability/Partition Tolerance: get the most recent version of the data, possibly stale
 </li>
-<li>Index is a collection of documents and equivalent of Rdbms (Relational Database Management System) database or schema
-</li>
-<li>Type is a collection of documents of a specific type inside index, a loose equivalent of table in Rdbms
-</li>
-<li>Document is a basic unit of operation for indexing, replications, and searching. An approximate equivalent of a row/record in Rdbms. Document can be searched for in an index, but when being indexed must be assigned to a type
-</li>
-<li>Shards is a unit of storage and operation assigned to a node to distribute index across nodes in a cluster - to allow horizontal scalability
-</li>
-<li>Replication supports high availability as in case of a node failure and improves scalability by allowing search operations on replicas
+<li>Understanding the trade-offs available to you is the key to success
 </li></ul>
 
                                 
@@ -286,7 +319,7 @@
 
             
                 
-                <a href="Intro.html" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="CapTheorem-1.html" class="navigation navigation-prev " aria-label="Previous page: CAP Theorem">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -302,7 +335,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Terminology","level":"2.2","depth":1,"next":{"title":"Data Modeling","level":"2.3","depth":1,"path":"content/chapter-01/DataModeling.md","ref":"./content/chapter-01/DataModeling.md","articles":[]},"previous":{"title":"Introduction","level":"2.1","depth":1,"path":"content/chapter-01/Intro.md","ref":"./content/chapter-01/Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/Terminology.md","mtime":"2016-10-14T13:18:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-14T14:18:52.488Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CAP Theorem and Beyond","level":"2.5","depth":1,"next":{"title":"Data Modeling","level":"2.6","depth":1,"path":"content/chapter-01/DataModeling.md","ref":"./content/chapter-01/DataModeling.md","articles":[]},"previous":{"title":"CAP Theorem","level":"2.4","depth":1,"path":"content/chapter-01/CapTheorem-1.md","ref":"./content/chapter-01/CapTheorem-1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/CapTheorem-2.md","mtime":"2016-10-15T22:48:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-15T22:24:54.508Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -5,7 +5,10 @@
 
 ## Chapter 1: Introduction ##
 * [Introduction](./content/chapter-01/Intro.md)
-* [Terminology](./content/chapter-01/Terminology.md)
+* [Terminology](./content/chapter-01/Terminology-1.md)
+* [Terminology Cont'd](./content/chapter-01/Terminology-2.md)
+* [CAP Theorem](./content/chapter-01/CapTheorem-1.md)
+* [CAP Theorem and Beyond](./content/chapter-01/CapTheorem-2.md)
 * [Data Modeling](./content/chapter-01/DataModeling.md)
 
 ## Chapter 5: Kibana 4 ##

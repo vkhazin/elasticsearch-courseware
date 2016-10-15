@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Setup · GitBook</title>
+        <title>Terminology · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="SetupEx.html" />
+    <link rel="next" href="Terminology-2.html" />
     
     
     <link rel="prev" href="Intro.html" />
@@ -111,9 +111,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../chapter-01/Intro.html">
+        <li class="chapter " data-level="2.1" data-path="Intro.html">
             
-                <a href="../chapter-01/Intro.html">
+                <a href="Intro.html">
             
                     
                     Introduction
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../chapter-01/Terminology-1.html">
+        <li class="chapter active" data-level="2.2" data-path="Terminology-1.html">
             
-                <a href="../chapter-01/Terminology-1.html">
+                <a href="Terminology-1.html">
             
                     
                     Terminology
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../chapter-01/Terminology-2.html">
+        <li class="chapter " data-level="2.3" data-path="Terminology-2.html">
             
-                <a href="../chapter-01/Terminology-2.html">
+                <a href="Terminology-2.html">
             
                     
                     Terminology Cont'd
@@ -150,9 +150,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../chapter-01/CapTheorem-1.html">
+        <li class="chapter " data-level="2.4" data-path="CapTheorem-1.html">
             
-                <a href="../chapter-01/CapTheorem-1.html">
+                <a href="CapTheorem-1.html">
             
                     
                     CAP Theorem
@@ -163,9 +163,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../chapter-01/CapTheorem-2.html">
+        <li class="chapter " data-level="2.5" data-path="CapTheorem-2.html">
             
-                <a href="../chapter-01/CapTheorem-2.html">
+                <a href="CapTheorem-2.html">
             
                     
                     CAP Theorem and Beyond
@@ -176,9 +176,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="../chapter-01/DataModeling.html">
+        <li class="chapter " data-level="2.6" data-path="DataModeling.html">
             
-                <a href="../chapter-01/DataModeling.html">
+                <a href="DataModeling.html">
             
                     
                     Data Modeling
@@ -196,9 +196,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="Intro.html">
+        <li class="chapter " data-level="3.1" data-path="../chapter-05/Intro.html">
             
-                <a href="Intro.html">
+                <a href="../chapter-05/Intro.html">
             
                     
                     Introduction
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="Setup.html">
+        <li class="chapter " data-level="3.2" data-path="../chapter-05/Setup.html">
             
-                <a href="Setup.html">
+                <a href="../chapter-05/Setup.html">
             
                     
                     Setup
@@ -222,9 +222,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="SetupEx.html">
+        <li class="chapter " data-level="3.3" data-path="../chapter-05/SetupEx.html">
             
-                <a href="SetupEx.html">
+                <a href="../chapter-05/SetupEx.html">
             
                     
                     Setup Exercise
@@ -265,7 +265,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Setup</a>
+        <a href="../.." >Terminology</a>
     </h1>
 </div>
 
@@ -280,19 +280,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="setup-and-configuration">Setup and Configuration</h1><ul><li>Kibana is an open source installed separately from Elastic Search
+                                <h1 id="terminology">Terminology</h1><ul><li>ElasticSearch is a near real time search platform build on top of <a href="https://lucene.apache.org/core/" target="_blank">Apache Lucene&#x2122;</a>
 </li>
-<li>Can be downloaded from <a href="https://www.elastic.co/downloads/kibana" target="_blank">Elastic.co</a> or install using <a href="https://www.elastic.co/guide/en/kibana/4.6/setup.html#setup-repositories" target="_blank">Linux Repositories</a>
+<li>ElasticSearch supports ACID for a single document only
 </li>
-<li>Configuration file: ./kibana.yml
+<li>Cluster is a collection of one or more nodes storing, indexing, and searching data
 </li>
-<li><p>Important settings:</p><pre><code>server.port: 5601
-server.host: &quot;0.0.0.0&quot;
-elasticsearch.url: &quot;http://localhost:9200&quot;</code></pre>
-<ul><li>Additional settings detailed <a href="https://www.elastic.co/guide/en/kibana/current/kibana-server-properties.html" target="_blank">here</a>
-</li></ul>
+<li>Node is a single server in a cluster, nodes discover each other with unicast and by cluster name defined in /etc/elasticsearch/elasticsearch.yml
 </li>
-<li>Kibana can be installed on the same nodes where Elastic Search is running, or on separate nodes
+<li>Node can be configured as master-eligible, data, client, tribe, or left default: master-eligible and data node
+</li>
+<li>Index is a collection of documents and equivalent of Rdbms (Relational Database Management System) database or schema
+</li>
+<li>Type is a collection of documents of a specific type inside index, a loose equivalent of table in Rdbms
+</li>
+<li>Document is a basic unit of operation for indexing, replications, and searching. An approximate equivalent of a row/record in Rdbms. Document can be searched for in an index, but when being indexed must be assigned to a type
 </li></ul>
 
                                 
@@ -326,7 +328,7 @@ elasticsearch.url: &quot;http://localhost:9200&quot;</code></pre>
                 </a>
                 
                 
-                <a href="SetupEx.html" class="navigation navigation-next " aria-label="Next page: Setup Exercise">
+                <a href="Terminology-2.html" class="navigation navigation-next " aria-label="Next page: Terminology Cont'd">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -337,7 +339,7 @@ elasticsearch.url: &quot;http://localhost:9200&quot;</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup","level":"3.2","depth":1,"next":{"title":"Setup Exercise","level":"3.3","depth":1,"path":"content/chapter-05/SetupEx.md","ref":"./content/chapter-05/SetupEx.md","articles":[]},"previous":{"title":"Introduction","level":"3.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/Setup.md","mtime":"2016-10-05T13:25:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-15T22:24:54.508Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Terminology","level":"2.2","depth":1,"next":{"title":"Terminology Cont'd","level":"2.3","depth":1,"path":"content/chapter-01/Terminology-2.md","ref":"./content/chapter-01/Terminology-2.md","articles":[]},"previous":{"title":"Introduction","level":"2.1","depth":1,"path":"content/chapter-01/Intro.md","ref":"./content/chapter-01/Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/Terminology-1.md","mtime":"2016-10-15T22:55:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-15T22:24:54.508Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
