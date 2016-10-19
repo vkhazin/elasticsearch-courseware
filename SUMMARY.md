@@ -13,6 +13,9 @@
 * [Data Examples](./content/chapter-01/DataModelingExamples-1.md)
 * [Data Examples - App Side Joins](./content/chapter-01/DataModelingExamples-2.md)
 * [Data Examples - Parent-Child](./content/chapter-01/DataModelingExamples-3.md)
+* [Exercise Setup](./content/chapter-01/ExerciseSetup.md)
+* [One Node Setup Exercise](./content/chapter-01/OneNodeSetupEx.md)
+* [Distributed Database](./content/chapter-01/DistributedDb.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)

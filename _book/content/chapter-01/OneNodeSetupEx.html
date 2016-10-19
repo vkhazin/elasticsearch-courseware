@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Terminology Cont'd · GitBook</title>
+        <title>One Node Setup Exercise · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CapTheorem-1.html" />
+    <link rel="next" href="DistributedDb.html" />
     
     
-    <link rel="prev" href="Terminology-1.html" />
+    <link rel="prev" href="ExerciseSetup.html" />
     
 
     </head>
@@ -137,7 +137,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="Terminology-2.html">
+        <li class="chapter " data-level="2.3" data-path="Terminology-2.html">
             
                 <a href="Terminology-2.html">
             
@@ -241,7 +241,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.11" data-path="OneNodeSetupEx.html">
+        <li class="chapter active" data-level="2.11" data-path="OneNodeSetupEx.html">
             
                 <a href="OneNodeSetupEx.html">
             
@@ -343,7 +343,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Terminology Cont'd</a>
+        <a href="../.." >One Node Setup Exercise</a>
     </h1>
 </div>
 
@@ -358,12 +358,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="terminology---contd">Terminology - Cont&apos;d</h1><ul><li>Shards is a unit of storage and operation assigned to a node to distribute index across nodes in a cluster - to allow horizontal scalability
+                                <h1 id="one-node-setup-exercise">One Node Setup Exercise</h1><ul><li>Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
+</a></a></li>
+<li><p>Update distro using terminal window:</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get install apt-transport-https -y</code></pre>
+<ul><li><p>Install Java Runtime Environment using terminal window</p><pre><code>sudo apt-get install default-jre -y</code></pre>
 </li>
-<li>Replication supports high availability as in case of a node failure and improves scalability by allowing search operations on replicas
+<li><p>Download and install Public Signing Key:</p><pre><code>wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -</code></pre>
 </li>
-<li>Clustering across multiple data centers - not supported (for now)  
-<img src="../../media/multi-DC.png" stype="align:center" width="500pxl">
+<li><p>Add repository definition:</p><pre><code>echo &quot;deb https://packages.elastic.co/elasticsearch/2.x/debian stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list</code></pre>
+</li>
+<li><p>Install Elastic Search:</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get install elasticsearch</code></pre>
+</li>
+<li><p>Start elasticsearch service:</p><pre><code>sudo service elasticsearch start</code></pre>
+</li>
+<li><p>Give it a moment to finish the initialization and verify it is running:</p><pre><code>curl localhost:9200</code></pre>
+</li>
+<li><p>Expected response:</p><pre><code>{
+&quot;name&quot; : &quot;Wrecker&quot;,
+&quot;cluster_name&quot; : &quot;elasticsearch&quot;,
+&quot;cluster_uuid&quot; : &quot;6j8V904DQIez9oBpejTbGQ&quot;,
+&quot;version&quot; : {
+&quot;number&quot; : &quot;2.4.1&quot;,
+&quot;build_hash&quot; : &quot;c67dc32e24162035d18d6fe1e952c4cbcbe79d16&quot;,
+&quot;build_timestamp&quot; : &quot;2016-09-27T18:57:55Z&quot;,
+&quot;build_snapshot&quot; : false,
+&quot;lucene_version&quot; : &quot;5.5.2&quot;
+},
+&quot;tagline&quot; : &quot;You Know, for Search&quot;
+}</code></pre>
+</li>
+<li><p>Posting first document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
+</li>
+<li><p>Expected Response:</p><pre><code>{&quot;_index&quot;:&quot;ordering&quot;,&quot;_type&quot;:&quot;order&quot;,&quot;_id&quot;:&quot;1&quot;,&quot;_version&quot;:1,&quot;_shards&quot;:{&quot;total&quot;:2,&quot;successful&quot;:1,&quot;failed&quot;:0},&quot;created&quot;:true}</code></pre>
+</li>
+<li><p>First queries:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?q=id:1&apos;
+curl &apos;localhost:9200/ordering/_search?pretty=true&amp;id:1&apos;</code></pre>
+</li>
+<li><p>Please review results - where are: doc id, document data, index name, type name, and search score?</p></li></ul>
 </li></ul>
 
                                 
@@ -392,12 +423,12 @@
 
             
                 
-                <a href="Terminology-1.html" class="navigation navigation-prev " aria-label="Previous page: Terminology">
+                <a href="ExerciseSetup.html" class="navigation navigation-prev " aria-label="Previous page: Exercise Setup">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CapTheorem-1.html" class="navigation navigation-next " aria-label="Next page: CAP Theorem">
+                <a href="DistributedDb.html" class="navigation navigation-next " aria-label="Next page: Distributed Database">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -408,7 +439,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Terminology Cont'd","level":"2.3","depth":1,"next":{"title":"CAP Theorem","level":"2.4","depth":1,"path":"content/chapter-01/CapTheorem-1.md","ref":"./content/chapter-01/CapTheorem-1.md","articles":[]},"previous":{"title":"Terminology","level":"2.2","depth":1,"path":"content/chapter-01/Terminology-1.md","ref":"./content/chapter-01/Terminology-1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/Terminology-2.md","mtime":"2016-10-15T22:34:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-19T12:41:10.446Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"One Node Setup Exercise","level":"2.11","depth":1,"next":{"title":"Distributed Database","level":"2.12","depth":1,"path":"content/chapter-01/DistributedDb.md","ref":"./content/chapter-01/DistributedDb.md","articles":[]},"previous":{"title":"Exercise Setup","level":"2.10","depth":1,"path":"content/chapter-01/ExerciseSetup.md","ref":"./content/chapter-01/ExerciseSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/OneNodeSetupEx.md","mtime":"2016-10-19T13:28:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-19T12:41:10.446Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
