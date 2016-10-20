@@ -267,6 +267,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.13" data-path="ClusterShardsReplicas.html">
+            
+                <a href="ClusterShardsReplicas.html">
+            
+                    
+                    Cluster, Shards, and Replicas
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -365,11 +378,10 @@
 </li>
 <li><p>Download and install Public Signing Key:</p><pre><code>wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -</code></pre>
 </li>
-<li><p>Add repository definition:</p><pre><code>echo &quot;deb https://packages.elastic.co/elasticsearch/2.x/debian stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list</code></pre>
+<li><p>Add repository definition:<br>echo &quot;deb <a href="https://packages.elastic.co/elasticsearch/2.x/debian" target="_blank">https://packages.elastic.co/elasticsearch/2.x/debian</a> stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list</p></li></ul>
 </li>
 <li><p>Install Elastic Search:</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get install elasticsearch</code></pre>
-</li>
-<li><p>Start elasticsearch service:</p><pre><code>sudo service elasticsearch start</code></pre>
+<ul><li><p>Start elasticsearch service:</p><pre><code>sudo service elasticsearch start</code></pre>
 </li>
 <li><p>Give it a moment to finish the initialization and verify it is running:</p><pre><code>curl localhost:9200</code></pre>
 </li>
@@ -387,14 +399,15 @@
 &quot;tagline&quot; : &quot;You Know, for Search&quot;
 }</code></pre>
 </li>
-<li><p>Posting first document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
+<li><p>Posting first document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d \ 
+&apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
 </li>
-<li><p>Expected Response:</p><pre><code>{&quot;_index&quot;:&quot;ordering&quot;,&quot;_type&quot;:&quot;order&quot;,&quot;_id&quot;:&quot;1&quot;,&quot;_version&quot;:1,&quot;_shards&quot;:{&quot;total&quot;:2,&quot;successful&quot;:1,&quot;failed&quot;:0},&quot;created&quot;:true}</code></pre>
+<li><p>Expected Response:<br>{&quot;_index&quot;:&quot;ordering&quot;,&quot;_type&quot;:&quot;order&quot;,&quot;_id&quot;:&quot;1&quot;,&quot;_version&quot;:1,&quot;_shards&quot;:{&quot;total&quot;:2,&quot;successful&quot;:1,&quot;failed&quot;:0},&quot;created&quot;:true}</p></li></ul>
 </li>
 <li><p>First queries:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?q=id:1&apos;
 curl &apos;localhost:9200/ordering/_search?pretty=true&amp;id:1&apos;</code></pre>
-</li>
-<li><p>Please review results - where are: doc id, document data, index name, type name, and search score?</p></li></ul>
+<ul><li>Please review results - where are: doc id, document data, index name, type name, and search score? 
+</li></ul>
 </li></ul>
 
                                 
@@ -439,7 +452,7 @@ curl &apos;localhost:9200/ordering/_search?pretty=true&amp;id:1&apos;</code></pr
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"One Node Setup Exercise","level":"2.11","depth":1,"next":{"title":"Distributed Database","level":"2.12","depth":1,"path":"content/chapter-01/DistributedDb.md","ref":"./content/chapter-01/DistributedDb.md","articles":[]},"previous":{"title":"Exercise Setup","level":"2.10","depth":1,"path":"content/chapter-01/ExerciseSetup.md","ref":"./content/chapter-01/ExerciseSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/OneNodeSetupEx.md","mtime":"2016-10-19T13:28:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-19T12:41:10.446Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"One Node Setup Exercise","level":"2.11","depth":1,"next":{"title":"Distributed Database","level":"2.12","depth":1,"path":"content/chapter-01/DistributedDb.md","ref":"./content/chapter-01/DistributedDb.md","articles":[]},"previous":{"title":"Exercise Setup","level":"2.10","depth":1,"path":"content/chapter-01/ExerciseSetup.md","ref":"./content/chapter-01/ExerciseSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/OneNodeSetupEx.md","mtime":"2016-10-20T13:03:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-20T13:00:34.584Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

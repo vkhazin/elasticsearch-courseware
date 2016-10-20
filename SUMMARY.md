@@ -16,6 +16,7 @@
 * [Exercise Setup](./content/chapter-01/ExerciseSetup.md)
 * [One Node Setup Exercise](./content/chapter-01/OneNodeSetupEx.md)
 * [Distributed Database](./content/chapter-01/DistributedDb.md)
+* [Cluster, Shards, and Replicas](./content/chapter-01/ClusterShardsReplicas.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)

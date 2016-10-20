@@ -13,10 +13,8 @@ sudo apt-get install default-jre -y
 ```
 wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
-* Add repository definition:
-```
+* Add repository definition:  
 echo "deb https://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
-```
 * Install Elastic Search:
 ```
 sudo apt-get update && sudo apt-get install elasticsearch
@@ -47,12 +45,11 @@ curl localhost:9200
 ```
 * Posting first document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d '{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
+curl -XPOST localhost:9200/ordering/order/1 -d \ 
+'{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
 ```
-* Expected Response:
-```
+* Expected Response:  
 {"_index":"ordering","_type":"order","_id":"1","_version":1,"_shards":{"total":2,"successful":1,"failed":0},"created":true}
-```
 * First queries:
 ```
 curl 'localhost:9200/ordering/order/_search?q=id:1'
