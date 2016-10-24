@@ -20,6 +20,13 @@
 * [Indices and Aliases](./content/chapter-01/IndicesAliases.md)
 * [Summary](./content/chapter-01/Summary.md)
 
+## Chapter 2: ElasticSearch Index ##
+* [Introduction](./content/chapter-02/Intro.md)
+* [Index](./content/chapter-02/Index.md)
+* [Type](./content/chapter-02/Type.md)
+* [Index and Type Api](./content/chapter-02/IndexTypeApi.md)
+* [Mapping](./content/chapter-02/Mapping-01.md)
+
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
