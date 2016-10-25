@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Mapping · GitBook</title>
+        <title>Transaction Log and Lucene Index · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter-05/Intro.html" />
+    <link rel="next" href="IndexConfig.html" />
     
     
-    <link rel="prev" href="IndexTypeApi.html" />
+    <link rel="prev" href="Mapping-01.md" />
     
 
     </head>
@@ -365,9 +365,61 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.5" data-path="Mapping-01.html">
+        <li class="chapter " data-level="3.5" data-path="Mapping-01.md">
             
-                <a href="Mapping-01.html">
+                <span>
+            
+                    
+                    Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="TranLogLucene.html">
+            
+                <a href="TranLogLucene.html">
+            
+                    
+                    Transaction Log and Lucene Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="IndexConfig.html">
+            
+                <a href="IndexConfig.html">
+            
+                    
+                    Index Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="IndexSettings.html">
+            
+                <a href="IndexSettings.html">
+            
+                    
+                    Index Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="Mapping.html">
+            
+                <a href="Mapping.html">
             
                     
                     Mapping
@@ -454,7 +506,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Mapping</a>
+        <a href="../.." >Transaction Log and Lucene Index</a>
     </h1>
 </div>
 
@@ -469,7 +521,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="transaction-log-and-lucene-index">Transaction Log and Lucene Index</h1><ul><li>Lucene is index organized during commit phase - relatively heavy operation
+</li>
+<li><a href="http://stackoverflow.com/questions/32269632/writing-to-lucene-index-one-document-at-a-time-slows-down-over-time" target="_blank"> Lucene does not have built-in transaction log capabilities</a>
+</li>
+<li>Change made between two commit operations are lost in case of failure
+</li>
+<li>To minimize data loss each shard uses write ahead log or transaction log
+</li>
+<li>In case of crash recent operations can be replayed back to Lucene index
+</li>
+<li>Flush is performing Lucene commit and is starting new transaction log in the background
+</li>
+<li>Flush and transaction log settings are configured in <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-translog.html" target="_blank">elasticsearch.yml</a>
+</li></ul>
+
                                 
                                 </section>
                             
@@ -496,12 +562,12 @@
 
             
                 
-                <a href="IndexTypeApi.html" class="navigation navigation-prev " aria-label="Previous page: Index and Type Api">
+                <a href="Mapping-01.md" class="navigation navigation-prev " aria-label="Previous page: Mapping">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter-05/Intro.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                <a href="IndexConfig.html" class="navigation navigation-next " aria-label="Next page: Index Configuration">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -512,7 +578,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mapping","level":"3.5","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Index and Type Api","level":"3.4","depth":1,"path":"content/chapter-02/IndexTypeApi.md","ref":"./content/chapter-02/IndexTypeApi.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/Mapping-01.md","mtime":"2016-10-24T13:14:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-24T13:02:09.012Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Transaction Log and Lucene Index","level":"3.6","depth":1,"next":{"title":"Index Configuration","level":"3.7","depth":1,"path":"content/chapter-02/IndexConfig.md","ref":"./content/chapter-02/IndexConfig.md","articles":[]},"previous":{"title":"Mapping","level":"3.5","depth":1,"path":"content/chapter-02/Mapping-01.md","ref":"./content/chapter-02/Mapping-01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/TranLogLucene.md","mtime":"2016-10-25T12:47:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-25T12:33:22.637Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

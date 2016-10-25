@@ -26,7 +26,10 @@
 * [Type](./content/chapter-02/Type.md)
 * [Index and Type Api](./content/chapter-02/IndexTypeApi.md)
 * [Mapping](./content/chapter-02/Mapping-01.md)
-
+* [Transaction Log and Lucene Index](./content/chapter-02/TranLogLucene.md)
+* [Index Configuration](./content/chapter-02/IndexConfig.md)
+* [Index Settings](./content/chapter-02/IndexSettings.md)
+* [Mapping](./content/chapter-02/Mapping.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
