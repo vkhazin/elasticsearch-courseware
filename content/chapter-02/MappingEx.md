@@ -41,6 +41,7 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
   }
 }
 ```
+
 * Try modifying existing mapping
 curl -XPUT localhost:9200/ordering/_mapping -d '
 {
