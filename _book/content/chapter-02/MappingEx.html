@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Index · GitBook</title>
+        <title>Mapping Exercise · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Type.html" />
+    <link rel="next" href="../chapter-05/Intro.html" />
     
     
-    <link rel="prev" href="Intro.html" />
+    <link rel="prev" href="Mapping.html" />
     
 
     </head>
@@ -326,7 +326,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="Index.html">
+        <li class="chapter " data-level="3.2" data-path="Index.html">
             
                 <a href="Index.html">
             
@@ -430,7 +430,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.10" data-path="MappingEx.html">
+        <li class="chapter active" data-level="3.10" data-path="MappingEx.html">
             
                 <a href="MappingEx.html">
             
@@ -519,7 +519,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Index</a>
+        <a href="../.." >Mapping Exercise</a>
     </h1>
 </div>
 
@@ -534,18 +534,120 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index">Index</h1><ul><li>Index is broken down, stored, and processed as collection of shards
+                                <h1 id="mapping-exercise">Mapping Exercise</h1><h1 id="one-node-setup-exercise">One Node Setup Exercise</h1><ul><li>Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
+</a></a></li>
+<li>Your sandbox is asleep: start workstation and then start project
 </li>
-<li>Each shard is a complete Lucene Index and cannot be scaled-out
+<li>Select &apos;Open IDE&apos; to get into your sandbox
 </li>
-<li>Form Lucene performance perspective larger index is faster than series of smaller indices
+<li><p>We have not yet configured elasticsearch service to start automatically, start using terminal window:</p><pre><code>sudo service elasticsearch start</code></pre>
+<ul><li><p>Service will start but listener will a bit to start responding to incoming requests:</p><pre><code>curl localhost:9200</code></pre>
 </li>
-<li>Shards are allocated to nodes and are searched independently
+<li><p>Give it few minutes before you get json response</p></li></ul>
 </li>
-<li>At the completion of search individual shards results must be aggregated - too many shards may impact performance
+<li>Post new document:
+curl -XPOST localhost:9200/ordering/order/1 -d \ 
+&apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;
 </li>
-<li>Index cannot store documents directly - types are used as buckets to index documents
+<li><p>Fetch mapping:</p><pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;</code></pre>
+<ul><li>Expected response:
 </li></ul>
+<pre><code>{
+&quot;ordering&quot; : {
+  &quot;mappings&quot; : {
+    &quot;order&quot; : {
+      &quot;properties&quot; : {
+        &quot;id&quot; : {
+          &quot;type&quot; : &quot;string&quot;
+        },
+        &quot;placedOn&quot; : {
+          &quot;type&quot; : &quot;date&quot;,
+          &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+        }
+      }
+    }
+  }
+}
+}</code></pre>
+<ul><li>Try modifying existing mapping:
+</li></ul>
+<pre><code>curl -XPUT localhost:9200/ordering/_mapping -d &apos;
+{
+&quot;ordering&quot; : {
+  &quot;mappings&quot; : {
+    &quot;order&quot; : {
+      &quot;properties&quot; : {
+        &quot;id&quot; : {
+          &quot;type&quot; : &quot;string&quot;
+        },
+        &quot;placedOn&quot; : {
+          &quot;type&quot; : &quot;date&quot;,
+          &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+        }
+      }
+    }
+  }
+}
+}&apos;</code></pre>
+<ul><li>What&apos;s the outcome? And why?
+</li></ul>
+</li>
+<li><p>Try modifying existing type mapping:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
+{
+&quot;ordering&quot; : {
+  &quot;mappings&quot; : {
+    &quot;order&quot; : {
+      &quot;properties&quot; : {
+        &quot;id&quot; : {
+          &quot;type&quot; : &quot;string&quot;
+        },
+        &quot;placedOn&quot; : {
+          &quot;type&quot; : &quot;date&quot;,
+          &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+        }
+      }
+    }
+  }
+}
+}&apos;</code></pre>
+<ul><li>What now? Why?
+</li></ul>
+</li>
+<li><p>Let try again:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
+{
+&quot;order&quot; : {
+  &quot;properties&quot; : {
+    &quot;id&quot; : {
+      &quot;type&quot; : &quot;string&quot;
+    },
+    &quot;placedOn&quot; : {
+      &quot;type&quot; : &quot;date&quot;,
+      &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+    }
+  }
+}
+}&apos;</code></pre>
+<ul><li>Did it work? What&apos;s the difference?
+</li></ul>
+</li>
+<li><p>Let&apos;s modify data type for existing field:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
+{
+&quot;order&quot; : {
+  &quot;properties&quot; : {
+    &quot;id&quot; : {
+      &quot;type&quot; : &quot;double&quot;
+    },
+    &quot;placedOn&quot; : {
+      &quot;type&quot; : &quot;date&quot;,
+      &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+    }
+  }
+}
+}&apos;</code></pre>
+<ul><li>Seriously, what now? Why? So much for the dynamic data mapping?
+</li></ul>
+</li>
+<li><p>What if we need to change data type after we have indexed the data?</p></li></ul>
 
                                 
                                 </section>
@@ -573,12 +675,12 @@
 
             
                 
-                <a href="Intro.html" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="Mapping.html" class="navigation navigation-prev " aria-label="Previous page: Mapping">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Type.html" class="navigation navigation-next " aria-label="Next page: Type">
+                <a href="../chapter-05/Intro.html" class="navigation navigation-next " aria-label="Next page: Introduction">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -589,7 +691,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Index","level":"3.2","depth":1,"next":{"title":"Type","level":"3.3","depth":1,"path":"content/chapter-02/Type.md","ref":"./content/chapter-02/Type.md","articles":[]},"previous":{"title":"Introduction","level":"3.1","depth":1,"path":"content/chapter-02/Intro.md","ref":"./content/chapter-02/Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/Index.md","mtime":"2016-10-24T13:14:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-26T12:42:19.580Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"3.10","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Mapping","level":"3.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2016-10-26T12:57:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-26T12:42:19.580Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

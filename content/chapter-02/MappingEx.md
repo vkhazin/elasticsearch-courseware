@@ -42,7 +42,8 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 }
 ```
 
-* Try modifying existing mapping
+* Try modifying existing mapping:
+```
 curl -XPUT localhost:9200/ordering/_mapping -d '
 {
   "ordering" : {
@@ -61,3 +62,71 @@ curl -XPUT localhost:9200/ordering/_mapping -d '
     }
   }
 }'
+```
+
+* What's the outcome? And why?
+* Try modifying existing type mapping:
+```
+curl -XPUT localhost:9200/ordering/order/_mapping -d '
+{
+  "ordering" : {
+    "mappings" : {
+      "order" : {
+        "properties" : {
+          "id" : {
+            "type" : "string"
+          },
+          "placedOn" : {
+            "type" : "date",
+            "format" : "strict_date_optional_time||epoch_millis"
+          }
+        }
+      }
+    }
+  }
+}'
+```
+
+* What now? Why?
+* Let try again:
+```
+curl -XPUT localhost:9200/ordering/order/_mapping -d '
+{
+  "order" : {
+    "properties" : {
+      "id" : {
+        "type" : "string"
+      },
+      "placedOn" : {
+        "type" : "date",
+        "format" : "strict_date_optional_time||epoch_millis"
+      }
+    }
+  }
+}'
+```
+
+* Did it work? What's the difference?
+* Let's modify data type for existing field:
+```
+curl -XPUT localhost:9200/ordering/order/_mapping -d '
+{
+  "order" : {
+    "properties" : {
+      "id" : {
+        "type" : "double"
+      },
+      "placedOn" : {
+        "type" : "date",
+        "format" : "strict_date_optional_time||epoch_millis"
+      }
+    }
+  }
+}'
+```
+
+* Seriously, what now? Why? So much for the dynamic data mapping?
+* What if we need to change data type after we have indexed the data?
+
+
+

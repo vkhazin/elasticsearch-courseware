@@ -30,6 +30,7 @@
 * [Index Configuration](./content/chapter-02/IndexConfig.md)
 * [Index Settings](./content/chapter-02/IndexSettings.md)
 * [Mapping](./content/chapter-02/Mapping.md)
+* [Mapping Exercise](./content/chapter-02/MappingEx.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
