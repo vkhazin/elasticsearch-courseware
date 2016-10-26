@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter-05/Intro.html" />
+    <link rel="next" href="NotAnalyzedMultiField.html" />
     
     
     <link rel="prev" href="Mapping.html" />
@@ -443,6 +443,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.11" data-path="NotAnalyzedMultiField.html">
+            
+                <a href="NotAnalyzedMultiField.html">
+            
+                    
+                    Not Analyzed & Multi-Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -647,7 +660,14 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
 <ul><li>Seriously, what now? Why? So much for the dynamic data mapping?
 </li></ul>
 </li>
-<li><p>What if we need to change data type after we have indexed the data?</p></li></ul>
+<li><p>What if we need to change data type after we have indexed the data?</p></li>
+<li><p>There is no (more) option to delete the mapping - delete and recreate index is the only option :-(</p><pre><code>curl -XDELETE localhost:9200/ordering</code></pre>
+<ul><li>Watch out! There is no warning or confirmation using curl!
+</li></ul>
+</li>
+<li>Pss: look out for the proper response too:
+<pre><code>{&quot;acknowledged&quot;:true}</code></pre>
+</li></ul>
 
                                 
                                 </section>
@@ -680,7 +700,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
                 </a>
                 
                 
-                <a href="../chapter-05/Intro.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                <a href="NotAnalyzedMultiField.html" class="navigation navigation-next " aria-label="Next page: Not Analyzed & Multi-Fields">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -691,7 +711,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"3.10","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Mapping","level":"3.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2016-10-26T12:57:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-26T12:42:19.580Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"3.10","depth":1,"next":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"previous":{"title":"Mapping","level":"3.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2016-10-26T13:22:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-26T12:42:19.580Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

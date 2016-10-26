@@ -127,6 +127,14 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
 
 * Seriously, what now? Why? So much for the dynamic data mapping?
 * What if we need to change data type after we have indexed the data?
-
+* There is no (more) option to delete the mapping - delete and recreate index is the only option :-(
+```
+curl -XDELETE localhost:9200/ordering
+```
+* Watch out! There is no warning or confirmation using curl!
+* Pss: look out for the proper response too:
+```
+{"acknowledged":true}
+```
 
 

@@ -31,6 +31,7 @@
 * [Index Settings](./content/chapter-02/IndexSettings.md)
 * [Mapping](./content/chapter-02/Mapping.md)
 * [Mapping Exercise](./content/chapter-02/MappingEx.md)
+* [Not Analyzed & Multi-Fields](./content/chapter-02/NotAnalyzedMultiField.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
