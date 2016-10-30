@@ -11,7 +11,7 @@ sudo service elasticsearch start
 ```
 curl localhost:9200
 ```
-* Give it few minutes before you get json response
+* Give it few minutes before you get json response...
 * Post new document:
 ```
 curl -XPOST localhost:9200/ordering/order/1 -d \
@@ -43,8 +43,8 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 ```
 * Add mapping for a new field
 ```
-curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
-{
+curl -XPUT localhost:9200/ordering/order/_mapping -d \
+'{
   "order" : {
     "properties" : {
       "id" : {
@@ -66,7 +66,6 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
 ```
 {"acknowledged":true}
 ```
-
 * Populate new order with spaces in id and trackingId fields/properties:  
 ```
 curl -XPOST localhost:9200/ordering/order/1 -d \
@@ -74,7 +73,6 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
   "id": "orderId with spaces", 
   "placedOn": "2016-10-17T13:03:30.830Z",
   "trackingId": "trackingId with spaces"
-
 }'
 ```  
 * Let's run first search:
