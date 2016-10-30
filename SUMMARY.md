@@ -35,6 +35,7 @@
 * [Not Analyzed & Multi-Fields Exercise](./content/chapter-02/NotAnalyzedMultiFieldEx.md)
 * [Summary](./content/chapter-02/Summary.md)
 
+## Chapter 3: 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
 * [Setup](./content/chapter-05/Setup.md)
