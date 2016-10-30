@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Index and Type Api · GitBook</title>
+        <title>Not Analyzed & Multi-Fields Exercise · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Mapping-01.md" />
+    <link rel="next" href="../chapter-05/Intro.html" />
     
     
-    <link rel="prev" href="Type.html" />
+    <link rel="prev" href="NotAnalyzedMultiField.html" />
     
 
     </head>
@@ -352,7 +352,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4" data-path="IndexTypeApi.html">
+        <li class="chapter " data-level="3.4" data-path="IndexTypeApi.html">
             
                 <a href="IndexTypeApi.html">
             
@@ -456,7 +456,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.12" data-path="NotAnalyzedMultiFieldEx.html">
+        <li class="chapter active" data-level="3.12" data-path="NotAnalyzedMultiFieldEx.html">
             
                 <a href="NotAnalyzedMultiFieldEx.html">
             
@@ -545,7 +545,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Index and Type Api</a>
+        <a href="../.." >Not Analyzed & Multi-Fields Exercise</a>
     </h1>
 </div>
 
@@ -560,14 +560,104 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index-and-type-api">Index and Type Api</h1><ul><li>How do we create an index?
+                                <h1 id="not-analyzed--multi-fields-exercise">Not Analyzed &amp; Multi-Fields Exercise</h1><ul><li>Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
+</a></a></li>
+<li>Your sandbox is asleep: start workstation and then start project
 </li>
-<li><p>Index will be created lazily by ElasticSeach when we post a document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d \ 
-&apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
-<ul><li>Type will be created lazily by the same operation
+<li>Select &apos;Open IDE&apos; to get into your sandbox
+</li>
+<li><p>We have not yet configured elasticsearch service to start automatically, start using terminal window:</p><pre><code>sudo service elasticsearch start</code></pre>
+<ul><li><p>Service will start but listener will a bit to start responding to incoming requests:</p><pre><code>curl localhost:9200</code></pre>
+</li>
+<li><p>Give it few minutes before you get json response</p></li></ul>
+</li>
+<li>Post new document:
+curl -XPOST localhost:9200/ordering/order/1 -d \
+&apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;
+</li>
+<li><p>Fetch mapping:</p><pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;</code></pre>
+<ul><li><p>Expected response:</p><pre><code>{
+&quot;ordering&quot; : {
+&quot;mappings&quot; : {
+  &quot;order&quot; : {
+    &quot;properties&quot; : {
+      &quot;id&quot; : {
+        &quot;type&quot; : &quot;string&quot;
+      },
+      &quot;placedOn&quot; : {
+        &quot;type&quot; : &quot;date&quot;,
+        &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+      }
+    }
+  }
+}
+}
+}</code></pre>
+</li>
+<li><p>Add mapping for a new field</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d \ &apos;
+{
+&quot;order&quot; : {
+&quot;properties&quot; : {
+  &quot;id&quot; : {
+    &quot;type&quot; : &quot;string&quot;
+  },
+  &quot;placedOn&quot; : {
+    &quot;type&quot; : &quot;date&quot;,
+    &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+  },
+  &quot;trackingId&quot; : {
+    &quot;type&quot; : &quot;string&quot;,
+    &quot;index&quot; : &quot;not_analyzed&quot;
+  }
+}
+}
+}&apos;</code></pre>
+</li>
+<li><p>Expected response:</p><pre><code>{&quot;acknowledged&quot;:true}</code></pre>
+</li>
+<li><p>Populate new order with spaces in id and trackingId fields/properties:
+```
+curl -XPOST localhost:9200/ordering/order/1 -d \
+&apos;{
+&quot;id&quot;: &quot;string with spaces&quot;, 
+&quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;,
+&quot;trackingId&quot;: &quot;string with spaces&quot;</p></li></ul>
 </li></ul>
-</li>
-<li></li></ul>
+<p>}&apos;</p><pre><code>* Let&apos;s run first search:</code></pre>
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:string&apos;</p><pre><code>* Did you get any results?
+* Let&apos;s run second search:</code></pre>
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=trackingId:string&apos;</p><pre><code>* Did you get any results?
+* What&apos;s the difference in behaviour and why?
+* Add mapping for another new field</code></pre>
+<p>curl -XPUT localhost:9200/ordering/order/_mapping -d \ &apos;
+{
+  &quot;order&quot; : {
+    &quot;properties&quot;:{</p><pre><code>   &quot;streetName&quot;:{
+
+      &quot;type&quot;:&quot;string&quot;,
+      &quot;fields&quot;:{
+
+         &quot;notparsed&quot;:{
+
+            &quot;type&quot;:&quot;string&quot;,
+            &quot;index&quot;:&quot;not\_analyzed&quot;
+         }
+      }
+   }
+}</code></pre>
+<p>}
+}&apos;</p><pre><code>* Re-populate the data</code></pre>
+<p>curl -XPOST localhost:9200/ordering/order/1 -d \
+&apos;{
+  &quot;id&quot;: &quot;string with spaces&quot;, 
+  &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;,
+  &quot;streetName&quot;: &quot;name with spaces&quot;
+}&apos;</p><pre><code>* Let&apos;s search for the street name:</code></pre>
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName:name&apos;</p><pre><code>* Let&apos;s search for the street name on not-parsed field:</code></pre>
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName.notparsed:name&apos;</p><pre><code>* Let&apos;s search for the street name on not-parsed field again:</code></pre>
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName.notparsed:name%20with%20spaces&apos;
+```</p><ul><li>What are results in the search #1, #2, and #3; and what is the reason for these results?
+</li></ul>
 
                                 
                                 </section>
@@ -595,12 +685,12 @@
 
             
                 
-                <a href="Type.html" class="navigation navigation-prev " aria-label="Previous page: Type">
+                <a href="NotAnalyzedMultiField.html" class="navigation navigation-prev " aria-label="Previous page: Not Analyzed & Multi-Fields">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Mapping-01.md" class="navigation navigation-next " aria-label="Next page: Mapping">
+                <a href="../chapter-05/Intro.html" class="navigation navigation-next " aria-label="Next page: Introduction">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -611,7 +701,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Index and Type Api","level":"3.4","depth":1,"next":{"title":"Mapping","level":"3.5","depth":1,"path":"content/chapter-02/Mapping-01.md","ref":"./content/chapter-02/Mapping-01.md","articles":[]},"previous":{"title":"Type","level":"3.3","depth":1,"path":"content/chapter-02/Type.md","ref":"./content/chapter-02/Type.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/IndexTypeApi.md","mtime":"2016-10-24T13:30:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-30T03:46:28.988Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields Exercise","level":"3.12","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","mtime":"2016-10-30T18:23:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-30T03:46:28.988Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

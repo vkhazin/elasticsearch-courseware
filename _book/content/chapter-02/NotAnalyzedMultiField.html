@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter-05/Intro.html" />
+    <link rel="next" href="NotAnalyzedMultiFieldEx.html" />
     
     
     <link rel="prev" href="MappingEx.html" />
@@ -456,6 +456,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.12" data-path="NotAnalyzedMultiFieldEx.html">
+            
+                <a href="NotAnalyzedMultiFieldEx.html">
+            
+                    
+                    Not Analyzed & Multi-Fields Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -547,7 +560,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="not-analyzed--multi-fields">Not Analyzed &amp; Multi-Fields</h1><ul><li>By its nature ElasticSerach and Lucene break strings into terms using <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html" target="_blank">built-in</a> or custom tokenizers 
+                                <h1 id="not-analyzed--multi-fields">Not Analyzed &amp; Multi-Fields</h1><ul><li>Lucene and hence ElasticSearch break strings into terms using <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html" target="_blank">built-in</a> or custom tokenizers 
 </li>
 <li>Some strings don&apos;t make sense to tokenize e.g. <a href="https://www.google.ca/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#newwindow=1&amp;q=define:+guid" target="_blank">uuid or guid</a> often used as equivalent of a primary key and/or unique identifier
 </li>
@@ -558,10 +571,6 @@
           &quot;id&quot; : {
               &quot;type&quot; : &quot;string&quot;,
               &quot;index&quot;: &quot;not_analyzed&quot;
-          },
-          &quot;placedOn&quot; : {
-              &quot;type&quot; : &quot;date&quot;,
-              &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
           }
       }
   }
@@ -573,24 +582,20 @@
 </li>
 <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/multi-fields.html" target="_blank">Multi-Fields</a> Mapping allows double indexing the same data:
 <pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
-{
-&quot;order&quot; : {
-  &quot;properties&quot; : {
-          &quot;streetName&quot; : {
-              &quot;type&quot;: &quot;string&quot;,
-              &quot;fields&quot;: {
-                      &quot;notparsed&quot;: { 
-                          &quot;type&quot;:  &quot;string&quot;,
-                          &quot;index&quot;: &quot;not_analyzed&quot;
-                      }
-                }
-            },
-          &quot;placedOn&quot; : {
-              &quot;type&quot; : &quot;date&quot;,
-              &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+{  
+ &quot;order&quot;:{  
+    &quot;properties&quot;:{  
+       &quot;streetName&quot;:{  
+          &quot;type&quot;:&quot;string&quot;,
+          &quot;fields&quot;:{  
+             &quot;notparsed&quot;:{  
+                &quot;type&quot;:&quot;string&quot;,
+                &quot;index&quot;:&quot;not_analyzed&quot;
+             }
           }
-  }
-}
+       }
+    }
+ }
 }&apos;</code></pre>
 </li></ul>
 
@@ -625,7 +630,7 @@
                 </a>
                 
                 
-                <a href="../chapter-05/Intro.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                <a href="NotAnalyzedMultiFieldEx.html" class="navigation navigation-next " aria-label="Next page: Not Analyzed & Multi-Fields Exercise">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -636,7 +641,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Mapping Exercise","level":"3.10","depth":1,"path":"content/chapter-02/MappingEx.md","ref":"./content/chapter-02/MappingEx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiField.md","mtime":"2016-10-26T13:27:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-26T12:42:19.580Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"next":{"title":"Not Analyzed & Multi-Fields Exercise","level":"3.12","depth":1,"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","ref":"./content/chapter-02/NotAnalyzedMultiFieldEx.md","articles":[]},"previous":{"title":"Mapping Exercise","level":"3.10","depth":1,"path":"content/chapter-02/MappingEx.md","ref":"./content/chapter-02/MappingEx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiField.md","mtime":"2016-10-30T13:06:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-30T03:46:28.988Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

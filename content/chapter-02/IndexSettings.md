@@ -5,7 +5,7 @@
 ```
 PUT /index-name/_settings
 {
-    "number_of_replicas": 5
+	"number_of_replicas": 5
 }
 ```
 * Number of replicas can be configured dynamically:

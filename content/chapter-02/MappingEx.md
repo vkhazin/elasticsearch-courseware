@@ -1,7 +1,5 @@
 # Mapping Exercise #
 
-# One Node Setup Exercise #
-
 * Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
 * Your sandbox is asleep: start workstation and then start project
 * Select 'Open IDE' to get into your sandbox

@@ -32,6 +32,7 @@
 * [Mapping](./content/chapter-02/Mapping.md)
 * [Mapping Exercise](./content/chapter-02/MappingEx.md)
 * [Not Analyzed & Multi-Fields](./content/chapter-02/NotAnalyzedMultiField.md)
+* [Not Analyzed & Multi-Fields Exercise](./content/chapter-02/NotAnalyzedMultiFieldEx.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)

@@ -9,10 +9,10 @@ number_of_replicas: 1
 ```
 PUT /index-name
 {
-    "settings": {
-        "number_of_shards" :   1
-        "number_of_replicas" : 0
-    }
+	"settings": {
+		"number_of_shards" :   1
+		"number_of_replicas" : 0
+	}
 }
 ```
 * Do you recall discussion about multi-index search capabilities?

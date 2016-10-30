@@ -56,3 +56,5 @@ curl 'localhost:9200/ordering/order/_search?q=id:1'
 curl 'localhost:9200/ordering/_search?pretty=true&id:1'
 ```
 * Please review results - where are: doc id, document data, index name, type name, and search score? 
+* Important: we are using a read-only file system until later into the course
+* Restarting virtual workstation or service restart resets all the data
