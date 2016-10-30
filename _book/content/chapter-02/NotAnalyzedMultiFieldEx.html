@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter-05/Intro.html" />
+    <link rel="next" href="Summary.html" />
     
     
     <link rel="prev" href="NotAnalyzedMultiField.html" />
@@ -469,6 +469,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.13" data-path="Summary.html">
+            
+                <a href="Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -571,12 +584,11 @@
 </li>
 <li><p>Give it few minutes before you get json response</p></li></ul>
 </li>
-<li>Post new document:
-curl -XPOST localhost:9200/ordering/order/1 -d \
-&apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;
+<li><p>Post new document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d \
+&apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
+<ul><li><p>Fetch mapping:</p><pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;</code></pre>
 </li>
-<li><p>Fetch mapping:</p><pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;</code></pre>
-<ul><li><p>Expected response:</p><pre><code>{
+<li><p>Expected response:</p><pre><code>{
 &quot;ordering&quot; : {
 &quot;mappings&quot; : {
   &quot;order&quot; : {
@@ -613,22 +625,22 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
 }
 }&apos;</code></pre>
 </li>
-<li><p>Expected response:</p><pre><code>{&quot;acknowledged&quot;:true}</code></pre>
-</li>
-<li><p>Populate new order with spaces in id and trackingId fields/properties:
-```
+<li><p>Expected response:</p></li></ul>
+<pre><code>{&quot;acknowledged&quot;:true}</code></pre>
+<ul><li>Populate new order with spaces in id and trackingId fields/properties:
+</li></ul>
+<p>```
 curl -XPOST localhost:9200/ordering/order/1 -d \
 &apos;{
-&quot;id&quot;: &quot;string with spaces&quot;, 
+&quot;id&quot;: &quot;orderId with spaces&quot;, 
 &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;,
-&quot;trackingId&quot;: &quot;string with spaces&quot;</p></li></ul>
-</li></ul>
+&quot;trackingId&quot;: &quot;trackingId with spaces&quot;</p></li></ul>
 <p>}&apos;</p><pre><code>* Let&apos;s run first search:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:string&apos;</p><pre><code>* Did you get any results?
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:orderId&apos;</p><pre><code>* Did you get any results?
 * Let&apos;s run second search:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=trackingId:string&apos;</p><pre><code>* Did you get any results?
-* What&apos;s the difference in behaviour and why?
-* Add mapping for another new field</code></pre>
+<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=trackingId:trackingId&apos;</p><pre><code>* Did you get any results?  
+* What&apos;s the difference in behaviour and why?  
+* Adding mapping for multi-field:</code></pre>
 <p>curl -XPUT localhost:9200/ordering/order/_mapping -d \ &apos;
 {
   &quot;order&quot; : {
@@ -646,7 +658,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
    }
 }</code></pre>
 <p>}
-}&apos;</p><pre><code>* Re-populate the data</code></pre>
+}&apos;</p><pre><code>* Re-populate the data:</code></pre>
 <p>curl -XPOST localhost:9200/ordering/order/1 -d \
 &apos;{
   &quot;id&quot;: &quot;string with spaces&quot;, 
@@ -690,7 +702,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
                 </a>
                 
                 
-                <a href="../chapter-05/Intro.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                <a href="Summary.html" class="navigation navigation-next " aria-label="Next page: Summary">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -701,7 +713,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields Exercise","level":"3.12","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","mtime":"2016-10-30T18:28:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-30T03:46:28.988Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields Exercise","level":"3.12","depth":1,"next":{"title":"Summary","level":"3.13","depth":1,"path":"content/chapter-02/Summary.md","ref":"./content/chapter-02/Summary.md","articles":[]},"previous":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","mtime":"2016-10-30T20:29:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-30T03:46:28.988Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

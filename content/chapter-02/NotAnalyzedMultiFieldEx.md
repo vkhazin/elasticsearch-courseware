@@ -8,13 +8,15 @@
 sudo service elasticsearch start
 ``` 
 * Service will start but listener will a bit to start responding to incoming requests:
- ```
+```
 curl localhost:9200
 ```
 * Give it few minutes before you get json response
 * Post new document:
+```
 curl -XPOST localhost:9200/ordering/order/1 -d \
 '{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
+```
 * Fetch mapping:
 ```
 curl 'localhost:9200/ordering/order/_mapping?pretty=true'
@@ -64,28 +66,29 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
 ```
 {"acknowledged":true}
 ```
-* Populate new order with spaces in id and trackingId fields/properties:
+
+* Populate new order with spaces in id and trackingId fields/properties:  
 ```
 curl -XPOST localhost:9200/ordering/order/1 -d \
 '{
-  "id": "string with spaces", 
+  "id": "orderId with spaces", 
   "placedOn": "2016-10-17T13:03:30.830Z",
-  "trackingId": "string with spaces"
+  "trackingId": "trackingId with spaces"
 
 }'
-```
+```  
 * Let's run first search:
 ```
-curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:string'
+curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:orderId'
 ```
 * Did you get any results?
 * Let's run second search:
 ```
-curl 'localhost:9200/ordering/order/_search?pretty=true&q=trackingId:string'
+curl 'localhost:9200/ordering/order/_search?pretty=true&q=trackingId:trackingId'
 ```
-* Did you get any results?
-* What's the difference in behaviour and why?
-* Add mapping for another new field
+* Did you get any results?  
+* What's the difference in behaviour and why?  
+* Adding mapping for multi-field:
 ```
 curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
 {
@@ -104,7 +107,7 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
   }
 }'
 ```
-* Re-populate the data
+* Re-populate the data:
 ```
 curl -XPOST localhost:9200/ordering/order/1 -d \
 '{
