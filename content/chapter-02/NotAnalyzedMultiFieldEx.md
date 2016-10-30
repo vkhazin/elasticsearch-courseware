@@ -6,9 +6,9 @@
 * We have not yet configured elasticsearch service to start automatically, start using terminal window:
 ```
 sudo service elasticsearch start
-```
+``` 
 * Service will start but listener will a bit to start responding to incoming requests:
-```
+ ```
 curl localhost:9200
 ```
 * Give it few minutes before you get json response
