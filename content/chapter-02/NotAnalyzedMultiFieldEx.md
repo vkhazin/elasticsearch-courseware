@@ -7,9 +7,6 @@
 ```
 sudo service elasticsearch start
 ``` 
-
-> 
-
 * Service will start but listener will a bit to start responding to incoming requests:
  ```
 curl localhost:9200
