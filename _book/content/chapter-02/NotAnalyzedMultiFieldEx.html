@@ -485,11 +485,122 @@
 
     
         
+        <li class="header">Chapter 3: Search</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chapter-03/Intro.html">
+            
+                <a href="../chapter-03/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../chapter-03/QueryDsl-1.html">
+            
+                <a href="../chapter-03/QueryDsl-1.html">
+            
+                    
+                    Query Dsl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../chapter-03/QueryDsl-2.html">
+            
+                <a href="../chapter-03/QueryDsl-2.html">
+            
+                    
+                    Query Dsl Cont'd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../chapter-03/QueryDslLeaf.html">
+            
+                <a href="../chapter-03/QueryDslLeaf.html">
+            
+                    
+                    Query Dsl Leaf Clause
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../chapter-03/QueryDslTerm.html">
+            
+                <a href="../chapter-03/QueryDslTerm.html">
+            
+                    
+                    Query Dsl Term
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../chapter-03/QueryDslTerms.html">
+            
+                <a href="../chapter-03/QueryDslTerms.html">
+            
+                    
+                    Query Dsl Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../chapter-03/QueryDslRange.html">
+            
+                <a href="../chapter-03/QueryDslRange.html">
+            
+                    
+                    Query Dsl Tange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../chapter-03/QueryDslCompound.html">
+            
+                <a href="../chapter-03/QueryDslCompound.html">
+            
+                    
+                    Query Dsl Compound Clause
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
         <li class="header">Chapter 5: Kibana 4</li>
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../chapter-05/Intro.html">
+        <li class="chapter " data-level="5.1" data-path="../chapter-05/Intro.html">
             
                 <a href="../chapter-05/Intro.html">
             
@@ -502,7 +613,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../chapter-05/Setup.html">
+        <li class="chapter " data-level="5.2" data-path="../chapter-05/Setup.html">
             
                 <a href="../chapter-05/Setup.html">
             
@@ -515,7 +626,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../chapter-05/SetupEx.html">
+        <li class="chapter " data-level="5.3" data-path="../chapter-05/SetupEx.html">
             
                 <a href="../chapter-05/SetupEx.html">
             
@@ -582,7 +693,7 @@
 <li><p>We have not yet configured elasticsearch service to start automatically, start using terminal window:</p><pre><code>sudo service elasticsearch start</code></pre>
 <ul><li><p>Service will start but listener will a bit to start responding to incoming requests:</p><pre><code>curl localhost:9200</code></pre>
 </li>
-<li><p>Give it few minutes before you get json response</p></li></ul>
+<li><p>Give it few minutes before you get json response...</p></li></ul>
 </li>
 <li><p>Post new document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d \
 &apos;{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
@@ -606,8 +717,8 @@
 }
 }</code></pre>
 </li>
-<li><p>Add mapping for a new field</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d \ &apos;
-{
+<li><p>Add mapping for a new field</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d \
+&apos;{
 &quot;order&quot; : {
 &quot;properties&quot; : {
   &quot;id&quot; : {
@@ -625,50 +736,55 @@
 }
 }&apos;</code></pre>
 </li>
-<li><p>Expected response:</p></li></ul>
-<pre><code>{&quot;acknowledged&quot;:true}</code></pre>
-<ul><li>Populate new order with spaces in id and trackingId fields/properties:
-</li></ul>
-<p>```
-curl -XPOST localhost:9200/ordering/order/1 -d \
+<li><p>Expected response:</p><pre><code>{&quot;acknowledged&quot;:true}</code></pre>
+</li>
+<li><p>Populate new order with spaces in id and trackingId fields/properties:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d \
 &apos;{
 &quot;id&quot;: &quot;orderId with spaces&quot;, 
 &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;,
-&quot;trackingId&quot;: &quot;trackingId with spaces&quot;</p></li></ul>
-<p>}&apos;</p><pre><code>* Let&apos;s run first search:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:orderId&apos;</p><pre><code>* Did you get any results?
-* Let&apos;s run second search:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=trackingId:trackingId&apos;</p><pre><code>* Did you get any results?  
-* What&apos;s the difference in behaviour and why?  
-* Adding mapping for multi-field:</code></pre>
-<p>curl -XPUT localhost:9200/ordering/order/_mapping -d \ &apos;
+&quot;trackingId&quot;: &quot;trackingId with spaces&quot;
+}&apos;</code></pre>
+</li>
+<li><p>Let&apos;s run first search:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:orderId&apos;</code></pre>
+</li>
+<li><p>Did you get any results?</p></li></ul>
+</li>
+<li><p>Let&apos;s run second search:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=trackingId:trackingId&apos;</code></pre>
+<ul><li>Did you get any results?  
+</li></ul>
+</li>
+<li>What&apos;s the difference in behaviour and why?  
+</li>
+<li><p>Adding mapping for multi-field:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d \ &apos;
 {
-  &quot;order&quot; : {
-    &quot;properties&quot;:{</p><pre><code>   &quot;streetName&quot;:{
-
-      &quot;type&quot;:&quot;string&quot;,
-      &quot;fields&quot;:{
-
-         &quot;notparsed&quot;:{
-
-            &quot;type&quot;:&quot;string&quot;,
-            &quot;index&quot;:&quot;not\_analyzed&quot;
-         }
-      }
-   }
-}</code></pre>
-<p>}
-}&apos;</p><pre><code>* Re-populate the data:</code></pre>
-<p>curl -XPOST localhost:9200/ordering/order/1 -d \
+&quot;order&quot; : {
+  &quot;properties&quot;:{  
+     &quot;streetName&quot;:{  
+        &quot;type&quot;:&quot;string&quot;,
+        &quot;fields&quot;:{  
+           &quot;notparsed&quot;:{  
+              &quot;type&quot;:&quot;string&quot;,
+              &quot;index&quot;:&quot;not_analyzed&quot;
+           }
+        }
+     }
+  }
+}
+}&apos;</code></pre>
+<ul><li><p>Re-populate the data:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d \
 &apos;{
-  &quot;id&quot;: &quot;string with spaces&quot;, 
-  &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;,
-  &quot;streetName&quot;: &quot;name with spaces&quot;
-}&apos;</p><pre><code>* Let&apos;s search for the street name:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName:name&apos;</p><pre><code>* Let&apos;s search for the street name on not-parsed field:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName.notparsed:name&apos;</p><pre><code>* Let&apos;s search for the street name on not-parsed field again:</code></pre>
-<p>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName.notparsed:name%20with%20spaces&apos;
-```</p><ul><li>What are results in the search #1, #2, and #3; and what is the reason for these results?
+&quot;id&quot;: &quot;string with spaces&quot;, 
+&quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;,
+&quot;streetName&quot;: &quot;name with spaces&quot;
+}&apos;</code></pre>
+</li>
+<li><p>Let&apos;s search for the street name:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName:name&apos;</code></pre>
+</li>
+<li><p>Let&apos;s search for the street name on not-parsed field:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName.notparsed:name&apos;</code></pre>
+</li>
+<li><p>Let&apos;s search for the street name on not-parsed field again:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=streetName.notparsed:name%20with%20spaces&apos;</code></pre>
+</li>
+<li><p>What are results in the search #1, #2, and #3; and what is the reason for these results?</p></li></ul>
 </li></ul>
 
                                 
@@ -713,7 +829,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields Exercise","level":"3.12","depth":1,"next":{"title":"Summary","level":"3.13","depth":1,"path":"content/chapter-02/Summary.md","ref":"./content/chapter-02/Summary.md","articles":[]},"previous":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","mtime":"2016-10-30T20:29:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-30T03:46:28.988Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields Exercise","level":"3.12","depth":1,"next":{"title":"Summary","level":"3.13","depth":1,"path":"content/chapter-02/Summary.md","ref":"./content/chapter-02/Summary.md","articles":[]},"previous":{"title":"Not Analyzed & Multi-Fields","level":"3.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","mtime":"2016-10-30T20:40:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-31T12:33:11.496Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

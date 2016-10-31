@@ -37,7 +37,13 @@
 
 ## Chapter 3: Search ##
 * [Introduction](./content/chapter-03/Intro.md)
-* 
+* [Query Dsl](./content/chapter-03/QueryDsl-1.md)
+* [Query Dsl Cont'd](./content/chapter-03/QueryDsl-2.md)
+* [Query Dsl Leaf Clause](./content/chapter-03/QueryDslLeaf.md)
+* [Query Dsl Term](./content/chapter-03/QueryDslTerm.md)
+* [Query Dsl Terms](./content/chapter-03/QueryDslTerms.md)
+* [Query Dsl Tange](./content/chapter-03/QueryDslRange.md)
+* [Query Dsl Compound Clause](./content/chapter-03/QueryDslCompound.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
