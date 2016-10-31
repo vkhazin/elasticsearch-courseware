@@ -684,21 +684,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="query-dsl-compound-clause">Query Dsl Compound Clause</h1><ul><li><p>Combing leaf query clauses</p></li>
-<li><p>&apos;match_all&apos; the most simplistic query</p><pre><code>curl localhost:9200/_search -d &apos;{
-  &quot;query&quot;: {
-      &quot;match_all&quot;: {}
+                                <h1 id="query-dsl-compound-clause">Query Dsl Compound Clause</h1><ul><li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/compound-queries.html" target="_blank">Combing leaf query clauses</a>
+</li>
+<li>bool frequently used, simple to use:
+<pre><code>curl localhost:9200/ordering/orders/_search -d &apos;{
+  &quot;query&quot; : {
+      &quot;bool&quot; : {
+          &quot;must&quot; : {
+              &quot;term&quot; : { &quot;id&quot; : &quot;1&quot; }
+          },
+          &quot;must&quot;: {
+              &quot;query_string&quot; : { 
+                  &quot;query&quot; : &quot;trackingId:*&quot; 
+              }
+          }
+      }
   }
 }&apos;</code></pre>
-<ul><li>Simple match query:
-<pre><code>curl &apos;localhost:9200/_search?pretty=true&apos; -d &apos;{
-&quot;query&quot;: {
-&quot;match&quot;: {
-  &quot;streetName&quot;: &quot;name&quot;
-}
-}
-}&apos;</code></pre>
-</li></ul>
 </li></ul>
 
                                 
@@ -743,7 +745,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Query Dsl Compound Clause","level":"4.8","depth":1,"next":{"title":"Introduction","level":"5.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Query Dsl Tange","level":"4.7","depth":1,"path":"content/chapter-03/QueryDslRange.md","ref":"./content/chapter-03/QueryDslRange.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/QueryDslCompound.md","mtime":"2016-10-31T13:11:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-31T12:33:11.496Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Query Dsl Compound Clause","level":"4.8","depth":1,"next":{"title":"Introduction","level":"5.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Query Dsl Tange","level":"4.7","depth":1,"path":"content/chapter-03/QueryDslRange.md","ref":"./content/chapter-03/QueryDslRange.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/QueryDslCompound.md","mtime":"2016-10-31T13:33:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-31T12:33:11.496Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

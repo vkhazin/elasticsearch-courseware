@@ -1,24 +1,20 @@
 # Query Dsl Compound Clause #
 
-* Combing leaf query clauses
-
-
-
-* 'match_all' the most simplistic query
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/compound-queries.html" target="_blank">Combing leaf query clauses</a>
+* bool frequently used, simple to use:
 ```
-curl localhost:9200/_search -d '{
-	"query": {
-		"match_all": {}
+curl localhost:9200/ordering/orders/_search -d '{
+	"query" : {
+		"bool" : {
+			"must" : {
+				"term" : { "id" : "1" }
+			},
+			"must": {
+				"query_string" : { 
+					"query" : "trackingId:*" 
+				}
+			}
+		}
 	}
-}'
-```
-* Simple match query:
-```
-curl 'localhost:9200/_search?pretty=true' -d '{
-  "query": {
-    "match": {
-      "streetName": "name"
-    }
-  }
 }'
 ```
