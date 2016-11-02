@@ -42,8 +42,10 @@
 * [Query Dsl Leaf Clause](./content/chapter-03/QueryDslLeaf.md)
 * [Query Dsl Term](./content/chapter-03/QueryDslTerm.md)
 * [Query Dsl Terms](./content/chapter-03/QueryDslTerms.md)
-* [Query Dsl Tange](./content/chapter-03/QueryDslRange.md)
+* [Query Dsl Range](./content/chapter-03/QueryDslRange.md)
 * [Query Dsl Compound Clause](./content/chapter-03/QueryDslCompound.md)
+* [Aggregations](./content/chapter-03/Aggregations.md)
+* [Nested Aggregations](./content/chapter-03/NestedAggregations.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
