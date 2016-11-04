@@ -60,7 +60,7 @@
     <link rel="next" href="NestedAggregations.html" />
     
     
-    <link rel="prev" href="QueryDslCompound.html" />
+    <link rel="prev" href="QueryEx.html" />
     
 
     </head>
@@ -593,7 +593,33 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.9" data-path="Aggregations.html">
+        <li class="chapter " data-level="4.9" data-path="QueryPagination.html">
+            
+                <a href="QueryPagination.html">
+            
+                    
+                    Query Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="QueryEx.html">
+            
+                <a href="QueryEx.html">
+            
+                    
+                    Query Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.11" data-path="Aggregations.html">
             
                 <a href="Aggregations.html">
             
@@ -606,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.10" data-path="NestedAggregations.html">
+        <li class="chapter " data-level="4.12" data-path="NestedAggregations.html">
             
                 <a href="NestedAggregations.html">
             
@@ -710,18 +736,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="aggregations">Aggregations</h1><ul><li><p>First aggregation query:
-```
-curl -XPOST &quot;<a href="http://localhost:9200/ordering/order/_search" target="_blank">http://localhost:9200/ordering/order/_search</a>&quot; -d&apos;
+                                <h1 id="aggregations">Aggregations</h1><ul><li><p>First aggregation query:</p><pre><code>curl -XPOST &quot;http://localhost:9200/ordering/order/_search&quot; -d&apos;
 {
-  &quot;size&quot;: 0,</p><pre><code>  &quot;aggregations&quot;: {
+  &quot;size&quot;: 0, 
+  &quot;aggregations&quot;: {
       &quot;order-status&quot;: {
           &quot;terms&quot;: {
-              &quot;field&quot;: &quot;status&quot;}
+              &quot;field&quot;: &quot;status&quot;
+          }
       }
-  }</code></pre>
-<p>}</p></li></ul>
-<p>```</p><ul><li>&quot;size&quot;: 0 - suppress query results to fetch aggregations results only
+  }
+}</code></pre>
+<ul><li>&quot;size&quot;: 0 - suppress query results to fetch aggregations results only
+</li></ul>
 </li>
 <li>&quot;aggregations&quot; or &quot;aggs&quot; - part of ElasticSearch Dsl
 </li>
@@ -756,7 +783,7 @@ curl -XPOST &quot;<a href="http://localhost:9200/ordering/order/_search" target=
 
             
                 
-                <a href="QueryDslCompound.html" class="navigation navigation-prev " aria-label="Previous page: Query Dsl Compound Clause">
+                <a href="QueryEx.html" class="navigation navigation-prev " aria-label="Previous page: Query Exercise">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -772,7 +799,7 @@ curl -XPOST &quot;<a href="http://localhost:9200/ordering/order/_search" target=
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Aggregations","level":"4.9","depth":1,"next":{"title":"Nested Aggregations","level":"4.10","depth":1,"path":"content/chapter-03/NestedAggregations.md","ref":"./content/chapter-03/NestedAggregations.md","articles":[]},"previous":{"title":"Query Dsl Compound Clause","level":"4.8","depth":1,"path":"content/chapter-03/QueryDslCompound.md","ref":"./content/chapter-03/QueryDslCompound.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/Aggregations.md","mtime":"2016-11-02T13:38:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-02T02:31:24.747Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Aggregations","level":"4.11","depth":1,"next":{"title":"Nested Aggregations","level":"4.12","depth":1,"path":"content/chapter-03/NestedAggregations.md","ref":"./content/chapter-03/NestedAggregations.md","articles":[]},"previous":{"title":"Query Exercise","level":"4.10","depth":1,"path":"content/chapter-03/QueryEx.md","ref":"./content/chapter-03/QueryEx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/Aggregations.md","mtime":"2016-11-04T19:38:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-04T12:43:22.173Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

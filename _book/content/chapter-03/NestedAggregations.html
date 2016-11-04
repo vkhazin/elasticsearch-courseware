@@ -593,7 +593,33 @@
             
         </li>
     
-        <li class="chapter " data-level="4.9" data-path="Aggregations.html">
+        <li class="chapter " data-level="4.9" data-path="QueryPagination.html">
+            
+                <a href="QueryPagination.html">
+            
+                    
+                    Query Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="QueryEx.html">
+            
+                <a href="QueryEx.html">
+            
+                    
+                    Query Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="Aggregations.html">
             
                 <a href="Aggregations.html">
             
@@ -606,7 +632,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.10" data-path="NestedAggregations.html">
+        <li class="chapter active" data-level="4.12" data-path="NestedAggregations.html">
             
                 <a href="NestedAggregations.html">
             
@@ -710,24 +736,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="nested-aggregations">Nested Aggregations</h1><ul><li><p>Example of nested aggregation query:
-```
-curl -XPOST &quot;<a href="http://localhost:9200/ordering/order/_search" target="_blank">http://localhost:9200/ordering/order/_search</a>&quot; -d&apos;
-{
-  &quot;size&quot;: 0,</p><pre><code>  &quot;aggs&quot;: {
-      &quot;order-status&quot;: {
-          &quot;terms&quot;: {
-              &quot;field&quot;: &quot;status&quot;}
-      },
-      &quot;aggs&quot;: {
-          &quot;placedOn&quot;: {
-              &quot;???&quot;: {
-                  &quot;field&quot;: &quot;???&quot;}
+                                <h1 id="nested-aggregations">Nested Aggregations</h1><ul><li>Example of nested aggregation query:
+<pre><code>curl -XPOST &apos;http://localhost:9200/ordering/order/_search&apos; -d &apos;
+{  
+  &quot;size&quot;: 0,  
+      &quot;aggs&quot;: {  
+          &quot;order-status&quot;: {  
+              &quot;terms&quot;: {  
+                  &quot;field&quot;: &quot;status&quot;},
+              &quot;aggs&quot;: {  
+                  &quot;placedOn&quot;: {  
+                  &quot;date_histogram&quot; : {  
+                      &quot;field&quot; : &quot;placedOn&quot;,  
+                      &quot;interval&quot; : &quot;month&quot;  
+                  }  
+              }     
           }
-      }            
-  }</code></pre>
-<p>}</p></li></ul>
-<p>```</p>
+      }  
+  }  
+}&apos;</code></pre>
+</li></ul>
+
                                 
                                 </section>
                             
@@ -770,7 +799,7 @@ curl -XPOST &quot;<a href="http://localhost:9200/ordering/order/_search" target=
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Nested Aggregations","level":"4.10","depth":1,"next":{"title":"Introduction","level":"5.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Aggregations","level":"4.9","depth":1,"path":"content/chapter-03/Aggregations.md","ref":"./content/chapter-03/Aggregations.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/NestedAggregations.md","mtime":"2016-11-02T13:40:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-02T02:31:24.747Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nested Aggregations","level":"4.12","depth":1,"next":{"title":"Introduction","level":"5.1","depth":1,"path":"content/chapter-05/Intro.md","ref":"./content/chapter-05/Intro.md","articles":[]},"previous":{"title":"Aggregations","level":"4.11","depth":1,"path":"content/chapter-03/Aggregations.md","ref":"./content/chapter-03/Aggregations.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/NestedAggregations.md","mtime":"2016-11-04T14:14:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-04T12:43:22.173Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -44,6 +44,8 @@
 * [Query Dsl Terms](./content/chapter-03/QueryDslTerms.md)
 * [Query Dsl Range](./content/chapter-03/QueryDslRange.md)
 * [Query Dsl Compound Clause](./content/chapter-03/QueryDslCompound.md)
+* [Query Pagination](./content/chapter-03/QueryPagination.md)
+* [Query Exercise](./content/chapter-03/QueryEx.md)
 * [Aggregations](./content/chapter-03/Aggregations.md)
 * [Nested Aggregations](./content/chapter-03/NestedAggregations.md)
 

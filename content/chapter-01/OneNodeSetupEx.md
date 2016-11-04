@@ -11,13 +11,13 @@ sudo apt-get install default-jre -y
 ```
 * Download and install Public Signing Key:
 ```
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 * Add repository definition:  
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
 * Install Elastic Search:
 ```
-sudo apt-get update && sudo apt-get install elasticsearch -y
+sudo apt-get update && sudo apt-get install elasticsearch
 ```
 * Start elasticsearch service:
 ```
@@ -45,7 +45,7 @@ curl localhost:9200
 ```
 * Posting first document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d \ 
+curl -XPOST localhost:9200/ordering/order/1 -d \
 '{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
 ```
 * Expected Response:  
