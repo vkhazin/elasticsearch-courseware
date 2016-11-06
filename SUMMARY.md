@@ -47,9 +47,15 @@
 * [Query Pagination](./content/chapter-03/QueryPagination.md)
 * [Query Exercise](./content/chapter-03/QueryEx.md)
 * [Aggregations](./content/chapter-03/Aggregations.md)
-* [Nested Aggregations](./content/chapter-03/NestedAggregations.md)
+* [Highlighting](./content/chapter-03/Highlighting.md)
+* [Filter](./content/chapter-03/Filter.md)
+* [Filter Example](./content/chapter-03/FilterExample.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
 * [Setup](./content/chapter-05/Setup.md)
 * [Setup Exercise](./content/chapter-05/SetupEx.md)
+
+## Extras ##
+* [Nested Aggregations](./content/extras/NestedAggregations.md)
+
