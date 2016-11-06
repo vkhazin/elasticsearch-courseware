@@ -50,6 +50,8 @@
 * [Highlighting](./content/chapter-03/Highlighting.md)
 * [Filter](./content/chapter-03/Filter.md)
 * [Filter Example](./content/chapter-03/FilterExample.md)
+* [Filter Exercise](./content/chapter-03/FilterEx.md)
+* [Summary](./content/chapter-03/Summary.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)

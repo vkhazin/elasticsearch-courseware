@@ -671,6 +671,32 @@
             
         </li>
     
+        <li class="chapter " data-level="4.15" data-path="FilterEx.html">
+            
+                <a href="FilterEx.html">
+            
+                    
+                    Filter Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.16" data-path="Summary.html">
+            
+                <a href="Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -784,46 +810,44 @@
                                 
                                 <h1 id="query-pagination">Query Pagination</h1><ul><li>Query results are limited to page size of 10 by default
 </li>
-<li>Query pagination and page number controlled by From/Size parameters:
-```
-curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; \
--d &apos;{ &quot;from&quot;:0, &quot;size&quot;:2, &quot;query&quot;: {&quot;match_all&quot;:{}}}&apos;
-</li></ul>
-<pre><code>* Expected result:</code></pre>
-<p>{
-  &quot;took&quot; : 3,
-  &quot;timed_out&quot; : false,
-  &quot;_shards&quot; : {
-    &quot;total&quot; : 5,
-    &quot;successful&quot; : 5,
-    &quot;failed&quot; : 0
-  },
-  &quot;hits&quot; : {
-    &quot;total&quot; : 3,
-    &quot;max_score&quot; : 1.0,
-    &quot;hits&quot; : [ {
-      &quot;_index&quot; : &quot;ordering&quot;,
-      &quot;_type&quot; : &quot;order&quot;,
-      &quot;_id&quot; : &quot;2&quot;,
-      &quot;_score&quot; : 1.0,
-      &quot;_source&quot; : {
-        &quot;id&quot; : &quot;2&quot;,
-        &quot;placedOn&quot; : &quot;2017-01-01T00:00:00Z&quot;,
-        &quot;status&quot; : &quot;pending&quot;
-      }
-    }, {
-      &quot;_index&quot; : &quot;ordering&quot;,
-      &quot;_type&quot; : &quot;order&quot;,
-      &quot;_id&quot; : &quot;4&quot;,
-      &quot;_score&quot; : 1.0,
-      &quot;_source&quot; : {
-        &quot;id&quot; : &quot;4&quot;,
-        &quot;placedOn&quot; : &quot;2016-01-01T00:00:00Z&quot;,
-        &quot;status&quot; : &quot;received&quot;
-      }
-    } ]
+<li><p>Query pagination and page number controlled by From/Size parameters:</p><pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
+{ &quot;from&quot;:0, &quot;size&quot;:2, &quot;query&quot;: {&quot;match_all&quot;:{}}}&apos;</code></pre>
+<ul><li><p>Expected result:</p><pre><code>{
+&quot;took&quot; : 3,
+&quot;timed_out&quot; : false,
+&quot;_shards&quot; : {
+&quot;total&quot; : 5,
+&quot;successful&quot; : 5,
+&quot;failed&quot; : 0
+},
+&quot;hits&quot; : {
+&quot;total&quot; : 3,
+&quot;max_score&quot; : 1.0,
+&quot;hits&quot; : [ {
+  &quot;_index&quot; : &quot;ordering&quot;,
+  &quot;_type&quot; : &quot;order&quot;,
+  &quot;_id&quot; : &quot;2&quot;,
+  &quot;_score&quot; : 1.0,
+  &quot;_source&quot; : {
+    &quot;id&quot; : &quot;2&quot;,
+    &quot;placedOn&quot; : &quot;2017-01-01T00:00:00Z&quot;,
+    &quot;status&quot; : &quot;pending&quot;
   }
-}</p><ul><li>Note hits.total field, what it stands for?
+}, {
+  &quot;_index&quot; : &quot;ordering&quot;,
+  &quot;_type&quot; : &quot;order&quot;,
+  &quot;_id&quot; : &quot;4&quot;,
+  &quot;_score&quot; : 1.0,
+  &quot;_source&quot; : {
+    &quot;id&quot; : &quot;4&quot;,
+    &quot;placedOn&quot; : &quot;2016-01-01T00:00:00Z&quot;,
+    &quot;status&quot; : &quot;received&quot;
+  }
+} ]
+}
+}</code></pre>
+</li>
+<li><p>Note hits.total field, what it stands for?</p></li></ul>
 </li>
 <li>How results are sorted?
 </li></ul>
@@ -870,7 +894,7 @@ curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Query Pagination","level":"4.9","depth":1,"next":{"title":"Query Exercise","level":"4.10","depth":1,"path":"content/chapter-03/QueryEx.md","ref":"./content/chapter-03/QueryEx.md","articles":[]},"previous":{"title":"Query Dsl Compound Clause","level":"4.8","depth":1,"path":"content/chapter-03/QueryDslCompound.md","ref":"./content/chapter-03/QueryDslCompound.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/QueryPagination.md","mtime":"2016-11-04T19:47:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-05T21:01:31.756Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Query Pagination","level":"4.9","depth":1,"next":{"title":"Query Exercise","level":"4.10","depth":1,"path":"content/chapter-03/QueryEx.md","ref":"./content/chapter-03/QueryEx.md","articles":[]},"previous":{"title":"Query Dsl Compound Clause","level":"4.8","depth":1,"path":"content/chapter-03/QueryDslCompound.md","ref":"./content/chapter-03/QueryDslCompound.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/QueryPagination.md","mtime":"2016-11-06T05:02:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-06T04:58:51.367Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

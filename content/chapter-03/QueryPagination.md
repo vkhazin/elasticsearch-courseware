@@ -3,9 +3,8 @@
 * Query results are limited to page size of 10 by default
 * Query pagination and page number controlled by From/Size parameters:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' \
--d '{ "from":0, "size":2, "query": {"match_all":{}}}'
-
+curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+{ "from":0, "size":2, "query": {"match_all":{}}}'
 ```
 * Expected result:
 ```
@@ -43,5 +42,6 @@ curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' \
     } ]
   }
 }
+```
 * Note hits.total field, what it stands for?
 * How results are sorted?
