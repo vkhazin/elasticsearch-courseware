@@ -1,4 +1,4 @@
-# Chapter 3 - Search #
+# Chapter 3: Search #
 
 * Understanding search Query DSL
 * In-depth understanding of search components: aggregations, search types, highlighting and other options.

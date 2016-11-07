@@ -25,7 +25,6 @@
 * [Index](./content/chapter-02/Index.md)
 * [Type](./content/chapter-02/Type.md)
 * [Index and Type Api](./content/chapter-02/IndexTypeApi.md)
-* [Mapping](./content/chapter-02/Mapping-01.md)
 * [Transaction Log and Lucene Index](./content/chapter-02/TranLogLucene.md)
 * [Index Configuration](./content/chapter-02/IndexConfig.md)
 * [Index Settings](./content/chapter-02/IndexSettings.md)
@@ -45,13 +44,20 @@
 * [Query Dsl Range](./content/chapter-03/QueryDslRange.md)
 * [Query Dsl Compound Clause](./content/chapter-03/QueryDslCompound.md)
 * [Query Pagination](./content/chapter-03/QueryPagination.md)
+* [Query Uri](./content/chapter-03/QueryUri.md)
+* [Aggregation](./content/chapter-03/Aggregation.md)
 * [Query Exercise](./content/chapter-03/QueryEx.md)
-* [Aggregations](./content/chapter-03/Aggregations.md)
 * [Highlighting](./content/chapter-03/Highlighting.md)
 * [Filter](./content/chapter-03/Filter.md)
 * [Filter Example](./content/chapter-03/FilterExample.md)
 * [Filter Exercise](./content/chapter-03/FilterEx.md)
 * [Summary](./content/chapter-03/Summary.md)
+
+## Chapter 4: Advanced Search and Mapping ##
+* [Introduction](./content/chapter-04/Intro.md)
+* [Terms Aggregation](./content/chapter-04/TermsAggregation.md)
+* [Nested Aggregation Query](./content/chapter-04/NestedAggregationQuery.md)
+* [Nested Aggregation Results](./content/chapter-04/NestedAggregationResults.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)

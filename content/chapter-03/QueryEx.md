@@ -3,15 +3,16 @@
 * Login into your ElasticSearch sandbox
 * Populate few orders:
 ```
-curl -XPOST localhost:9200/ordering/order/2 -d \
-'{"id": "2", "placedOn": "2017-01-01T00:00:00Z", "status": "pending"}'
-
-curl -XPOST localhost:9200/ordering/order/3 -d \
-'{"id": "3", "placedOn": "2016-10-01T00:00:00Z", "status": "shipped"}'
-
-curl -XPOST localhost:9200/ordering/order/4 -d \
-'{"id": "4", "placedOn": "2016-01-01T00:00:00Z", "status": "received"}'
-
+curl -XPOST localhost:9200/ordering/order/2 -d '
+{"id": "2", "placedOn": "2017-01-01T00:00:00Z", "status": "pending"}'
+```
+```
+curl -XPOST localhost:9200/ordering/order/3 -d '
+{"id": "3", "placedOn": "2016-10-01T00:00:00Z", "status": "shipped"}'
+```
+```
+curl -XPOST localhost:9200/ordering/order/4 -d '
+{"id": "4", "placedOn": "2016-01-01T00:00:00Z", "status": "received"}'
 ```
 * Confirm there are some records to search on:
 ```
@@ -23,4 +24,5 @@ curl 'localhost:9200/ordering/order/_search?pretty=true'
 * What is the order of results?
 * How do you <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html" target="_blank">sort</a> result using arbitrary field?
 * Pick couple of options and run your sort query
+* Reformat your query to use query uri instead of query json
 * You will be asked to present your sort findings to others...
