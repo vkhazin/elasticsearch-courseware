@@ -58,6 +58,13 @@
 * [Terms Aggregation](./content/chapter-04/TermsAggregation.md)
 * [Nested Aggregation Query](./content/chapter-04/NestedAggregationQuery.md)
 * [Nested Aggregation Results](./content/chapter-04/NestedAggregationResults.md)
+* [Date Histogram Aggregation](./content/chapter-04/DateHistogramAggregation.md)
+* [Range Aggregation](./content/chapter-04/RangeAggregation.md)
+* [Nested Datatype](./content/chapter-04/NestedDatatype.md)
+* [Nested Datatype Mapping](./content/chapter-04/NestedDatatypeMapping.md)
+* [Nested Datatype Query](./content/chapter-04/NestedDatatypeQuery.md)
+* [Aggregation Exercise](./content/chapter-04/AggregationEx.md)
+* [Parent-Child Relationship](./content/chapter-04/ParentChild.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)

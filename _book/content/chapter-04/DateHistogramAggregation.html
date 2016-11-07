@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Introduction · GitBook</title>
+        <title>Date Histogram Aggregation · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="TermsAggregation.html" />
+    <link rel="next" href="RangeAggregation.html" />
     
     
-    <link rel="prev" href="../chapter-03/Summary.html" />
+    <link rel="prev" href="NestedAggregationResults.html" />
     
 
     </head>
@@ -704,7 +704,7 @@
         
         
     
-        <li class="chapter active" data-level="5.1" data-path="Intro.html">
+        <li class="chapter " data-level="5.1" data-path="Intro.html">
             
                 <a href="Intro.html">
             
@@ -756,7 +756,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="DateHistogramAggregation.html">
+        <li class="chapter active" data-level="5.5" data-path="DateHistogramAggregation.html">
             
                 <a href="DateHistogramAggregation.html">
             
@@ -943,7 +943,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Introduction</a>
+        <a href="../.." >Date Histogram Aggregation</a>
     </h1>
 </div>
 
@@ -958,11 +958,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chapter-4-advanced-search-and-mapping">Chapter 4: Advanced Search and Mapping</h1><ul><li>Introduction to aggregations and nested document relations
+                                <h1 id="date-histogram-aggregation">Date Histogram Aggregation</h1><ul><li>Aggregation that can be applied on date/time field values extracted from the documents
 </li>
-<li>Understanding nested objects and parent-child relationships
-</li>
-<li>Aggregation queries
+<li><p>Builds fixed size buckets based on the interval dynamically:</p><pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
+{
+&quot;size&quot;: 0,
+&quot;aggs&quot;: {
+  &quot;placedOnMonth&quot;: {
+    &quot;date_histogram&quot; : {
+      &quot;field&quot;: &quot;placedOn&quot;,
+      &quot;interval&quot;: &quot;month&quot;,
+      &quot;format&quot;: &quot;YYYY-MM&quot;
+     }
+  }
+}
+}
+&apos;</code></pre>
+<ul><li>Results:
+<pre><code>{
+...
+&quot;aggregations&quot; : {
+&quot;placedOnMonth&quot; : {
+  &quot;buckets&quot; : [ {
+    &quot;key_as_string&quot; : &quot;2016-01&quot;,
+    &quot;key&quot; : 1451606400000,
+    &quot;doc_count&quot; : 1
+  }, {
+    &quot;key_as_string&quot; : &quot;2016-02&quot;,
+    &quot;key&quot; : 1454284800000,
+    &quot;doc_count&quot; : 0
+  }, {
+    &quot;key_as_string&quot; : &quot;2016-03&quot;,
+    &quot;key&quot; : 1456790400000,
+    &quot;doc_count&quot; : 0
+  }, {
+...</code></pre>
+</li></ul>
 </li></ul>
 
                                 
@@ -991,12 +1022,12 @@
 
             
                 
-                <a href="../chapter-03/Summary.html" class="navigation navigation-prev " aria-label="Previous page: Summary">
+                <a href="NestedAggregationResults.html" class="navigation navigation-prev " aria-label="Previous page: Nested Aggregation Results">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="TermsAggregation.html" class="navigation navigation-next " aria-label="Next page: Terms Aggregation">
+                <a href="RangeAggregation.html" class="navigation navigation-next " aria-label="Next page: Range Aggregation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1007,7 +1038,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"5.1","depth":1,"next":{"title":"Terms Aggregation","level":"5.2","depth":1,"path":"content/chapter-04/TermsAggregation.md","ref":"./content/chapter-04/TermsAggregation.md","articles":[]},"previous":{"title":"Summary","level":"4.17","depth":1,"path":"content/chapter-03/Summary.md","ref":"./content/chapter-03/Summary.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/Intro.md","mtime":"2016-11-07T00:07:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-07T13:25:21.462Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Date Histogram Aggregation","level":"5.5","depth":1,"next":{"title":"Range Aggregation","level":"5.6","depth":1,"path":"content/chapter-04/RangeAggregation.md","ref":"./content/chapter-04/RangeAggregation.md","articles":[]},"previous":{"title":"Nested Aggregation Results","level":"5.4","depth":1,"path":"content/chapter-04/NestedAggregationResults.md","ref":"./content/chapter-04/NestedAggregationResults.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/DateHistogramAggregation.md","mtime":"2016-11-07T00:25:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-07T13:25:21.462Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

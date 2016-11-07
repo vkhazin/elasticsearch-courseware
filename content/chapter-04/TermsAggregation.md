@@ -12,7 +12,7 @@ curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
       }
     }
   }
-}''
+}'
 ```
 * "size": 0 - suppress query results to fetch aggregations results only
 * "aggregations" or "aggs" - part of ElasticSearch Dsl
