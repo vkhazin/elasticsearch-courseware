@@ -7,4 +7,4 @@
 * Children can be queried, updated, and deleted separately from the parent and from each other
 * With large number of child documents parent-child indexing is more effective
 * Child documents can be incorporated into query criteria and into the query results
-* Parent-Child maps are stored in so called <a href="https://www.elastic.co/guide/en/elasticsearch/guide/2.x/docvalues.html" target="_blank">doc values</a> quick in-memory processing and scalable to split on disk.
+* Parent-Child maps are stored in so called <a href="https://www.elastic.co/guide/en/elasticsearch/guide/2.x/docvalues.html" target="_blank">doc values</a> quick in-memory processing and scalable split on disk.
