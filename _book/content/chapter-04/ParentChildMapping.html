@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Terms Aggregation · GitBook</title>
+        <title>Parent-Child Mapping · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="NestedAggregationQuery.html" />
+    <link rel="next" href="ParentChildIndexing.html" />
     
     
-    <link rel="prev" href="ParentChildIndexing.html" />
+    <link rel="prev" href="ParentChild.html" />
     
 
     </head>
@@ -795,7 +795,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.8" data-path="ParentChildMapping.html">
+        <li class="chapter active" data-level="5.8" data-path="ParentChildMapping.html">
             
                 <a href="ParentChildMapping.html">
             
@@ -821,7 +821,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.10" data-path="TermsAggregation.html">
+        <li class="chapter " data-level="5.10" data-path="TermsAggregation.html">
             
                 <a href="TermsAggregation.html">
             
@@ -995,7 +995,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Terms Aggregation</a>
+        <a href="../.." >Parent-Child Mapping</a>
     </h1>
 </div>
 
@@ -1010,25 +1010,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="terms-aggregation">Terms Aggregation</h1><ul><li><p>Recall first aggregation query:</p><pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
+                                <h1 id="parent-child-mapping">Parent-Child Mapping</h1><ul><li>Requires mapping at the time of index creation or using <a href="https://gist.github.com/nicolashery/6317643" target="_blank">update-mapping</a>
+</li>
+<li>Creating new index with two types for parent-child relationship:
+<pre><code>curl -XPUT &apos;localhost:9200/politics?pretty=true&apos; -d &apos;
 {
-&quot;size&quot;: 0, 
-&quot;aggregations&quot;: {
-  &quot;order-status&quot;: {
-    &quot;terms&quot;: {
-      &quot;field&quot;: &quot;status&quot;
-    }
-  }
-}
+ &quot;mappings&quot;: {
+   &quot;party&quot;: {},
+   &quot;supporter&quot;: {
+     &quot;_parent&quot;: {
+       &quot;type&quot;: &quot;party&quot; 
+     }
+   }
+ }
 }&apos;</code></pre>
-<ul><li>&quot;size&quot;: 0 - suppress query results to fetch aggregations results only
-</li></ul>
-</li>
-<li>&quot;aggregations&quot; or &quot;aggs&quot; - part of ElasticSearch Dsl
-</li>
-<li>&quot;order-status&quot; - arbitrary name for aggregation
-</li>
-<li>&quot;terms&quot; - type of aggregation to use
 </li></ul>
 
                                 
@@ -1057,12 +1052,12 @@
 
             
                 
-                <a href="ParentChildIndexing.html" class="navigation navigation-prev " aria-label="Previous page: Parent-Child Indexing">
+                <a href="ParentChild.html" class="navigation navigation-prev " aria-label="Previous page: Parent-Child Relationship">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="NestedAggregationQuery.html" class="navigation navigation-next " aria-label="Next page: Nested Aggregation Query">
+                <a href="ParentChildIndexing.html" class="navigation navigation-next " aria-label="Next page: Parent-Child Indexing">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1073,7 +1068,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Terms Aggregation","level":"5.10","depth":1,"next":{"title":"Nested Aggregation Query","level":"5.11","depth":1,"path":"content/chapter-04/NestedAggregationQuery.md","ref":"./content/chapter-04/NestedAggregationQuery.md","articles":[]},"previous":{"title":"Parent-Child Indexing","level":"5.9","depth":1,"path":"content/chapter-04/ParentChildIndexing.md","ref":"./content/chapter-04/ParentChildIndexing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/TermsAggregation.md","mtime":"2016-11-07T13:27:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-08T01:39:48.808Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Parent-Child Mapping","level":"5.8","depth":1,"next":{"title":"Parent-Child Indexing","level":"5.9","depth":1,"path":"content/chapter-04/ParentChildIndexing.md","ref":"./content/chapter-04/ParentChildIndexing.md","articles":[]},"previous":{"title":"Parent-Child Relationship","level":"5.7","depth":1,"path":"content/chapter-04/ParentChild.md","ref":"./content/chapter-04/ParentChild.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/ParentChildMapping.md","mtime":"2016-11-08T14:21:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-08T01:39:48.808Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

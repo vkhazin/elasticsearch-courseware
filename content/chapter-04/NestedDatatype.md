@@ -1,7 +1,8 @@
 # Nested Datatype #
 
 * Nested is a specialized version of the 'object' datatype that allows querying of arrays of objects to be queried independently
-* Lucene has no concept of inner objects and hence data is flattened when being indexed with not quite as expected behavior:
+* Lucene has no concept of inner objects and hence data is flattened when being indexed with not quite as expected behavior.
+* Data posted
 ```
 {
   "group" : "fans",

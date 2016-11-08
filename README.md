@@ -36,7 +36,7 @@ During this class, the instructor will:
 * Overview of Filter DSL compared to Query DSL
 
 ### Advanced Search and Mapping ###
-* Introduction to aggregations and nested document relations
+* Introduction to data aggregations and nested document relations
 * Understanding nested objects and parent-child relationships
 * Aggregation queries
 

@@ -56,10 +56,13 @@
 ## Chapter 4: Advanced Search and Mapping ##
 * [Introduction](./content/chapter-04/Intro.md)
 * [Data Aggregation](./content/chapter-04/DataAggregation.md)
+* [Data Aggregation - Cont'd](./content/chapter-04/DataAggregation-1.md)
 * [Nested Datatype](./content/chapter-04/NestedDatatype.md)
 * [Nested Datatype Mapping](./content/chapter-04/NestedDatatypeMapping.md)
 * [Nested Datatype Query](./content/chapter-04/NestedDatatypeQuery.md)
 * [Parent-Child Relationship](./content/chapter-04/ParentChild.md)
+* [Parent-Child Mapping](./content/chapter-04/ParentChildMapping.md)
+* [Parent-Child Indexing](./content/chapter-04/ParentChildIndexing.md)
 
 * [Terms Aggregation](./content/chapter-04/TermsAggregation.md)
 * [Nested Aggregation Query](./content/chapter-04/NestedAggregationQuery.md)

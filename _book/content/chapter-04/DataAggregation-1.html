@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Terms Aggregation · GitBook</title>
+        <title>Data Aggregation - Cont'd · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="NestedAggregationQuery.html" />
+    <link rel="next" href="NestedDatatype.html" />
     
     
-    <link rel="prev" href="ParentChildIndexing.html" />
+    <link rel="prev" href="DataAggregation.html" />
     
 
     </head>
@@ -730,7 +730,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="DataAggregation-1.html">
+        <li class="chapter active" data-level="5.3" data-path="DataAggregation-1.html">
             
                 <a href="DataAggregation-1.html">
             
@@ -821,7 +821,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.10" data-path="TermsAggregation.html">
+        <li class="chapter " data-level="5.10" data-path="TermsAggregation.html">
             
                 <a href="TermsAggregation.html">
             
@@ -995,7 +995,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Terms Aggregation</a>
+        <a href="../.." >Data Aggregation - Cont'd</a>
     </h1>
 </div>
 
@@ -1010,25 +1010,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="terms-aggregation">Terms Aggregation</h1><ul><li><p>Recall first aggregation query:</p><pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
-{
-&quot;size&quot;: 0, 
-&quot;aggregations&quot;: {
-  &quot;order-status&quot;: {
-    &quot;terms&quot;: {
-      &quot;field&quot;: &quot;status&quot;
-    }
-  }
-}
-}&apos;</code></pre>
-<ul><li>&quot;size&quot;: 0 - suppress query results to fetch aggregations results only
+                                <h1 id="data-aggregation-contd">Data Aggregation Cont&apos;d</h1><ul><li>Aggregated data is not likely to be stored in the same shape in Rdbms
+</li>
+<li>Rdbms more likely to store data in related tables using foreign key relationship, whether enforced or not.
+</li>
+<li>Aggregating data in ElasticSearch from Rdbms likely to result in data de-normalization
+</li>
+<li><p>Rdbms likely data model:</p></li>
+<li><p>Movies</p></li></ul>
+<table>
+<thead>
+<tr><th>AssetId</th>
+<th>Title</th>
+<th>ShortSynopsis</th>
+<th>...</th>
+</tr></thead><tbody>
+<tr><td>86c1bba8-d18f-4bbc-9cb4-a90a4220f59c</td>
+<td>My First Mister</td>
+<td>Desperate to escape the..</td>
+<td>...</td>
+</tr></tbody></table>
+
+<ul><li>Cast Members  
 </li></ul>
+<table>
+<thead>
+<tr><th>MemberId</th>
+<th>Name</th>
+<th>...</th>
+</tr></thead><tbody>
+<tr><td>b42e5484-e7e1-4eaf-b9a2-b8f25487533b</td>
+<td>Leelee Sobieski</td>
+<td>...</td>
+</tr><tr><td>1290de91-2bc3-4b72-9a0d-6fa0e04b44ab</td>
+<td>Albert Brooks</td>
+<td>...</td>
+</tr></tbody></table>
+
+<ul><li>Movie Cast Members  
+</li></ul>
+<table>
+<thead>
+<tr><th>AssetId</th>
+<th>MemberId</th>
+<th>Role</th>
+</tr></thead><tbody>
+<tr><td>86c1bba8-d18f-4bbc-9cb4-a90a4220f59c</td>
+<td>b42e5484-e7e1-4eaf-b9a2-b8f25487533b</td>
+<td>Cast</td>
+</tr><tr><td>86c1bba8-d18f-4bbc-9cb4-a90a4220f59c</td>
+<td>1290de91-2bc3-4b72-9a0d-6fa0e04b44ab</td>
+<td>Cast</td>
+</tr></tbody></table>
+
+<ul><li>How do you maintain the de-normalized data in ElasticSearch?
 </li>
-<li>&quot;aggregations&quot; or &quot;aggs&quot; - part of ElasticSearch Dsl
-</li>
-<li>&quot;order-status&quot; - arbitrary name for aggregation
-</li>
-<li>&quot;terms&quot; - type of aggregation to use
+<li>Json based NoSql such as Couchbase, MongoDb, and others may store data aggregated already
 </li></ul>
 
                                 
@@ -1057,12 +1094,12 @@
 
             
                 
-                <a href="ParentChildIndexing.html" class="navigation navigation-prev " aria-label="Previous page: Parent-Child Indexing">
+                <a href="DataAggregation.html" class="navigation navigation-prev " aria-label="Previous page: Data Aggregation">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="NestedAggregationQuery.html" class="navigation navigation-next " aria-label="Next page: Nested Aggregation Query">
+                <a href="NestedDatatype.html" class="navigation navigation-next " aria-label="Next page: Nested Datatype">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1073,7 +1110,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Terms Aggregation","level":"5.10","depth":1,"next":{"title":"Nested Aggregation Query","level":"5.11","depth":1,"path":"content/chapter-04/NestedAggregationQuery.md","ref":"./content/chapter-04/NestedAggregationQuery.md","articles":[]},"previous":{"title":"Parent-Child Indexing","level":"5.9","depth":1,"path":"content/chapter-04/ParentChildIndexing.md","ref":"./content/chapter-04/ParentChildIndexing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/TermsAggregation.md","mtime":"2016-11-07T13:27:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-08T01:39:48.808Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Data Aggregation - Cont'd","level":"5.3","depth":1,"next":{"title":"Nested Datatype","level":"5.4","depth":1,"path":"content/chapter-04/NestedDatatype.md","ref":"./content/chapter-04/NestedDatatype.md","articles":[]},"previous":{"title":"Data Aggregation","level":"5.2","depth":1,"path":"content/chapter-04/DataAggregation.md","ref":"./content/chapter-04/DataAggregation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/DataAggregation-1.md","mtime":"2016-11-08T13:49:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-08T01:39:48.808Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

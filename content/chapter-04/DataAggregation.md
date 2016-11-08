@@ -1,6 +1,6 @@
 # Data Aggregation #
 
-* Some data does not fit into a flat table, e.g. movie data
+* Main entity includes or aggregates related data in it
 * Directors, crew, producers, images, and etc... How to index it all?
 * Example of movie data:
 ```
