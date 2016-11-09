@@ -71,10 +71,10 @@
 * [Range Aggregation](./content/chapter-04/RangeAggregation.md)
 * [Aggregation Exercise](./content/chapter-04/AggregationEx.md)
 
-
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
 * [Setup](./content/chapter-05/Setup.md)
+* [Sample Data Setup](./content/chapter-05/SampleDataSetup.md)
 * [Setup Exercise](./content/chapter-05/SetupEx.md)
 
 ## Extras ##
