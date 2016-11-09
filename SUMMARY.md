@@ -63,7 +63,7 @@
 * [Parent-Child Relationship](./content/chapter-04/ParentChild.md)
 * [Parent-Child Mapping](./content/chapter-04/ParentChildMapping.md)
 * [Parent-Child Indexing](./content/chapter-04/ParentChildIndexing.md)
-
+* [Parent-Child Searching](./content/chapter-04/ParentChildSearching.md)
 * [Terms Aggregation](./content/chapter-04/TermsAggregation.md)
 * [Nested Aggregation Query](./content/chapter-04/NestedAggregationQuery.md)
 * [Nested Aggregation Results](./content/chapter-04/NestedAggregationResults.md)
