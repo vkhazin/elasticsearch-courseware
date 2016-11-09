@@ -64,13 +64,13 @@
 * [Parent-Child Mapping](./content/chapter-04/ParentChildMapping.md)
 * [Parent-Child Indexing](./content/chapter-04/ParentChildIndexing.md)
 * [Parent-Child Searching](./content/chapter-04/ParentChildSearching.md)
+* [Parent-Child Exercise](./content/chapter-04/ParentChildExercise.md)
 * [Terms Aggregation](./content/chapter-04/TermsAggregation.md)
 * [Nested Aggregation Query](./content/chapter-04/NestedAggregationQuery.md)
 * [Nested Aggregation Results](./content/chapter-04/NestedAggregationResults.md)
 * [Date Histogram Aggregation](./content/chapter-04/DateHistogramAggregation.md)
 * [Range Aggregation](./content/chapter-04/RangeAggregation.md)
 * [Aggregation Exercise](./content/chapter-04/AggregationEx.md)
-
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
