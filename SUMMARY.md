@@ -77,6 +77,13 @@
 * [Setup](./content/chapter-05/Setup.md)
 * [Sample Data Setup](./content/chapter-05/SampleDataSetup.md)
 * [Setup Exercise](./content/chapter-05/SetupEx.md)
+* [Discover](./content/chapter-05/DiscoverIntroduction.md)
+* [Visualize](./content/chapter-05/Visualize.md)
+* [Data Table Exercise](./content/chapter-05/DataTableEx.md)
+* [Metric](./content/chapter-05/Metric.md)
+* [Metric Exercise](./content/chapter-05/MetricEx.md)
+* [Vertical Bar Chart](./content/chapter-05/VerticalBarChart.md)
+* [Chart Exercise](./content/chapter-05/ChartExercise.md)
 
 ## Extras ##
 * [Nested Aggregations](./content/extras/NestedAggregations.md)
