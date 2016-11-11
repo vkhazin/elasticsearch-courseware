@@ -13,6 +13,10 @@ curl -XPOST localhost:9200/ordering/order/1 -d '
 * Retrieving existing mappings:  
 ```
 curl localhost:9200/ordering/order/_mapping
+
+```
+* Expected response:
+```
 {
 	ordering: {
 		mappings: {

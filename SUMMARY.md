@@ -71,6 +71,7 @@
 * [Date Histogram Aggregation](./content/chapter-04/DateHistogramAggregation.md)
 * [Range Aggregation](./content/chapter-04/RangeAggregation.md)
 * [Aggregation Exercise](./content/chapter-04/AggregationEx.md)
+* [Summary](./content/chapter-04/Summary.md)
 
 ## Chapter 5: Kibana 4 ##
 * [Introduction](./content/chapter-05/Intro.md)
@@ -83,8 +84,19 @@
 * [Metric](./content/chapter-05/Metric.md)
 * [Metric Exercise](./content/chapter-05/MetricEx.md)
 * [Vertical Bar Chart](./content/chapter-05/VerticalBarChart.md)
-* [Chart Exercise](./content/chapter-05/ChartExercise.md)
+* [Vertical Bar Chart Exercise](./content/chapter-05/VerticalBarChartEx.md)
+* [Tile Map](./content/chapter-05/TileMap.md)
+* [Dashboard](./content/chapter-05/Dashboard.md)
+* [Summary](./content/chapter-05/Summary.md)
+
+## Chapter 6: Preparing for Production
+* [Introduction](./content/chapter-06/Intro.md)
+* [Capacity Planning](./content/chapter-06/CapacityPlanning.md)
+* [Memory Planning](./content/chapter-06/MemoryPlanning.md)
 
 ## Extras ##
-* [Nested Aggregations](./content/extras/NestedAggregations.md)
+* [Mapping templates]
+* [Search templates]
+* [Plug-ins]
+* [Shield]
 
