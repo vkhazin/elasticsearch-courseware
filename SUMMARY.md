@@ -93,6 +93,10 @@
 * [Introduction](./content/chapter-06/Intro.md)
 * [Capacity Planning](./content/chapter-06/CapacityPlanning.md)
 * [Memory Planning](./content/chapter-06/MemoryPlanning.md)
+* [CPU Planning](./content/chapter-06/CpuPlanning.md)
+* [Cluster State](./content/chapter-06/ClusterState.md)
+* [Network Planning](./content/chapter-06/NetworkPlanning.md)
+* [Performance Testing](./content/chapter-06/PerformanceTesting.md)
 
 ## Extras ##
 * [Mapping templates]

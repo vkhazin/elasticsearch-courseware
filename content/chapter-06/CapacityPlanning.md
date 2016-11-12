@@ -9,4 +9,5 @@
 * Bigger nodes means more processing can be performed on a node with fast access to in-memory data and faster local IO
 * Resizing node in production is likely more challenging than adding a new node to a cluster
 * <a href="https://www.elastic.co/blog/found-elasticsearch-in-production" target="_blank">Elasticsearch is built for scaling out on commodity hardware, not up on single massive machines.</a>
+* How high can it go? <a href="https://grey-boundary.io/field-notes-elasticsearch-at-petabyte-scale-on-aws/" target="_blank">Pretty high<a>
 * So which one it is going to be: more smaller nodes or less larger nodes?

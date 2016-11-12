@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="CpuPlanning.html" />
+    
     
     <link rel="prev" href="CapacityPlanning.html" />
     
@@ -1171,6 +1173,58 @@
             
         </li>
     
+        <li class="chapter " data-level="7.4" data-path="CpuPlanning.html">
+            
+                <a href="CpuPlanning.html">
+            
+                    
+                    CPU Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="ClusterState.html">
+            
+                <a href="ClusterState.html">
+            
+                    
+                    Cluster State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="NetworkPlanning.md">
+            
+                <span>
+            
+                    
+                    Network Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="PerformanceTesting.html">
+            
+                <a href="PerformanceTesting.html">
+            
+                    
+                    Performance Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -1290,6 +1344,10 @@
 <li>ElasticSearch is not a database per ce, hence it &lt;a href <a href="https://www.elastic.co/blog/found-elasticsearch-in-production#outofmemory-caused-crashes" target="_blank">https://www.elastic.co/blog/found-elasticsearch-in-production#outofmemory-caused-crashes</a>&quot; target=&quot;_blank&quot;&gt;&apos;does not look before it leaps...&apos;&lt;/a&gt;
 </li>
 <li>Approach recommended by Elastic: &quot;start out with more memory than you need and scale down to find the sweet spot&quot;
+</li>
+<li>Do not enable memory disk swap - it is <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#_swapping_is_the_death_of_performance" target="_blank">deadly for ElasticSearch performance</a>
+</li>
+<li>Swap file might need to be disabled for NoSql as well e.g.:<a href="http://stackoverflow.com/questions/22988824/why-swap-needs-to-be-turned-off-in-datastax-cassandra" target="_blank">Cassandra</a>
 </li></ul>
 
                                 
@@ -1318,10 +1376,14 @@
 
             
                 
-                <a href="CapacityPlanning.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Capacity Planning">
+                <a href="CapacityPlanning.html" class="navigation navigation-prev " aria-label="Previous page: Capacity Planning">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="CpuPlanning.html" class="navigation navigation-next " aria-label="Next page: CPU Planning">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1330,7 +1392,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Memory Planning","level":"7.3","depth":1,"next":{"title":"[Mapping templates]","level":"8.1","depth":1,"ref":"","articles":[]},"previous":{"title":"Capacity Planning","level":"7.2","depth":1,"path":"content/chapter-06/CapacityPlanning.md","ref":"./content/chapter-06/CapacityPlanning.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/MemoryPlanning.md","mtime":"2016-11-11T14:28:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-11T01:45:53.563Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Memory Planning","level":"7.3","depth":1,"next":{"title":"CPU Planning","level":"7.4","depth":1,"path":"content/chapter-06/CpuPlanning.md","ref":"./content/chapter-06/CpuPlanning.md","articles":[]},"previous":{"title":"Capacity Planning","level":"7.2","depth":1,"path":"content/chapter-06/CapacityPlanning.md","ref":"./content/chapter-06/CapacityPlanning.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/MemoryPlanning.md","mtime":"2016-11-11T20:00:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-12T02:26:18.452Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
