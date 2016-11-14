@@ -1,0 +1,1728 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Monitoring · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="MarvelEx.html" />
+    
+    
+    <link rel="prev" href="PerformanceTesting.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Course Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 0: Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter-00/Intro.html">
+            
+                <a href="../chapter-00/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chapter-00/WhyElasticSearch.html">
+            
+                <a href="../chapter-00/WhyElasticSearch.html">
+            
+                    
+                    Why ElasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chapter-00/CourseObjectives.html">
+            
+                <a href="../chapter-00/CourseObjectives.html">
+            
+                    
+                    Course objectives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../chapter-00/Audience.html">
+            
+                <a href="../chapter-00/Audience.html">
+            
+                    
+                    Intended Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../chapter-00/Prerequisites.html">
+            
+                <a href="../chapter-00/Prerequisites.html">
+            
+                    
+                    Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../chapter-00/AboutInstructor.html">
+            
+                <a href="../chapter-00/AboutInstructor.html">
+            
+                    
+                    About Instructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../chapter-00/AboutParticipants.html">
+            
+                <a href="../chapter-00/AboutParticipants.html">
+            
+                    
+                    About Participants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../chapter-00/Logistics.html">
+            
+                <a href="../chapter-00/Logistics.html">
+            
+                    
+                    Logistics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 1: Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../chapter-01/Intro.html">
+            
+                <a href="../chapter-01/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../chapter-01/Terminology-1.html">
+            
+                <a href="../chapter-01/Terminology-1.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chapter-01/Terminology-2.html">
+            
+                <a href="../chapter-01/Terminology-2.html">
+            
+                    
+                    Terminology Cont'd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chapter-01/CapTheorem-1.html">
+            
+                <a href="../chapter-01/CapTheorem-1.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../chapter-01/CapTheorem-2.html">
+            
+                <a href="../chapter-01/CapTheorem-2.html">
+            
+                    
+                    CAP Theorem and Beyond
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../chapter-01/DataModeling.html">
+            
+                <a href="../chapter-01/DataModeling.html">
+            
+                    
+                    Data Modeling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../chapter-01/DataModelingExamples-1.html">
+            
+                <a href="../chapter-01/DataModelingExamples-1.html">
+            
+                    
+                    Data Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../chapter-01/DataModelingExamples-2.html">
+            
+                <a href="../chapter-01/DataModelingExamples-2.html">
+            
+                    
+                    Data Examples - App Side Joins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../chapter-01/DataModelingExamples-3.html">
+            
+                <a href="../chapter-01/DataModelingExamples-3.html">
+            
+                    
+                    Data Examples - Parent-Child
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="../chapter-01/ExerciseSetup.html">
+            
+                <a href="../chapter-01/ExerciseSetup.html">
+            
+                    
+                    Exercise Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="../chapter-01/OneNodeSetupEx.html">
+            
+                <a href="../chapter-01/OneNodeSetupEx.html">
+            
+                    
+                    One Node Setup Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="../chapter-01/DistributedDb.html">
+            
+                <a href="../chapter-01/DistributedDb.html">
+            
+                    
+                    Distributed Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="../chapter-01/ClusterShardsReplicas.html">
+            
+                <a href="../chapter-01/ClusterShardsReplicas.html">
+            
+                    
+                    Cluster, Shards, and Replicas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="../chapter-01/IndicesAliases.html">
+            
+                <a href="../chapter-01/IndicesAliases.html">
+            
+                    
+                    Indices and Aliases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="../chapter-01/Summary.html">
+            
+                <a href="../chapter-01/Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 2: ElasticSearch Index</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chapter-02/Intro.html">
+            
+                <a href="../chapter-02/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../chapter-02/Index.html">
+            
+                <a href="../chapter-02/Index.html">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../chapter-02/Type.html">
+            
+                <a href="../chapter-02/Type.html">
+            
+                    
+                    Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../chapter-02/IndexTypeApi.html">
+            
+                <a href="../chapter-02/IndexTypeApi.html">
+            
+                    
+                    Index and Type Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../chapter-02/TranLogLucene.html">
+            
+                <a href="../chapter-02/TranLogLucene.html">
+            
+                    
+                    Transaction Log and Lucene Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../chapter-02/IndexConfig.html">
+            
+                <a href="../chapter-02/IndexConfig.html">
+            
+                    
+                    Index Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../chapter-02/IndexSettings.html">
+            
+                <a href="../chapter-02/IndexSettings.html">
+            
+                    
+                    Index Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../chapter-02/Mapping.html">
+            
+                <a href="../chapter-02/Mapping.html">
+            
+                    
+                    Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../chapter-02/MappingEx.html">
+            
+                <a href="../chapter-02/MappingEx.html">
+            
+                    
+                    Mapping Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../chapter-02/NotAnalyzedMultiField.html">
+            
+                <a href="../chapter-02/NotAnalyzedMultiField.html">
+            
+                    
+                    Not Analyzed & Multi-Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../chapter-02/NotAnalyzedMultiFieldEx.html">
+            
+                <a href="../chapter-02/NotAnalyzedMultiFieldEx.html">
+            
+                    
+                    Not Analyzed & Multi-Fields Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../chapter-02/Summary.html">
+            
+                <a href="../chapter-02/Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 3: Search</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../chapter-03/Intro.html">
+            
+                <a href="../chapter-03/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../chapter-03/QueryDsl-1.html">
+            
+                <a href="../chapter-03/QueryDsl-1.html">
+            
+                    
+                    Query Dsl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../chapter-03/QueryDsl-2.html">
+            
+                <a href="../chapter-03/QueryDsl-2.html">
+            
+                    
+                    Query Dsl Cont'd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../chapter-03/QueryDslLeaf.html">
+            
+                <a href="../chapter-03/QueryDslLeaf.html">
+            
+                    
+                    Query Dsl Leaf Clause
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../chapter-03/QueryDslTerm.html">
+            
+                <a href="../chapter-03/QueryDslTerm.html">
+            
+                    
+                    Query Dsl Term
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../chapter-03/QueryDslTerms.html">
+            
+                <a href="../chapter-03/QueryDslTerms.html">
+            
+                    
+                    Query Dsl Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="../chapter-03/QueryDslRange.html">
+            
+                <a href="../chapter-03/QueryDslRange.html">
+            
+                    
+                    Query Dsl Range
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="../chapter-03/QueryDslCompound.html">
+            
+                <a href="../chapter-03/QueryDslCompound.html">
+            
+                    
+                    Query Dsl Compound Clause
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="../chapter-03/QueryPagination.html">
+            
+                <a href="../chapter-03/QueryPagination.html">
+            
+                    
+                    Query Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="../chapter-03/QueryUri.html">
+            
+                <a href="../chapter-03/QueryUri.html">
+            
+                    
+                    Query Uri
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" data-path="../chapter-03/Aggregation.html">
+            
+                <a href="../chapter-03/Aggregation.html">
+            
+                    
+                    Aggregation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" data-path="../chapter-03/QueryEx.html">
+            
+                <a href="../chapter-03/QueryEx.html">
+            
+                    
+                    Query Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13" data-path="../chapter-03/Highlighting.html">
+            
+                <a href="../chapter-03/Highlighting.html">
+            
+                    
+                    Highlighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.14" data-path="../chapter-03/Filter.html">
+            
+                <a href="../chapter-03/Filter.html">
+            
+                    
+                    Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.15" data-path="../chapter-03/FilterExample.html">
+            
+                <a href="../chapter-03/FilterExample.html">
+            
+                    
+                    Filter Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.16" data-path="../chapter-03/FilterEx.html">
+            
+                <a href="../chapter-03/FilterEx.html">
+            
+                    
+                    Filter Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.17" data-path="../chapter-03/Summary.html">
+            
+                <a href="../chapter-03/Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 4: Advanced Search and Mapping</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../chapter-04/Intro.html">
+            
+                <a href="../chapter-04/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../chapter-04/DataAggregation.html">
+            
+                <a href="../chapter-04/DataAggregation.html">
+            
+                    
+                    Data Aggregation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../chapter-04/DataAggregation-1.html">
+            
+                <a href="../chapter-04/DataAggregation-1.html">
+            
+                    
+                    Data Aggregation - Cont'd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../chapter-04/NestedDatatype.html">
+            
+                <a href="../chapter-04/NestedDatatype.html">
+            
+                    
+                    Nested Datatype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../chapter-04/NestedDatatypeMapping.html">
+            
+                <a href="../chapter-04/NestedDatatypeMapping.html">
+            
+                    
+                    Nested Datatype Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../chapter-04/NestedDatatypeQuery.html">
+            
+                <a href="../chapter-04/NestedDatatypeQuery.html">
+            
+                    
+                    Nested Datatype Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../chapter-04/ParentChild.html">
+            
+                <a href="../chapter-04/ParentChild.html">
+            
+                    
+                    Parent-Child Relationship
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../chapter-04/ParentChildMapping.html">
+            
+                <a href="../chapter-04/ParentChildMapping.html">
+            
+                    
+                    Parent-Child Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../chapter-04/ParentChildIndexing.html">
+            
+                <a href="../chapter-04/ParentChildIndexing.html">
+            
+                    
+                    Parent-Child Indexing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../chapter-04/ParentChildSearching.html">
+            
+                <a href="../chapter-04/ParentChildSearching.html">
+            
+                    
+                    Parent-Child Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../chapter-04/SearchExercise.html">
+            
+                <a href="../chapter-04/SearchExercise.html">
+            
+                    
+                    Search Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../chapter-04/TermsAggregation.html">
+            
+                <a href="../chapter-04/TermsAggregation.html">
+            
+                    
+                    Terms Aggregation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../chapter-04/NestedAggregationQuery.html">
+            
+                <a href="../chapter-04/NestedAggregationQuery.html">
+            
+                    
+                    Nested Aggregation Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../chapter-04/NestedAggregationResults.html">
+            
+                <a href="../chapter-04/NestedAggregationResults.html">
+            
+                    
+                    Nested Aggregation Results
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../chapter-04/DateHistogramAggregation.html">
+            
+                <a href="../chapter-04/DateHistogramAggregation.html">
+            
+                    
+                    Date Histogram Aggregation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../chapter-04/RangeAggregation.html">
+            
+                <a href="../chapter-04/RangeAggregation.html">
+            
+                    
+                    Range Aggregation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../chapter-04/AggregationEx.html">
+            
+                <a href="../chapter-04/AggregationEx.html">
+            
+                    
+                    Aggregation Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.18" data-path="../chapter-04/Summary.html">
+            
+                <a href="../chapter-04/Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 5: Kibana 4</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../chapter-05/Intro.html">
+            
+                <a href="../chapter-05/Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../chapter-05/Setup.html">
+            
+                <a href="../chapter-05/Setup.html">
+            
+                    
+                    Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../chapter-05/SampleDataSetup.html">
+            
+                <a href="../chapter-05/SampleDataSetup.html">
+            
+                    
+                    Sample Data Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../chapter-05/SetupEx.html">
+            
+                <a href="../chapter-05/SetupEx.html">
+            
+                    
+                    Setup Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../chapter-05/Discover.html">
+            
+                <a href="../chapter-05/Discover.html">
+            
+                    
+                    Discover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../chapter-05/Visualize.html">
+            
+                <a href="../chapter-05/Visualize.html">
+            
+                    
+                    Visualize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../chapter-05/DataTableEx.html">
+            
+                <a href="../chapter-05/DataTableEx.html">
+            
+                    
+                    Data Table Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../chapter-05/Metric.html">
+            
+                <a href="../chapter-05/Metric.html">
+            
+                    
+                    Metric
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../chapter-05/MetricEx.html">
+            
+                <a href="../chapter-05/MetricEx.html">
+            
+                    
+                    Metric Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../chapter-05/VerticalBarChart.html">
+            
+                <a href="../chapter-05/VerticalBarChart.html">
+            
+                    
+                    Vertical Bar Chart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../chapter-05/VerticalBarChartEx.html">
+            
+                <a href="../chapter-05/VerticalBarChartEx.html">
+            
+                    
+                    Vertical Bar Chart Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="../chapter-05/TileMap.html">
+            
+                <a href="../chapter-05/TileMap.html">
+            
+                    
+                    Tile Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="../chapter-05/Dashboard.html">
+            
+                <a href="../chapter-05/Dashboard.html">
+            
+                    
+                    Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="../chapter-05/Summary.html">
+            
+                <a href="../chapter-05/Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 6: Preparing for Production</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Intro.html">
+            
+                <a href="Intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="CapacityPlanning.html">
+            
+                <a href="CapacityPlanning.html">
+            
+                    
+                    Capacity Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="MemoryPlanning.html">
+            
+                <a href="MemoryPlanning.html">
+            
+                    
+                    Memory Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="CpuPlanning.html">
+            
+                <a href="CpuPlanning.html">
+            
+                    
+                    CPU Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="ClusterState.html">
+            
+                <a href="ClusterState.html">
+            
+                    
+                    Cluster State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="NetworkCapacity.html">
+            
+                <a href="NetworkCapacity.html">
+            
+                    
+                    Network Capacity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="PerformanceTesting.html">
+            
+                <a href="PerformanceTesting.html">
+            
+                    
+                    Performance Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.8" data-path="Monitoring.html">
+            
+                <a href="Monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="MarvelEx.html">
+            
+                <a href="MarvelEx.html">
+            
+                    
+                    Marvel Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.10" data-path="MonitoringPlugins.html">
+            
+                <a href="MonitoringPlugins.html">
+            
+                    
+                    Monitoring Plug-ins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="PerformanceTuning.html">
+            
+                <a href="PerformanceTuning.html">
+            
+                    
+                    Performance Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.12" data-path="IndexType.html">
+            
+                <a href="IndexType.html">
+            
+                    
+                    Indices vs. Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.13" data-path="QueryChoices.html">
+            
+                <a href="QueryChoices.html">
+            
+                    
+                    Query Choices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.14" data-path="TuningReferences.html">
+            
+                <a href="TuningReferences.html">
+            
+                    
+                    Tuning References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.15" data-path="HostedElasticSearch.html">
+            
+                <a href="HostedElasticSearch.html">
+            
+                    
+                    Hosted ElasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.16" data-path="HostedVsSelfManaged.html">
+            
+                <a href="HostedVsSelfManaged.html">
+            
+                    
+                    Hosted vs Self-Managed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.17" data-path="Summary.html">
+            
+                <a href="Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" >
+            
+                <span>
+            
+                    
+                    [Explain]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" >
+            
+                <span>
+            
+                    
+                    [Suggest]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" >
+            
+                <span>
+            
+                    
+                    [Scan]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" >
+            
+                <span>
+            
+                    
+                    [Mapping templates]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" >
+            
+                <span>
+            
+                    
+                    [Search templates]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" >
+            
+                <span>
+            
+                    
+                    [Plug-ins]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" >
+            
+                <span>
+            
+                    
+                    [Shield]
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Monitoring</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="performance-monitoring">Performance Monitoring</h1><ul><li>A variety of APIs let you manage and monitor the cluster
+</li>
+<li>Can access a large number of statistics through the API
+</li>
+<li><p>In the terminal run:</p><pre><code>curl localhost:9200/_cat</code></pre>
+<ul><li>Expected response:
+<pre><code>=^.^=
+/_cat/allocation
+/_cat/shards
+/_cat/shards/{index}
+/_cat/master
+/_cat/nodes
+/_cat/indices
+/_cat/indices/{index}
+/_cat/segments
+/_cat/segments/{index}
+/_cat/count
+/_cat/count/{index}
+/_cat/recovery
+/_cat/recovery/{index}
+/_cat/health
+/_cat/pending_tasks
+/_cat/aliases
+/_cat/aliases/{alias}
+/_cat/thread_pool
+/_cat/plugins
+/_cat/fielddata
+/_cat/fielddata/{fields}
+/_cat/nodeattrs
+/_cat/repositories
+/_cat/snapshots/{repository}</code></pre>
+</li></ul>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="PerformanceTesting.html" class="navigation navigation-prev " aria-label="Previous page: Performance Testing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="MarvelEx.html" class="navigation navigation-next " aria-label="Next page: Marvel Exercise">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Monitoring","level":"8.8","depth":1,"next":{"title":"Marvel Exercise","level":"8.9","depth":1,"path":"content/chapter-06/MarvelEx.md","ref":"./content/chapter-06/MarvelEx.md","articles":[]},"previous":{"title":"Performance Testing","level":"8.7","depth":1,"path":"content/chapter-06/PerformanceTesting.md","ref":"./content/chapter-06/PerformanceTesting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/Monitoring.md","mtime":"2016-11-12T02:57:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-14T00:06:25.196Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

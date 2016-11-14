@@ -11,4 +11,4 @@
 * Select 'Geo Coordinates' and select 'geo.coordinates' field
 * Select 'green arrow' on top to apply changes and explore zoom in/out
 * Switch to advanced options and check-out <a hrf="https://en.wikipedia.org/wiki/Web_Map_Service" target="_blank">wms</a>
-* There are <a href="https://www.elastic.co/elastic-tile-service" target="_blank">terms of service</> for the tile service apparently separate from the elastic search product
+* There are <a href="https://www.elastic.co/elastic-tile-service" target="_blank">terms of service</a> for the tile service apparently separate from the elastic search product

@@ -3,6 +3,16 @@
 ## Course Overview ##
 * [Overview](./README.md)
 
+## Chapter 0: Overview ##
+* [Introduction](./content/chapter-00/Intro.md)
+* [Why ElasticSearch](./content/chapter-00/WhyElasticSearch.md)
+* [Course objectives](./content/chapter-00/CourseObjectives.md)
+* [Intended Audience](./content/chapter-00/Audience.md)
+* [Prerequisites](./content/chapter-00/Prerequisites.md)
+* [About Instructor](./content/chapter-00/AboutInstructor.md)
+* [About Participants](./content/chapter-00/AboutParticipants.md)
+* [Logistics](./content/chapter-00/Logistics.md)
+
 ## Chapter 1: Introduction ##
 * [Introduction](./content/chapter-01/Intro.md)
 * [Terminology](./content/chapter-01/Terminology-1.md)
@@ -78,7 +88,7 @@
 * [Setup](./content/chapter-05/Setup.md)
 * [Sample Data Setup](./content/chapter-05/SampleDataSetup.md)
 * [Setup Exercise](./content/chapter-05/SetupEx.md)
-* [Discover](./content/chapter-05/DiscoverIntroduction.md)
+* [Discover](./content/chapter-05/Discover.md)
 * [Visualize](./content/chapter-05/Visualize.md)
 * [Data Table Exercise](./content/chapter-05/DataTableEx.md)
 * [Metric](./content/chapter-05/Metric.md)
@@ -95,10 +105,24 @@
 * [Memory Planning](./content/chapter-06/MemoryPlanning.md)
 * [CPU Planning](./content/chapter-06/CpuPlanning.md)
 * [Cluster State](./content/chapter-06/ClusterState.md)
-* [Network Planning](./content/chapter-06/NetworkPlanning.md)
+* [Network Capacity](./content/chapter-06/NetworkCapacity.md)
 * [Performance Testing](./content/chapter-06/PerformanceTesting.md)
+* [Monitoring](./content/chapter-06/Monitoring.md)
+* [Marvel Exercise](./content/chapter-06/MarvelEx.md)
+* [Monitoring Plug-ins](./content/chapter-06/MonitoringPlugins.md)
+* [Performance Tuning](./content/chapter-06/PerformanceTuning.md)
+* [Indices vs. Types](./content/chapter-06/IndexType.md)
+* [Query Choices](./content/chapter-06/QueryChoices.md)
+* [Tuning References](./content/chapter-06/TuningReferences.md)
+* [Hosted ElasticSearch](./content/chapter-06/HostedElasticSearch.md)
+* [Hosted vs Self-Managed](./content/chapter-06/HostedVsSelfManaged.md)
+* [Summary](./content/chapter-06/Summary.md)
+
 
 ## Extras ##
+* [Explain]
+* [Suggest]
+* [Scan]
 * [Mapping templates]
 * [Search templates]
 * [Plug-ins]
