@@ -1,18 +1,11 @@
 # Exercise Setup - Alternatives #
 
-## Nitrous.io ##
-* <a href="https://www.nitrous.io/app/#/signup" target="_blank">Register new account (or login)</a>
-* Confirm your email to activate account (give it a moment for email to arrive)
-* <a href="https://www.nitrous.io/app/#/login" target="_blank">Login into your new account</a>
-* Select 'Free' under 'New Workstation' and then 'Create Workstation' at the bottom of the page
-* After new workstation is created - select plus sign create new project
-* Select 'Ubuntu' as the project type and 'Create Project' at the bottom of the screen
-* Wait for project to be created...
-
 ## Aws ##
 * EC2 micro instances with Ubuntu 14.01
 * Root access via ssh
+* For Windows user please download <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">putty
+* For Mac and Linux users - ssh is available via terminal window
 
 ## Localhost ##
-* Download and install
-* Run locally
+* Download and install on localhost - JRE is required
+* Run locally via command line

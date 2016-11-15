@@ -5,4 +5,4 @@
 * Prerequisites
 * About Instructor
 * About Participants
-* Logistics
+* Event Logistics
