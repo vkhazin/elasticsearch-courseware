@@ -9,3 +9,4 @@
 ## Localhost ##
 * Download and install on localhost - JRE is required
 * Run locally via command line
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/_installation.html" target="_blank">Download and setup instructions</a>
