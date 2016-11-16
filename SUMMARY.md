@@ -118,6 +118,13 @@
 * [Hosted vs Self-Managed](./content/chapter-06/HostedVsSelfManaged.md)
 * [Summary](./content/chapter-06/Summary.md)
 
+## Chapter 7: Running in Production ##
+* [Introduction](./content/chapter-07/Intro.md)
+* [Installation](./content/chapter-07/Installation.md)
+* [Configuration](./content/chapter-07/Configuration.md)
+* [Hardware](./content/chapter-07/Hardware.md)
+* [Monitoring](./content/chapter-07/Monitoring.md)
+* [Alerting](./content/chapter-07/Alerting.md)
 
 ## Extras ##
 * [Explain]
