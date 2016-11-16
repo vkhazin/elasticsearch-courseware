@@ -125,6 +125,10 @@
 * [Hardware](./content/chapter-07/Hardware.md)
 * [Monitoring](./content/chapter-07/Monitoring.md)
 * [Alerting](./content/chapter-07/Alerting.md)
+* [Summary](./content/chapter-07/Summary.md)
+
+## Chapter 8: Course Summary ##
+* [What we learned](./content/chapter-08/Summary.md)
 
 ## Extras ##
 * [Explain]

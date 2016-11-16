@@ -1,6 +1,6 @@
-# Montioring #
+# Monitoring #
 
-* Plug-ins from Elastic.co or from third parties
+* Plug-ins from Elastic.co and from third parties: Marvel, ElasticSearchHQ, BigDesk, others 
 * Since everything in ElasticSearch is RESTFul Api: may choose to build own monitoring
 * Aws offers dashboards to monitor EC2 instances and Paas/Daas
 * Azure offers monitoring tools
