@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="MonitoringPlugins.html" />
+    <link rel="next" href="PerformanceTuning.html" />
     
     
-    <link rel="prev" href="Monitoring.html" />
+    <link rel="prev" href="MonitoringPlugins.html" />
     
 
     </head>
@@ -1349,12 +1349,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="8.9" data-path="MarvelEx.html">
+        <li class="chapter " data-level="8.9" data-path="MonitoringPlugins.html">
             
-                <a href="MarvelEx.html">
+                <a href="MonitoringPlugins.html">
             
                     
-                    Marvel Exercise
+                    Monitoring Plug-ins
             
                 </a>
             
@@ -1362,12 +1362,12 @@
             
         </li>
     
-        <li class="chapter " data-level="8.10" data-path="MonitoringPlugins.html">
+        <li class="chapter active" data-level="8.10" data-path="MarvelEx.html">
             
-                <a href="MonitoringPlugins.html">
+                <a href="MarvelEx.html">
             
                     
-                    Monitoring Plug-ins
+                    Marvel Exercise
             
                 </a>
             
@@ -1427,7 +1427,46 @@
             
         </li>
     
-        <li class="chapter " data-level="8.15" data-path="HostedElasticSearch.html">
+        <li class="chapter " data-level="8.15" data-path="DataPopulation.html">
+            
+                <a href="DataPopulation.html">
+            
+                    
+                    Data Population
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.16" data-path="DataSynchronization.html">
+            
+                <a href="DataSynchronization.html">
+            
+                    
+                    Data Synchronization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.17" data-path="DataReindexing.html">
+            
+                <a href="DataReindexing.html">
+            
+                    
+                    Data Re-Indexing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.18" data-path="HostedElasticSearch.html">
             
                 <a href="HostedElasticSearch.html">
             
@@ -1440,7 +1479,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.16" data-path="HostedVsSelfManaged.html">
+        <li class="chapter " data-level="8.19" data-path="HostedVsSelfManaged.html">
             
                 <a href="HostedVsSelfManaged.html">
             
@@ -1453,7 +1492,20 @@
             
         </li>
     
-        <li class="chapter " data-level="8.17" data-path="Summary.html">
+        <li class="chapter " data-level="8.20" data-path="DataPopulationEx.html">
+            
+                <a href="DataPopulationEx.html">
+            
+                    
+                    Data Population Exercise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.21" data-path="Summary.html">
             
                 <a href="Summary.html">
             
@@ -1593,12 +1645,12 @@
     
         <li class="chapter " data-level="11.1" >
             
-                <span>
+                <a target="_blank" href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-explain.html">
             
                     
-                    [Explain]
+                    Explain
             
-                </span>
+                </a>
             
 
             
@@ -1606,25 +1658,25 @@
     
         <li class="chapter " data-level="11.2" >
             
-                <span>
+                <a target="_blank" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html">
             
                     
-                    [Suggest]
+                    Suggest
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="11.3" >
+        <li class="chapter " data-level="11.3" data-path="../extras/MappingTemplates.html">
             
-                <span>
+                <a href="../extras/MappingTemplates.html">
             
                     
-                    [Scan]
+                    Mapping templates
             
-                </span>
+                </a>
             
 
             
@@ -1632,12 +1684,12 @@
     
         <li class="chapter " data-level="11.4" >
             
-                <span>
+                <a target="_blank" href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-template.html">
             
                     
-                    [Mapping templates]
+                    Search templates
             
-                </span>
+                </a>
             
 
             
@@ -1645,12 +1697,12 @@
     
         <li class="chapter " data-level="11.5" >
             
-                <span>
+                <a target="_blank" href="https://www.elastic.co/products/x-pack/security">
             
                     
-                    [Search templates]
+                    Shield
             
-                </span>
+                </a>
             
 
             
@@ -1658,12 +1710,12 @@
     
         <li class="chapter " data-level="11.6" >
             
-                <span>
+                <a target="_blank" href="https://www.elastic.co/guide/en/shield/current/ssl-tls.html">
             
                     
-                    [Plug-ins]
+                    Ssl
             
-                </span>
+                </a>
             
 
             
@@ -1671,12 +1723,12 @@
     
         <li class="chapter " data-level="11.7" >
             
-                <span>
+                <a target="_blank" href="https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282">
             
                     
-                    [Shield]
+                    Encryption at Rest
             
-                </span>
+                </a>
             
 
             
@@ -1739,9 +1791,9 @@ sudo service elasticsearch stop</code></pre>
 <li><p>Start ElasticSearch and Kibana services:</p><pre><code>sudo service start elasticsearch
 sudo service start kibana</code></pre>
 </li>
-<li><p>Navigate to http://<ip-address>:5601</ip-address></p></li></ul>
+<li><p>Navigate to <a href="http://ip-address:5601" target="_blank">http://ip-address:5601</a></p></li></ul>
 </li>
-<li>Switch to Marvel user interface by selecting 9-squares icon on top
+<li>Switch to Marvel user interface by selecting 9-squares icon from top menu
 </li>
 <li>Explore Marvel User Interface
 </li>
@@ -1776,12 +1828,12 @@ sudo service start kibana</code></pre>
 
             
                 
-                <a href="Monitoring.html" class="navigation navigation-prev " aria-label="Previous page: Monitoring">
+                <a href="MonitoringPlugins.html" class="navigation navigation-prev " aria-label="Previous page: Monitoring Plug-ins">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="MonitoringPlugins.html" class="navigation navigation-next " aria-label="Next page: Monitoring Plug-ins">
+                <a href="PerformanceTuning.html" class="navigation navigation-next " aria-label="Next page: Performance Tuning">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1792,7 +1844,7 @@ sudo service start kibana</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Marvel Exercise","level":"8.9","depth":1,"next":{"title":"Monitoring Plug-ins","level":"8.10","depth":1,"path":"content/chapter-06/MonitoringPlugins.md","ref":"./content/chapter-06/MonitoringPlugins.md","articles":[]},"previous":{"title":"Monitoring","level":"8.8","depth":1,"path":"content/chapter-06/Monitoring.md","ref":"./content/chapter-06/Monitoring.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/MarvelEx.md","mtime":"2016-11-12T15:00:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-15T23:31:17.586Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Marvel Exercise","level":"8.10","depth":1,"next":{"title":"Performance Tuning","level":"8.11","depth":1,"path":"content/chapter-06/PerformanceTuning.md","ref":"./content/chapter-06/PerformanceTuning.md","articles":[]},"previous":{"title":"Monitoring Plug-ins","level":"8.9","depth":1,"path":"content/chapter-06/MonitoringPlugins.md","ref":"./content/chapter-06/MonitoringPlugins.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/MarvelEx.md","mtime":"2016-11-19T10:27:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-19T19:09:24.312Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,6 +1,6 @@
 # Aggregation Exercise #
 
-* Login into your ElasticSearch sandbox
+* Log-in into your ElasticSearch sandbox
 * Populate few sample movie data:
 ```
 wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt

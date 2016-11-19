@@ -5,4 +5,4 @@
 * How to index child document?
 * How to move child document to another parent?
 * What happens to child documents when parent is deleted?
-* What aggregation types/queries do you recall when when to use each?
+* What aggregation types/queries do you recall and when to use them?

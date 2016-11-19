@@ -1,6 +1,6 @@
 # One Node Setup Exercise #
 
-* Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
+* Login into your sandbox
 * Update distro using terminal window:
 ```
 sudo apt-get update && sudo apt-get install apt-transport-https -y
@@ -13,8 +13,10 @@ sudo apt-get install default-jre -y
 ```
 wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
-* Add repository definition:  
+* Add repository definition:
+```
 echo "deb https://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+```
 * Install Elastic Search:
 ```
 sudo apt-get update && sudo apt-get install elasticsearch
@@ -45,8 +47,10 @@ curl localhost:9200
 ```
 * Posting first document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d \
-'{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
+curl -XPOST localhost:9200/ordering/order/1 -d ' {
+  "id": "1", 
+  "placedOn": "2016-10-17T13:03:30.830Z"
+}'
 ```
 * Expected Response:  
 {"_index":"ordering","_type":"order","_id":"1","_version":1,"_shards":{"total":2,"successful":1,"failed":0},"created":true}
@@ -56,5 +60,3 @@ curl 'localhost:9200/ordering/order/_search?q=id:1'
 curl 'localhost:9200/ordering/_search?pretty=true&id:1'
 ```
 * Please review results - where are: doc id, document data, index name, type name, and search score? 
-* Important: we are using a read-only file system until later into the course
-* Restarting virtual workstation or service restart resets all the data

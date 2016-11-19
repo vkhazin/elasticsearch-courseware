@@ -21,8 +21,8 @@ sudo service elasticsearch stop
 sudo service start elasticsearch
 sudo service start kibana
 ```
-* Navigate to http://<ip-address>:5601
-* Switch to Marvel user interface by selecting 9-squares icon on top
+* Navigate to http://ip-address:5601
+* Switch to Marvel user interface by selecting 9-squares icon from top menu
 * Explore Marvel User Interface
 * Feel free to install other monitoring plug-ins to find out which one you like more
 * Links provided on the previous slide...

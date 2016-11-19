@@ -2,7 +2,7 @@
 
 * Access Kibana user interface with browser: http://localhost:5601/
 * On discover tab construct some search with results
-* For the visualization we will numeric data type and some other filed for aggregation
+* For the visualization we will need numeric data type and some other filed for aggregation
 * Save the search definitions to reuse in the Visualization
 * Switch to Visualize tab
 * Select Vertical Chart Bar

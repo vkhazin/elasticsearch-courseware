@@ -12,7 +12,7 @@ PUT /index-name/_settings
 ```
 index.auto_expand_replicas: 0-5
 ```
-* Result size can be limited to conserve heap memory:
+* Query size can be limited to conserve heap memory:
 ```
 index.max_result_window: 10000
 ``` 

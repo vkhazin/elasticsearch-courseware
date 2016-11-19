@@ -10,7 +10,7 @@ curl 'localhost:9200/index1,index2/_search?q=id:1'
 ```
 * Wildcard search:
 ```
-curl 'localhost:9200/index*/_search?q=id:1'
+curl 'localhost:9200/index*/_search?q=id:*'
 ```
 * Index alias - create an alias for index or for group of indexes:
 ```

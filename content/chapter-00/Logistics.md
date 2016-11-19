@@ -7,7 +7,7 @@
 * Finish at 17:30
 * Materials are available on-line and are open-source
 * Materials contain external links
-* Exercises are mini-hackathons - no step-by-step instructions
+* Exercises are mini-hackathons, not step-by-step instructions
 * Questions, open discussions, and comments are encouraged
 * Keep it professional and polite
 * Let's have fun

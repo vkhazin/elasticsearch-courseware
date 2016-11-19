@@ -108,14 +108,18 @@
 * [Network Capacity](./content/chapter-06/NetworkCapacity.md)
 * [Performance Testing](./content/chapter-06/PerformanceTesting.md)
 * [Monitoring](./content/chapter-06/Monitoring.md)
-* [Marvel Exercise](./content/chapter-06/MarvelEx.md)
 * [Monitoring Plug-ins](./content/chapter-06/MonitoringPlugins.md)
+* [Marvel Exercise](./content/chapter-06/MarvelEx.md)
 * [Performance Tuning](./content/chapter-06/PerformanceTuning.md)
 * [Indices vs. Types](./content/chapter-06/IndexType.md)
 * [Query Choices](./content/chapter-06/QueryChoices.md)
 * [Tuning References](./content/chapter-06/TuningReferences.md)
+* [Data Population](./content/chapter-06/DataPopulation.md)
+* [Data Synchronization](./content/chapter-06/DataSynchronization.md)
+* [Data Re-Indexing](./content/chapter-06/DataReindexing.md)
 * [Hosted ElasticSearch](./content/chapter-06/HostedElasticSearch.md)
 * [Hosted vs Self-Managed](./content/chapter-06/HostedVsSelfManaged.md)
+* [Data Population Exercise](./content/chapter-06/DataPopulationEx.md)
 * [Summary](./content/chapter-06/Summary.md)
 
 ## Chapter 7: Running in Production ##
@@ -131,11 +135,11 @@
 * [What we learned](./content/chapter-08/Summary.md)
 
 ## Extras ##
-* [Explain]
-* [Suggest]
-* [Scan]
-* [Mapping templates]
-* [Search templates]
-* [Plug-ins]
-* [Shield]
+* [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-explain.html)
+* [Suggest](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html)
+* [Mapping templates](./content/extras/MappingTemplates.md)
+* [Search templates](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-template.html)
+* [Shield](https://www.elastic.co/products/x-pack/security)
+* [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
+* [Encryption at Rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
 

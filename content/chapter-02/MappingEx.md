@@ -1,20 +1,22 @@
 # Mapping Exercise #
 
-* Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
-* Your sandbox is asleep: start workstation and then start project
-* Select 'Open IDE' to get into your sandbox
+* Login into your sandbox
 * We have not yet configured elasticsearch service to start automatically, start using terminal window:
 ```
 sudo service elasticsearch start
 ```
-* Service will start but listener will a bit to start responding to incoming requests:
+* Service will start but listener will take before responding to incoming requests:
 ```
 curl localhost:9200
 ```
 * Give it few minutes before you get json response
 * Post new document:
-curl -XPOST localhost:9200/ordering/order/1 -d \ 
-'{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
+```
+curl -XPOST localhost:9200/ordering/order/1 -d '{
+  "id": "1", 
+  "placedOn": 
+  "2016-10-17T13:03:30.830Z"
+}'
 * Fetch mapping:
 ```
 curl 'localhost:9200/ordering/order/_mapping?pretty=true'
@@ -86,7 +88,7 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
 ```
 
 * What now? Why?
-* Let try again:
+* Let us try again:
 ```
 curl -XPUT localhost:9200/ordering/order/_mapping -d '
 {
@@ -103,7 +105,6 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
   }
 }'
 ```
-
 * Did it work? What's the difference?
 * Let's modify data type for existing field:
 ```
@@ -122,7 +123,6 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
   }
 }'
 ```
-
 * Seriously, what now? Why? So much for the dynamic data mapping?
 * What if we need to change data type after we have indexed the data?
 * There is no (more) option to delete the mapping - delete and recreate index is the only option :-(

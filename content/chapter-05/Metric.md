@@ -1,6 +1,6 @@
 # Metric #
 
-* Presents a single number based on search
+* Presents a single number based on a search
 * Count
 * Average
 * Max

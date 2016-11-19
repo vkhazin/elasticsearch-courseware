@@ -1,6 +1,6 @@
 # Chapter 3 - Summary #
 
-* What are the component of Query Dsl?
+* What are the components of Query Dsl?
 * What's the difference between leaf and compound clause
 * How search results are sorted?
 * What's score?
