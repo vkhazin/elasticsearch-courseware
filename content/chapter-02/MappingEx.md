@@ -5,7 +5,7 @@
 ```
 sudo service elasticsearch start
 ```
-* Service will start but listener will take before responding to incoming requests:
+* Service will start but listener will take its time before responding to incoming requests:
 ```
 curl localhost:9200
 ```
