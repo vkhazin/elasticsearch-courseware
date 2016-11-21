@@ -9,7 +9,7 @@ POST http://localhost:9200/index-name/type-name/document-id {
 * Nested document
 ```
 POST http://localhost:9200/index-name/type-name/document-id {
-	"message": "Hello World!"
+	"message": "Hello World!",
 	"keywords": [
 		"cheerful",
 		"happy"
