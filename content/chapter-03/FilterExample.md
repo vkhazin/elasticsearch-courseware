@@ -2,11 +2,10 @@
 
 * Query search:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
-{
-    "query" : {
-        "match": { "status": "pending" }
-    }
+curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' -d '{
+  "query": {
+    "term": { "COUNTY_NAME": "worcester" }
+  }
 }'
 ```
 * Filter search:
@@ -15,14 +14,11 @@ curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
  {
    "query": {
      "filtered": {
-       "query": {
-         "match_all": {}
-       },
        "filter": {
-         "term": { "status": "pending" }
+         "term": { "COUNTY_NAME": "worcester" }
        }
      }
    }
  }'
 ```
-* Results difference is hardly noticeable if any, but processing is quite different
+* Pss: convert term value to lower case!

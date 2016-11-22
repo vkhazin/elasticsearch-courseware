@@ -1,8 +1,7 @@
 # Not Analyzed & Multi-Fields Exercise #
 
-* Login into <a href="https://www.nitrous.io/app/#/login" target="_blank">Nitrous.io<a> using credentials created during Exercise Setup
+* Login into you virtual box
 * Your sandbox is asleep: start workstation and then start project
-* Select 'Open IDE' to get into your sandbox
 * We have not yet configured elasticsearch service to start automatically, start using terminal window:
 ```
 sudo service elasticsearch start

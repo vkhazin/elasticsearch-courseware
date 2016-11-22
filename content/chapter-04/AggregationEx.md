@@ -22,8 +22,7 @@ curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
       }
     }
   }
-}
-'
+}'
 ```
 * What buckets did you get?
 * How do I get more than 10 buckets? <a href="http://stackoverflow.com/questions/22927098/show-all-elasticsearch-aggregation-results-buckets-and-not-just-10" target="_blank">Check StackOverflow posting!</a>
