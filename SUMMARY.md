@@ -143,3 +143,5 @@
 * [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
 * [Encryption at Rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
 
+## Exercise Tips ##
+* [Search](/content/extras/SearchExTips.md) 

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Course objectives · GitBook</title>
+        <title>Search · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,6 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Audience.html" />
-    
-    
-    <link rel="prev" href="WhyElasticSearch.html" />
     
 
     </head>
@@ -111,9 +107,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="Intro.html">
+        <li class="chapter " data-level="2.1" data-path="../chapter-00/Intro.html">
             
-                <a href="Intro.html">
+                <a href="../chapter-00/Intro.html">
             
                     
                     Introduction
@@ -124,9 +120,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="WhyElasticSearch.html">
+        <li class="chapter " data-level="2.2" data-path="../chapter-00/WhyElasticSearch.html">
             
-                <a href="WhyElasticSearch.html">
+                <a href="../chapter-00/WhyElasticSearch.html">
             
                     
                     Why ElasticSearch
@@ -137,9 +133,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="CourseObjectives.html">
+        <li class="chapter " data-level="2.3" data-path="../chapter-00/CourseObjectives.html">
             
-                <a href="CourseObjectives.html">
+                <a href="../chapter-00/CourseObjectives.html">
             
                     
                     Course objectives
@@ -150,9 +146,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="Audience.html">
+        <li class="chapter " data-level="2.4" data-path="../chapter-00/Audience.html">
             
-                <a href="Audience.html">
+                <a href="../chapter-00/Audience.html">
             
                     
                     Intended Audience
@@ -163,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="Prerequisites.html">
+        <li class="chapter " data-level="2.5" data-path="../chapter-00/Prerequisites.html">
             
-                <a href="Prerequisites.html">
+                <a href="../chapter-00/Prerequisites.html">
             
                     
                     Prerequisites
@@ -176,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="AboutInstructor.html">
+        <li class="chapter " data-level="2.6" data-path="../chapter-00/AboutInstructor.html">
             
-                <a href="AboutInstructor.html">
+                <a href="../chapter-00/AboutInstructor.html">
             
                     
                     About Instructor
@@ -189,9 +185,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="AboutParticipants.html">
+        <li class="chapter " data-level="2.7" data-path="../chapter-00/AboutParticipants.html">
             
-                <a href="AboutParticipants.html">
+                <a href="../chapter-00/AboutParticipants.html">
             
                     
                     About Participants
@@ -202,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="Logistics.html">
+        <li class="chapter " data-level="2.8" data-path="../chapter-00/Logistics.html">
             
-                <a href="Logistics.html">
+                <a href="../chapter-00/Logistics.html">
             
                     
                     Logistics
@@ -1669,9 +1665,9 @@
             
         </li>
     
-        <li class="chapter " data-level="11.3" data-path="../extras/MappingTemplates.html">
+        <li class="chapter " data-level="11.3" data-path="MappingTemplates.html">
             
-                <a href="../extras/MappingTemplates.html">
+                <a href="MappingTemplates.html">
             
                     
                     Mapping templates
@@ -1741,9 +1737,9 @@
         
         
     
-        <li class="chapter " data-level="12.1" data-path="../extras/SearchExTips.html">
+        <li class="chapter active" data-level="12.1" data-path="SearchExTips.html">
             
-                <a href="../extras/SearchExTips.html">
+                <a href="SearchExTips.html">
             
                     
                     Search
@@ -1784,7 +1780,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Course objectives</a>
+        <a href="../.." >Search</a>
     </h1>
 </div>
 
@@ -1799,25 +1795,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="course-objectives">Course Objectives</h1><ul><li>Get familiar with ElasticSearch as a distributed database and search engine
-</li>
-<li>Install and configure ElasticSearch 2.4.x
-</li>
-<li>Gain understanding and proficiency with NoSql data-modeling principals
-</li>
-<li>Learn Query Dsl (domain specific language)
-</li>
-<li>Understand difference between search and filter
-</li>
-<li>Build aggregation queries
-</li>
-<li>Install and configure Kibana 4.6.x
-</li>
-<li>Leverage Kibana&apos;s discover, visualize, and dashboard functionality
-</li>
-<li>Install and explorer Marvel plug-in
-</li>
-<li>Review production planning and operational principals
+                                <h1 id="search-exercise-tips">Search Exercise Tips</h1><ul><li><p>Sort with query string:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;sort=id&apos;</code></pre>
+<ul><li>Search with payload
+<pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;{
+&quot;sort&quot;: {&quot;id&quot;:&quot;desc&quot;}
+}&apos;</code></pre>
+</li></ul>
 </li></ul>
 
                                 
@@ -1846,14 +1829,6 @@
 
             
                 
-                <a href="WhyElasticSearch.html" class="navigation navigation-prev " aria-label="Previous page: Why ElasticSearch">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="Audience.html" class="navigation navigation-next " aria-label="Next page: Intended Audience">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1862,7 +1837,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Course objectives","level":"2.3","depth":1,"next":{"title":"Intended Audience","level":"2.4","depth":1,"path":"content/chapter-00/Audience.md","ref":"./content/chapter-00/Audience.md","articles":[]},"previous":{"title":"Why ElasticSearch","level":"2.2","depth":1,"path":"content/chapter-00/WhyElasticSearch.md","ref":"./content/chapter-00/WhyElasticSearch.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-00/CourseObjectives.md","mtime":"2016-11-14T04:57:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-22T19:24:44.856Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Search","level":"12.1","depth":1,"previous":{"title":"Encryption at Rest","level":"11.7","depth":1,"url":"https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282","ref":"https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/extras/SearchExTips.md","mtime":"2016-11-22T20:26:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-22T19:24:44.856Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
