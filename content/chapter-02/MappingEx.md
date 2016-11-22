@@ -17,6 +17,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d '{
   "placedOn": 
   "2016-10-17T13:03:30.830Z"
 }'
+```
 * Fetch mapping:
 ```
 curl 'localhost:9200/ordering/order/_mapping?pretty=true'
@@ -41,7 +42,6 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
   }
 }
 ```
-
 * Try modifying existing mapping:
 ```
 curl -XPUT localhost:9200/ordering/_mapping -d '
@@ -63,7 +63,6 @@ curl -XPUT localhost:9200/ordering/_mapping -d '
   }
 }'
 ```
-
 * What's the outcome? And why?
 * Try modifying existing type mapping:
 ```
@@ -86,7 +85,6 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
   }
 }'
 ```
-
 * What now? Why?
 * Let us try again:
 ```
