@@ -135,13 +135,17 @@
 * [What we learned](./content/chapter-08/Summary.md)
 
 ## Extras ##
+* [Lucene Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
 * [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-explain.html)
 * [Suggest](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html)
 * [Mapping templates](./content/extras/MappingTemplates.md)
 * [Search templates](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-template.html)
+* [Percentile Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-aggregation.html)
 * [Shield](https://www.elastic.co/products/x-pack/security)
 * [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
 * [Encryption at Rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
+* [Postman](https://www.getpostman.com/apps)
+* [Sense](https://www.elastic.co/guide/en/sense/current/installing.html)
 
 ## Exercise Tips ##
 * [Search](/content/extras/SearchExTips.md) 
