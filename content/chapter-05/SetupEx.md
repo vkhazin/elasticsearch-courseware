@@ -26,11 +26,11 @@ sudo service kibana start
 wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json
 curl -XPOST 'localhost:9200/_bulk' --data-binary "@logs.json"
 ```
-* Open browser to http://localhost:5601 or http://public-ip-address:5601
+* Open browser to http://public-ip-address-same-as-ssh:5601
 * Kibana requires configuration before it display data: index name pattern is required
 * To find out what indices we have in the cluster:
 ```
-curl localhost:9200/_cat/inidces
+curl localhost:9200/_cat/indices
 ```
 * After typing index name pattern with star as a wildcard tab out from the field to get the fields refreshed
 * Kibana requires a date-time field to filter data on
