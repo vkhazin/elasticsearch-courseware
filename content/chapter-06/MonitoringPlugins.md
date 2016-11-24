@@ -3,7 +3,7 @@
 * ElasticSearch Cluster and Index RESFull Api allowed a lineup of plug-ins
 * <a href="https://www.elastic.co/products/x-pack/monitoring" target="_blank">Marvel:</a> monitoring and cluster management dashboard by Elastic
 * Marvel <a href="https://www.elastic.co/guide/en/marvel/current/configuration.html" target="_blank">settings</a> are embedded into elasticsearch.yml 
-* Allows to monitor multiple clusters heatth, indices, and individual nodes
+* Allows to monitor multiple clusters health, indices, and individual nodes
 * Marvel requires a license - basic license available at no charge
 * <a href="http://mobz.github.io/elasticsearch-head/" target="_blank">Head</a> another commonly mentioned monitoring and management plugin
 * Head's user interface is a bit dated but it appears to require no license
