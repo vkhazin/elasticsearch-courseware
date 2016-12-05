@@ -1,3 +1,4 @@
+curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json -o logs.json
 
 curl -XDELETE localhost:9200/logstash-2015.05.20
 curl -XPUT localhost:9200/logstash-2015.05.20 -d '

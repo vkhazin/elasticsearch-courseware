@@ -146,6 +146,8 @@
 * [Encryption at Rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
 * [Postman](https://www.getpostman.com/apps)
 * [Sense](https://www.elastic.co/guide/en/sense/current/installing.html)
+* [In-class Notes](https://docs.google.com/presentation/d/1GX4lY9yZyhRxuG5kCBZFgRTWpra9ny8R7KkI_6FMGEE/edit?usp=sharing)
+* [Cluster Diagram](https://drive.google.com/file/d/0BzVXruaTwGfldmM2NUlnSjM1R1U/view?usp=sharing)
 
 ## Exercise Tips ##
 * [Search](/content/extras/SearchExTips.md) 
