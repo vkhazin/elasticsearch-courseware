@@ -11,16 +11,24 @@ sudo apt-get install default-jre -y
 ```
 * Download and install Public Signing Key:
 ```
-wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 * Add repository definition:
 ```
-echo "deb https://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 ```
 * Install Elastic Search:
 ```
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
+* We are running on smaller than recommended hardware, need to adjust jvm.options:
+```
+sudo nano /etc/elasticsearch/jvm.options
+```
+* Locate '-Xms2g' and '-Xmx2g' two lines
+* Replace with: '-Xms512m' and '-Xmx512m'
+* Save the file by pressing: 'Ctrl-O' and then '<Enter>
+* Exit nano editor by hitting 'Ctrl-X'
 * Start elasticsearch service:
 ```
 sudo service elasticsearch start

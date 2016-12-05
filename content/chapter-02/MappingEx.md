@@ -14,8 +14,7 @@ curl localhost:9200
 ```
 curl -XPOST localhost:9200/ordering/order/1 -d '{
   "id": "1", 
-  "placedOn": 
-  "2016-10-17T13:03:30.830Z"
+  "placedOn": "2016-10-17T13:03:30.830Z"
 }'
 ```
 * Fetch mapping:
