@@ -11,7 +11,7 @@ sudo apt-get install default-jre -y
 ```
 * Download and install Public Signing Key:
 ```
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+curl -o - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 * Add repository definition:
 ```
@@ -64,7 +64,7 @@ curl -XPOST localhost:9200/ordering/order/1 -d ' {
 {"_index":"ordering","_type":"order","_id":"1","_version":1,"_shards":{"total":2,"successful":1,"failed":0},"created":true}
 * First queries:
 ```
-curl 'localhost:9200/ordering/order/_search?q=id:1'
+curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:1'
 curl 'localhost:9200/ordering/_search?pretty=true&id:1'
 ```
 * Please review results - where are: doc id, document data, index name, type name, and search score? 
