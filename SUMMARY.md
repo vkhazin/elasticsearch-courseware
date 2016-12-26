@@ -38,6 +38,7 @@
 * [Transaction Log and Lucene Index](./content/chapter-02/TranLogLucene.md)
 * [Index Configuration](./content/chapter-02/IndexConfig.md)
 * [Index Settings](./content/chapter-02/IndexSettings.md)
+* [Shrink Index](./content/chapter-02/ShrinkIndex.md)
 * [Mapping](./content/chapter-02/Mapping.md)
 * [Mapping Exercise](./content/chapter-02/MappingEx.md)
 * [Not Analyzed & Multi-Fields](./content/chapter-02/NotAnalyzedMultiField.md)

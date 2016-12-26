@@ -21,15 +21,7 @@ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee 
 ```
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
-* We are running on smaller than recommended hardware, need to adjust jvm.options:
-```
-sudo nano /etc/elasticsearch/jvm.options
-```
-* Locate '-Xms2g' and '-Xmx2g' two lines
-* Replace with: '-Xms512m' and '-Xmx512m'
-* Save the file by pressing: 'Ctrl-O' and then '<Enter>
-* Exit nano editor by hitting 'Ctrl-X'
-* Start elasticsearch service:
+* Start Elastic Search service:
 ```
 sudo service elasticsearch start
 ```
@@ -40,15 +32,15 @@ curl localhost:9200
 * Expected response:
 ```
 {
-  "name" : "Wrecker",
+  "name" : "qRml_JO",
   "cluster_name" : "elasticsearch",
-  "cluster_uuid" : "6j8V904DQIez9oBpejTbGQ",
+  "cluster_uuid" : "eDZmkVrdRaSrGcJy2kAqow",
   "version" : {
-    "number" : "2.4.1",
-    "build_hash" : "c67dc32e24162035d18d6fe1e952c4cbcbe79d16",
-    "build_timestamp" : "2016-09-27T18:57:55Z",
+    "number" : "5.1.1",
+    "build_hash" : "5395e21",
+    "build_date" : "2016-12-06T12:36:15.409Z",
     "build_snapshot" : false,
-    "lucene_version" : "5.5.2"
+    "lucene_version" : "6.3.0"
   },
   "tagline" : "You Know, for Search"
 }
@@ -62,9 +54,8 @@ curl -XPOST localhost:9200/ordering/order/1 -d ' {
 ```
 * Expected Response:  
 {"_index":"ordering","_type":"order","_id":"1","_version":1,"_shards":{"total":2,"successful":1,"failed":0},"created":true}
-* First queries:
+* First query:
 ```
 curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:1'
-curl 'localhost:9200/ordering/_search?pretty=true&id:1'
 ```
 * Please review results - where are: doc id, document data, index name, type name, and search score? 
