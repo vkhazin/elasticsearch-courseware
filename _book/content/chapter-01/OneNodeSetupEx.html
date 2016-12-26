@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>One Node Setup Exercise &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>One Node Setup Exercise &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,46 +1890,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="one-node-setup-exercise">One Node Setup Exercise</h1><ul><li>Login into your sandbox
-</li>
-<li><p>Update distro using terminal window:</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get install apt-transport-https -y</code></pre>
-<ul><li><p>Install Java Runtime Environment using terminal window</p><pre><code>sudo apt-get install default-jre -y</code></pre>
-</li>
-<li><p>Download and install Public Signing Key:</p><pre><code>curl -o - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -</code></pre>
-</li>
-<li><p>Add repository definition:</p><pre><code>echo &quot;deb https://artifacts.elastic.co/packages/5.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list</code></pre>
-</li>
-<li><p>Install Elastic Search:</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get install elasticsearch</code></pre>
-</li>
-<li><p>Start Elastic Search service:</p><pre><code>sudo service elasticsearch start</code></pre>
-</li>
-<li><p>Give it a moment to finish the initialization and verify it is running:</p><pre><code>curl localhost:9200</code></pre>
-</li>
-<li><p>Expected response:</p><pre><code>{
+                                <h1 id="one-node-setup-exercise">One Node Setup Exercise</h1>
+<ul>
+<li>Login into your sandbox</li>
+<li>Update distro using terminal window:<pre><code>sudo apt-get update &amp;&amp; sudo apt-get install apt-transport-https -y
+</code></pre></li>
+<li>Install Java Runtime Environment using terminal window<pre><code>sudo apt-get install default-jre -y
+</code></pre></li>
+<li>Download and install Public Signing Key:<pre><code>curl -o - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+</code></pre></li>
+<li>Add repository definition:<pre><code>echo &quot;deb https://artifacts.elastic.co/packages/5.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+</code></pre></li>
+<li>Install Elastic Search:<pre><code>sudo apt-get update &amp;&amp; sudo apt-get install elasticsearch
+</code></pre></li>
+<li>Start Elastic Search service:<pre><code>sudo service elasticsearch start
+</code></pre></li>
+<li>Give it a moment to finish the initialization and verify it is running:<pre><code>curl localhost:9200
+</code></pre></li>
+<li>Expected response:<pre><code>{
 &quot;name&quot; : &quot;qRml_JO&quot;,
 &quot;cluster_name&quot; : &quot;elasticsearch&quot;,
 &quot;cluster_uuid&quot; : &quot;eDZmkVrdRaSrGcJy2kAqow&quot;,
 &quot;version&quot; : {
-&quot;number&quot; : &quot;5.1.1&quot;,
-&quot;build_hash&quot; : &quot;5395e21&quot;,
-&quot;build_date&quot; : &quot;2016-12-06T12:36:15.409Z&quot;,
-&quot;build_snapshot&quot; : false,
-&quot;lucene_version&quot; : &quot;6.3.0&quot;
+  &quot;number&quot; : &quot;5.1.1&quot;,
+  &quot;build_hash&quot; : &quot;5395e21&quot;,
+  &quot;build_date&quot; : &quot;2016-12-06T12:36:15.409Z&quot;,
+  &quot;build_snapshot&quot; : false,
+  &quot;lucene_version&quot; : &quot;6.3.0&quot;
 },
 &quot;tagline&quot; : &quot;You Know, for Search&quot;
-}</code></pre>
-</li>
-<li><p>Posting first document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos; {
+}
+</code></pre></li>
+<li>Posting first document:<pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos; {
 &quot;id&quot;: &quot;1&quot;, 
 &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;
-}&apos;</code></pre>
-</li>
-<li><p>Expected Response:<br>{&quot;_index&quot;:&quot;ordering&quot;,&quot;_type&quot;:&quot;order&quot;,&quot;_id&quot;:&quot;1&quot;,&quot;_version&quot;:1,&quot;_shards&quot;:{&quot;total&quot;:2,&quot;successful&quot;:1,&quot;failed&quot;:0},&quot;created&quot;:true}</p></li></ul>
-</li>
-<li><p>First query:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:1&apos;</code></pre>
-<ul><li>Please review results - where are: doc id, document data, index name, type name, and search score? 
-</li></ul>
-</li></ul>
+}&apos;
+</code></pre></li>
+<li>Expected Response:<br>{&quot;_index&quot;:&quot;ordering&quot;,&quot;_type&quot;:&quot;order&quot;,&quot;_id&quot;:&quot;1&quot;,&quot;_version&quot;:1,&quot;_shards&quot;:{&quot;total&quot;:2,&quot;successful&quot;:1,&quot;failed&quot;:0},&quot;created&quot;:true}</li>
+<li>First query:<pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&amp;q=id:1&apos;
+</code></pre></li>
+<li>Please review results - where are: doc id, document data, index name, type name, and search score? </li>
+</ul>
 
                                 
                                 </section>
@@ -1954,7 +1955,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1977,7 +1978,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"One Node Setup Exercise","level":"3.11","depth":1,"next":{"title":"Distributed Database","level":"3.12","depth":1,"path":"content/chapter-01/DistributedDb.md","ref":"./content/chapter-01/DistributedDb.md","articles":[]},"previous":{"title":"Exercise Setup","level":"3.10","depth":1,"path":"content/chapter-01/ExerciseSetup.md","ref":"./content/chapter-01/ExerciseSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/OneNodeSetupEx.md","mtime":"2016-12-26T17:09:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"One Node Setup Exercise","level":"3.11","depth":1,"next":{"title":"Distributed Database","level":"3.12","depth":1,"path":"content/chapter-01/DistributedDb.md","ref":"./content/chapter-01/DistributedDb.md","articles":[]},"previous":{"title":"Exercise Setup","level":"3.10","depth":1,"path":"content/chapter-01/ExerciseSetup.md","ref":"./content/chapter-01/ExerciseSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-01/OneNodeSetupEx.md","mtime":"2016-12-26T17:09:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

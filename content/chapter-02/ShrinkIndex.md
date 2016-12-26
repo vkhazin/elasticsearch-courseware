@@ -16,4 +16,4 @@ PUT /index-name/_settings
 ```
 POST source-index/_shrink/target-index
 ```
-* Shrink Index is brand new in version 5.x not sure whether it is ready for prime time. https://www.elastic.co/guide/en/elasticsearch/reference/5.1/indices-shrink-index.html
+* Shrink Index is brand new in version 5.x, it is ready for prime time? https://www.elastic.co/guide/en/elasticsearch/reference/5.1/indices-shrink-index.html

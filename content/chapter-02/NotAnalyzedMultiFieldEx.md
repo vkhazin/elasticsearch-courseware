@@ -11,9 +11,13 @@ sudo service elasticsearch start
 curl localhost:9200
 ```
 * Give it few minutes before you get json response...
+* Delete previously created index and its mapping:
+```
+curl -XDELETE 'localhost:9200/ordering?pretty=true'
+```
 * Post new document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d \
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -d \
 '{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
 ```
 * Fetch mapping:
@@ -28,11 +32,16 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
       "order" : {
         "properties" : {
           "id" : {
-            "type" : "string"
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
           },
           "placedOn" : {
-            "type" : "date",
-            "format" : "strict_date_optional_time||epoch_millis"
+            "type" : "date"
           }
         }
       }
@@ -42,19 +51,19 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 ```
 * Add mapping for a new field
 ```
-curl -XPUT localhost:9200/ordering/order/_mapping -d \
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d \
 '{
   "order" : {
     "properties" : {
       "id" : {
-        "type" : "string"
+        "type" : "text"
       },
       "placedOn" : {
         "type" : "date",
         "format" : "strict_date_optional_time||epoch_millis"
       },
       "trackingId" : {
-        "type" : "string",
+        "type" : "keyword",
         "index" : "not_analyzed"
       }
     }
@@ -67,7 +76,7 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \
 ```
 * Populate new order with spaces in id and trackingId fields/properties:  
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d \
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -d \
 '{
   "id": "orderId with spaces", 
   "placedOn": "2016-10-17T13:03:30.830Z",
@@ -92,10 +101,10 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
   "order" : {
     "properties":{  
        "streetName":{  
-          "type":"string",
+          "type":"text",
           "fields":{  
              "notparsed":{  
-                "type":"string",
+                "type":"keyword",
                 "index":"not_analyzed"
              }
           }
@@ -106,8 +115,8 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
 ```
 * Re-populate the data:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d \
-'{
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -d '
+{
   "id": "string with spaces", 
   "placedOn": "2016-10-17T13:03:30.830Z",
   "streetName": "name with spaces"

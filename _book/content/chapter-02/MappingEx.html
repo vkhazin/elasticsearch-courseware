@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Mapping Exercise &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mapping Exercise &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,66 +1890,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mapping-exercise">Mapping Exercise</h1><ul><li>Login into your sandbox
-</li>
-<li><p>We have not yet configured elasticsearch service to start automatically, start using terminal window:</p><pre><code>sudo service elasticsearch start</code></pre>
-<ul><li><p>Service will start but listener will take its time before responding to incoming requests:</p><pre><code>curl localhost:9200</code></pre>
-</li>
-<li><p>Give it few minutes before you get json response</p></li></ul>
-</li>
-<li><p>Post new document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;{
+                                <h1 id="mapping-exercise">Mapping Exercise</h1>
+<ul>
+<li>Login into your sandbox</li>
+<li>We have not yet configured elasticsearch service to start automatically, start using terminal window:<pre><code>sudo service elasticsearch start
+</code></pre></li>
+<li>Service will start but listener will take its time before responding to incoming requests:<pre><code>curl localhost:9200
+</code></pre></li>
+<li>Give it few minutes before you get json response</li>
+<li>Post new document:<pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;{
 &quot;id&quot;: &quot;1&quot;, 
 &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;
-}&apos;</code></pre>
-<ul><li><p>Fetch mapping:</p><pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;</code></pre>
-</li>
-<li><p>Expected response:</p><pre><code>{
+}&apos;
+</code></pre></li>
+<li>Fetch mapping:<pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;
+</code></pre></li>
+<li>Expected response:<pre><code>{
 &quot;ordering&quot; : {
-&quot;mappings&quot; : {
-  &quot;order&quot; : {
-    &quot;properties&quot; : {
-      &quot;id&quot; : {
-        &quot;type&quot; : &quot;string&quot;
-      },
-      &quot;placedOn&quot; : {
-        &quot;type&quot; : &quot;date&quot;,
-        &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+  &quot;mappings&quot; : {
+    &quot;order&quot; : {
+      &quot;properties&quot; : {
+        &quot;id&quot; : {
+          &quot;type&quot; : &quot;text&quot;,
+          &quot;fields&quot; : {
+            &quot;keyword&quot; : {
+              &quot;type&quot; : &quot;keyword&quot;,
+              &quot;ignore_above&quot; : 256
+            }
+          }
+        },
+        &quot;placedOn&quot; : {
+          &quot;type&quot; : &quot;date&quot;
+        }
       }
     }
   }
 }
 }
-}</code></pre>
-</li>
-<li><p>Try modifying existing mapping:</p><pre><code>curl -XPUT localhost:9200/ordering/_mapping -d &apos;
-{
-&quot;ordering&quot; : {
-&quot;mappings&quot; : {
-  &quot;order&quot; : {
-    &quot;properties&quot; : {
-      &quot;id&quot; : {
-        &quot;type&quot; : &quot;string&quot;
-      },
-      &quot;placedOn&quot; : {
-        &quot;type&quot; : &quot;date&quot;,
-        &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
-      }
-    }
-  }
-}
-}
-}&apos;</code></pre>
-</li>
-<li><p>What&apos;s the outcome? And why?</p></li></ul>
-</li>
-<li><p>Try modifying existing type mapping:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
+</code></pre></li>
+<li>Try modifying existing mapping:<pre><code>curl -XPUT &apos;localhost:9200/ordering/_mapping?pretty=true&apos; -d &apos;
 {
 &quot;ordering&quot; : {
   &quot;mappings&quot; : {
     &quot;order&quot; : {
       &quot;properties&quot; : {
         &quot;id&quot; : {
-          &quot;type&quot; : &quot;string&quot;
+          &quot;type&quot; : &quot;text&quot;,
+          &quot;fields&quot; : {
+            &quot;keyword&quot; : {
+              &quot;type&quot; : &quot;keyword&quot;,
+              &quot;ignore_above&quot; : 256
+            }
+          }
         },
         &quot;placedOn&quot; : {
           &quot;type&quot; : &quot;date&quot;,
@@ -1959,16 +1951,47 @@
     }
   }
 }
-}&apos;</code></pre>
-<ul><li>What now? Why?
-</li></ul>
-</li>
-<li><p>Let us try again:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
+}&apos;
+</code></pre></li>
+<li>What&apos;s the outcome? And why?</li>
+<li>Try modifying existing type mapping:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=mapping&apos; -d &apos;
+{
+&quot;ordering&quot; : {
+  &quot;mappings&quot; : {
+    &quot;order&quot; : {
+      &quot;properties&quot; : {
+        &quot;id&quot; : {
+          &quot;type&quot; : &quot;text&quot;,
+          &quot;fields&quot; : {
+            &quot;keyword&quot; : {
+              &quot;type&quot; : &quot;keyword&quot;,
+              &quot;ignore_above&quot; : 256
+            }
+          }
+        },
+        &quot;placedOn&quot; : {
+          &quot;type&quot; : &quot;date&quot;,
+          &quot;format&quot; : &quot;strict_date_optional_time||epoch_millis&quot;
+        }
+      }
+    }
+  }
+}
+}&apos;
+</code></pre></li>
+<li>What now? Why?</li>
+<li>Let us try again:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=mapping&apos; -d &apos;
 {
 &quot;order&quot; : {
   &quot;properties&quot; : {
     &quot;id&quot; : {
-      &quot;type&quot; : &quot;string&quot;
+      &quot;type&quot; : &quot;text&quot;,
+      &quot;fields&quot; : {
+        &quot;keyword&quot; : {
+          &quot;type&quot; : &quot;keyword&quot;,
+          &quot;ignore_above&quot; : 256
+        }
+      }
     },
     &quot;placedOn&quot; : {
       &quot;type&quot; : &quot;date&quot;,
@@ -1976,11 +1999,10 @@
     }
   }
 }
-}&apos;</code></pre>
-<ul><li>Did it work? What&apos;s the difference?
-</li></ul>
-</li>
-<li><p>Let&apos;s modify data type for existing field:</p><pre><code>curl -XPUT localhost:9200/ordering/order/_mapping -d &apos;
+}&apos;
+</code></pre></li>
+<li>Did it work? What&apos;s the difference?</li>
+<li>Let&apos;s modify data type for existing field:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos; -d &apos;
 {
 &quot;order&quot; : {
   &quot;properties&quot; : {
@@ -1993,19 +2015,16 @@
     }
   }
 }
-}&apos;</code></pre>
-<ul><li>Seriously, what now? Why? So much for the dynamic data mapping?
-</li></ul>
-</li>
-<li>What if we need to change data type after we have indexed the data?
-</li>
-<li><p>There is no (more) option to delete the mapping - delete and recreate index is the only option :-(</p><pre><code>curl -XDELETE localhost:9200/ordering</code></pre>
-<ul><li>Watch out! There is no warning or confirmation using curl!
-</li></ul>
-</li>
-<li>Pss: look out for the proper response too:
-<pre><code>{&quot;acknowledged&quot;:true}</code></pre>
-</li></ul>
+}&apos;
+</code></pre></li>
+<li>Seriously, what now? Why? So much for the dynamic data mapping?</li>
+<li>What if we need to change data type after we have indexed the data?</li>
+<li>There is no (more) option to delete the mapping - delete and recreate index is the only option :-(<pre><code>curl -XDELETE localhost:9200/ordering
+</code></pre></li>
+<li>Watch out! There is no warning or confirmation using curl!</li>
+<li>Pss: look out for the proper response too:<pre><code>{&quot;acknowledged&quot;:true}
+</code></pre></li>
+</ul>
 
                                 
                                 </section>
@@ -2030,7 +2049,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -2053,7 +2072,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"4.10","depth":1,"next":{"title":"Not Analyzed & Multi-Fields","level":"4.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"previous":{"title":"Mapping","level":"4.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2016-12-05T21:15:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"4.10","depth":1,"next":{"title":"Not Analyzed & Multi-Fields","level":"4.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"previous":{"title":"Mapping","level":"4.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2016-12-26T21:59:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Setup Exercise &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Setup Exercise &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,51 +1890,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="exercise-setup-kibana">Exercise: Setup Kibana</h1><ul><li>Log-in into your sand-box
-</li>
-<li><p>From terminal download and install Public Signing Key:</p><pre><code>wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -</code></pre>
-<ul><li><p>From terminal add repository definitions:</p><pre><code>echo &quot;deb https://packages.elastic.co/kibana/4.6/debian stable main&quot; | sudo tee -a /etc/apt/sources.list.d/kibana.list</code></pre>
-</li>
-<li><p>Update repositories info and install Kibana:</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get -y install kibana</code></pre>
-</li>
-<li><p>Confirm Status or Start Kibana:</p><pre><code>sudo service kibana status</code></pre>
-</li></ul>
-<p>or</p><pre><code>sudo service kibana start</code></pre>
-<ul><li><p>Populating sample data:</p><pre><code>wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json
-curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot;</code></pre>
-</li>
-<li><p>Open browser to <a href="http://public-ip-address-same-as-ssh:5601" target="_blank">http://public-ip-address-same-as-ssh:5601</a></p></li></ul>
-</li>
-<li>Kibana requires configuration before it display data: index name pattern is required
-</li>
-<li><p>To find out what indices we have in the cluster:</p><pre><code>curl localhost:9200/_cat/indices</code></pre>
-<ul><li>After typing index name pattern with star as a wildcard tab out from the field to get the fields refreshed
-</li></ul>
-</li>
-<li>Kibana requires a date-time field to filter data on
-</li>
-<li>By default Kibana displays data for last 15 minutes and in simulated environment it is often an empty result set
-</li>
-<li>Look at the top-right corner to adjust the timeframe
-</li>
-<li>You should be able to see some data now, if not, common troubles are index pattern configuration and a timeframe selection
-</li>
-<li>There is a star icon at the top  of the page to preserve default settings
-</li>
-<li>Head to the &apos;Discover&apos; link at the top
-</li>
-<li>Adjust time-frame in the top-right corner
-</li>
-<li>Use search box to locate some record
-</li>
-<li>Select &apos;add&apos; link next to few fields to present selected fields on the results pane
-</li>
-<li>Select any record and switch between text and json views
-</li>
-<li>Save search using icon under the time frame selector
-</li>
-<li>We will look into other tabs a bit later...
-</li></ul>
+                                <h1 id="exercise-setup-kibana">Exercise: Setup Kibana</h1>
+<ul>
+<li>Log-in into your sand-box</li>
+<li>From terminal download and install Public Signing Key:<pre><code>wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+</code></pre></li>
+<li>From terminal add repository definitions:<pre><code>echo &quot;deb https://packages.elastic.co/kibana/4.6/debian stable main&quot; | sudo tee -a /etc/apt/sources.list.d/kibana.list
+</code></pre></li>
+<li>Update repositories info and install Kibana:<pre><code>sudo apt-get update &amp;&amp; sudo apt-get -y install kibana
+</code></pre></li>
+<li>Confirm Status or Start Kibana:<pre><code>sudo service kibana status
+</code></pre>or<pre><code>sudo service kibana start
+</code></pre></li>
+<li>Populating sample data:<pre><code>wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json
+curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot;
+</code></pre></li>
+<li>Open browser to <a href="http://public-ip-address-same-as-ssh:5601" target="_blank">http://public-ip-address-same-as-ssh:5601</a></li>
+<li>Kibana requires configuration before it display data: index name pattern is required</li>
+<li>To find out what indices we have in the cluster:<pre><code>curl localhost:9200/_cat/indices
+</code></pre></li>
+<li>After typing index name pattern with star as a wildcard tab out from the field to get the fields refreshed</li>
+<li>Kibana requires a date-time field to filter data on</li>
+<li>By default Kibana displays data for last 15 minutes and in simulated environment it is often an empty result set</li>
+<li>Look at the top-right corner to adjust the timeframe</li>
+<li>You should be able to see some data now, if not, common troubles are index pattern configuration and a timeframe selection</li>
+<li>There is a star icon at the top  of the page to preserve default settings</li>
+<li>Head to the &apos;Discover&apos; link at the top</li>
+<li>Adjust time-frame in the top-right corner</li>
+<li>Use search box to locate some record</li>
+<li>Select &apos;add&apos; link next to few fields to present selected fields on the results pane</li>
+<li>Select any record and switch between text and json views</li>
+<li>Save search using icon under the time frame selector</li>
+<li>We will look into other tabs a bit later...</li>
+</ul>
 
                                 
                                 </section>
@@ -1959,7 +1947,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1982,7 +1970,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup Exercise","level":"7.4","depth":1,"next":{"title":"Discover","level":"7.5","depth":1,"path":"content/chapter-05/Discover.md","ref":"./content/chapter-05/Discover.md","articles":[]},"previous":{"title":"Sample Data Setup","level":"7.3","depth":1,"path":"content/chapter-05/SampleDataSetup.md","ref":"./content/chapter-05/SampleDataSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/SetupEx.md","mtime":"2016-11-23T11:57:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup Exercise","level":"7.4","depth":1,"next":{"title":"Discover","level":"7.5","depth":1,"path":"content/chapter-05/Discover.md","ref":"./content/chapter-05/Discover.md","articles":[]},"previous":{"title":"Sample Data Setup","level":"7.3","depth":1,"path":"content/chapter-05/SampleDataSetup.md","ref":"./content/chapter-05/SampleDataSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/SetupEx.md","mtime":"2016-11-23T11:57:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

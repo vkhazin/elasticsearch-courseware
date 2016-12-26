@@ -29,11 +29,16 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
       "order" : {
         "properties" : {
           "id" : {
-            "type" : "string"
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
           },
           "placedOn" : {
-            "type" : "date",
-            "format" : "strict_date_optional_time||epoch_millis"
+            "type" : "date"
           }
         }
       }
@@ -43,14 +48,20 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 ```
 * Try modifying existing mapping:
 ```
-curl -XPUT localhost:9200/ordering/_mapping -d '
+curl -XPUT 'localhost:9200/ordering/_mapping?pretty=true' -d '
 {
   "ordering" : {
     "mappings" : {
       "order" : {
         "properties" : {
           "id" : {
-            "type" : "string"
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
           },
           "placedOn" : {
             "type" : "date",
@@ -65,14 +76,20 @@ curl -XPUT localhost:9200/ordering/_mapping -d '
 * What's the outcome? And why?
 * Try modifying existing type mapping:
 ```
-curl -XPUT localhost:9200/ordering/order/_mapping -d '
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 {
   "ordering" : {
     "mappings" : {
       "order" : {
         "properties" : {
           "id" : {
-            "type" : "string"
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
           },
           "placedOn" : {
             "type" : "date",
@@ -87,12 +104,18 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
 * What now? Why?
 * Let us try again:
 ```
-curl -XPUT localhost:9200/ordering/order/_mapping -d '
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 {
   "order" : {
     "properties" : {
       "id" : {
-        "type" : "string"
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
       },
       "placedOn" : {
         "type" : "date",
@@ -105,7 +128,7 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d '
 * Did it work? What's the difference?
 * Let's modify data type for existing field:
 ```
-curl -XPUT localhost:9200/ordering/order/_mapping -d '
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
 {
   "order" : {
     "properties" : {

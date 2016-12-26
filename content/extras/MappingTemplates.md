@@ -18,4 +18,4 @@
    ...
 }
 ```
-* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/dynamic-templates.html" target="_blank">Detailed Documentation</a>
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/dynamic-templates.html" target="_blank">Detailed Documentation</a>

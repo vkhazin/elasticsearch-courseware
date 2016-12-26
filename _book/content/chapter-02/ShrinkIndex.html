@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Shrink Index &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shrink Index &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,21 +1890,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="shrink-index">Shrink Index</h1><ul><li>Number of shards cannot be changed after index has been created, but
-</li>
-<li>New in version 5.x - index can be shrunk to smaller number of shards
-</li>
-<li><p>Index must be in good health and in read-only state, can be achieved with following request:</p><pre><code>PUT /index-name/_settings
+                                <h1 id="shrink-index">Shrink Index</h1>
+<ul>
+<li>Number of shards cannot be changed after index has been created, but</li>
+<li>New in version 5.x - index can be shrunk to smaller number of shards</li>
+<li>Index must be in good health and in read-only state, can be achieved with following request:<pre><code>PUT /index-name/_settings
 {
 &quot;settings&quot;: {
   &quot;index.routing.allocation.require._name&quot;: &quot;new-node-name&quot;, 
   &quot;index.blocks.write&quot;: true 
 }
-}</code></pre>
-<ul><li><p>Shrink Index is a single RESTful command:</p><pre><code>POST source-index/_shrink/target-index</code></pre>
-</li>
-<li><p>Shrink Index is brand new in version 5.x not sure whether it is ready for prime time. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/indices-shrink-index.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/5.1/indices-shrink-index.html</a></p></li></ul>
-</li></ul>
+}
+</code></pre></li>
+<li>Shrink Index is a single RESTful command:<pre><code>POST source-index/_shrink/target-index
+</code></pre></li>
+<li>Shrink Index is brand new in version 5.x, it is ready for prime time? <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/indices-shrink-index.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/5.1/indices-shrink-index.html</a></li>
+</ul>
 
                                 
                                 </section>
@@ -1929,7 +1930,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1952,7 +1953,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Shrink Index","level":"4.8","depth":1,"next":{"title":"Mapping","level":"4.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"previous":{"title":"Index Settings","level":"4.7","depth":1,"path":"content/chapter-02/IndexSettings.md","ref":"./content/chapter-02/IndexSettings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/ShrinkIndex.md","mtime":"2016-12-26T17:15:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Shrink Index","level":"4.8","depth":1,"next":{"title":"Mapping","level":"4.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"previous":{"title":"Index Settings","level":"4.7","depth":1,"path":"content/chapter-02/IndexSettings.md","ref":"./content/chapter-02/IndexSettings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/ShrinkIndex.md","mtime":"2016-12-26T21:37:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

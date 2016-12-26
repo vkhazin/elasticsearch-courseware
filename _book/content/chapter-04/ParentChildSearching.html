@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Parent-Child Searching &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Parent-Child Searching &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,7 +1890,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="parent-child-searching">Parent-Child Searching</h1><ul><li><p>Searching for parent by child:</p><pre><code>curl &apos;localhost:9200/politics/party/_search?pretty=true&apos; -d &apos;{
+                                <h1 id="parent-child-searching">Parent-Child Searching</h1>
+<ul>
+<li>Searching for parent by child:<pre><code>curl &apos;localhost:9200/politics/party/_search?pretty=true&apos; -d &apos;{
 &quot;query&quot;: {
   &quot;has_child&quot;: {
     &quot;type&quot;: &quot;supporter&quot;,
@@ -1901,23 +1903,23 @@
     }
   }
 }
-}&apos;</code></pre>
-<ul><li>Search for children by parent:
-<pre><code>curl &apos;localhost:9200/politics/supporter/_search?pretty=true&apos; -d &apos;{
+}&apos;
+</code></pre></li>
+<li>Search for children by parent:<pre><code>curl &apos;localhost:9200/politics/supporter/_search?pretty=true&apos; -d &apos;{
 {
 &quot;query&quot;: {
-&quot;has_parent&quot;: {
-  &quot;type&quot;: &quot;party&quot;, 
-  &quot;query&quot;: {
-    &quot;match&quot;: {
-      &quot;name&quot;: &quot;The Heartless&quot;
+  &quot;has_parent&quot;: {
+    &quot;type&quot;: &quot;party&quot;, 
+    &quot;query&quot;: {
+      &quot;match&quot;: {
+        &quot;name&quot;: &quot;The Heartless&quot;
+      }
     }
   }
 }
-}
-}&apos;</code></pre>
-</li></ul>
-</li></ul>
+}&apos;
+</code></pre></li>
+</ul>
 
                                 
                                 </section>
@@ -1942,7 +1944,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1965,7 +1967,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Parent-Child Searching","level":"6.10","depth":1,"next":{"title":"Search Exercise","level":"6.11","depth":1,"path":"content/chapter-04/SearchExercise.md","ref":"./content/chapter-04/SearchExercise.md","articles":[]},"previous":{"title":"Parent-Child Indexing","level":"6.9","depth":1,"path":"content/chapter-04/ParentChildIndexing.md","ref":"./content/chapter-04/ParentChildIndexing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/ParentChildSearching.md","mtime":"2016-11-09T14:25:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Parent-Child Searching","level":"6.10","depth":1,"next":{"title":"Search Exercise","level":"6.11","depth":1,"path":"content/chapter-04/SearchExercise.md","ref":"./content/chapter-04/SearchExercise.md","articles":[]},"previous":{"title":"Parent-Child Indexing","level":"6.9","depth":1,"path":"content/chapter-04/ParentChildIndexing.md","ref":"./content/chapter-04/ParentChildIndexing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/ParentChildSearching.md","mtime":"2016-11-09T14:25:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

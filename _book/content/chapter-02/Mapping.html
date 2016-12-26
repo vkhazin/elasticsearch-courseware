@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Mapping &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mapping &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,39 +1890,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mapping">Mapping</h1><ul><li>Defines how document and its fields are stored and indexed
-</li>
-<li>Mapping can be derived dynamically by ElasticSearch
-</li>
-<li>Handful core data types are <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html" target="_blank">supported</a>
-</li>
-<li>Mapping can be added to existing index for <a style="color:red">new fields</a>
-</li>
-<li>Existing field mapping not always possible to modify
-</li>
-<li><p>ElasticSearch will derive mapping for new type and for new fields:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;
-{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
-<ul><li><p>Retrieving existing mappings:</p><pre><code>curl localhost:9200/ordering/order/_mapping</code></pre>
-</li>
-<li><p>Expected response:</p><pre><code>{
-ordering: {
-    mappings: {
-        order: {
-            properties: {
-                id: {
-                    type: &quot;string&quot;
-                },
-                placedOn: {
-                    type: &quot;strict_date_optional_time||epoch_millis&quot;
-                }
+                                <h1 id="mapping">Mapping</h1>
+<ul>
+<li>Defines how document and its fields are stored and indexed</li>
+<li>Mapping can be derived dynamically by ElasticSearch</li>
+<li>Handful core data types are <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/mapping-types.html" target="_blank">supported</a></li>
+<li>Mapping can be added to existing index for <a style="color:red">new fields</a></li>
+<li>Existing field mapping not always possible to modify</li>
+<li>ElasticSearch will derive mapping for new type and for new fields:<pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;
+{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;
+</code></pre></li>
+<li>Retrieving existing mappings:<pre><code>curl &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos;
+</code></pre></li>
+<li>Expected response:<pre><code>{
+&quot;ordering&quot; : {
+  &quot;mappings&quot; : {
+    &quot;order&quot; : {
+      &quot;properties&quot; : {
+        &quot;id&quot; : {
+          &quot;type&quot; : &quot;text&quot;,
+          &quot;fields&quot; : {
+            &quot;keyword&quot; : {
+              &quot;type&quot; : &quot;keyword&quot;,
+              &quot;ignore_above&quot; : 256
             }
+          }
+        },
+        &quot;placedOn&quot; : {
+          &quot;type&quot; : &quot;date&quot;
         }
+      }
     }
+  }
 }
-}  </code></pre>
-</li>
-<li><p>Rich support for <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#built-in-date-formats" target="_blank">date-time formats</a></p></li></ul>
-</li></ul>
+}
+</code></pre></li>
+<li>Rich support for <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/mapping-date-format.html#built-in-date-formats" target="_blank">date-time formats</a></li>
+</ul>
 
                                 
                                 </section>
@@ -1947,7 +1951,7 @@ ordering: {
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1970,7 +1974,7 @@ ordering: {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mapping","level":"4.9","depth":1,"next":{"title":"Mapping Exercise","level":"4.10","depth":1,"path":"content/chapter-02/MappingEx.md","ref":"./content/chapter-02/MappingEx.md","articles":[]},"previous":{"title":"Shrink Index","level":"4.8","depth":1,"path":"content/chapter-02/ShrinkIndex.md","ref":"./content/chapter-02/ShrinkIndex.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/Mapping.md","mtime":"2016-11-18T23:26:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mapping","level":"4.9","depth":1,"next":{"title":"Mapping Exercise","level":"4.10","depth":1,"path":"content/chapter-02/MappingEx.md","ref":"./content/chapter-02/MappingEx.md","articles":[]},"previous":{"title":"Shrink Index","level":"4.8","depth":1,"path":"content/chapter-02/ShrinkIndex.md","ref":"./content/chapter-02/ShrinkIndex.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/Mapping.md","mtime":"2016-12-26T23:03:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

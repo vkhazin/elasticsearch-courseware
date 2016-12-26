@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Index and Type Api &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Index and Type Api &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,28 +1890,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index-and-type-api">Index and Type Api</h1><ul><li>How do we create an index?
-</li>
-<li><p>Index will be created lazily by ElasticSeach when we post a document:</p><pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;
-{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;</code></pre>
-<ul><li>Type will be created lazily by the same operation
-</li></ul>
-</li>
-<li><p>To retrieve the document just posted:</p><pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&apos;</code></pre>
-<ul><li>Expected result:
-<pre><code>{
+                                <h1 id="index-and-type-api">Index and Type Api</h1>
+<ul>
+<li>How do we create an index?</li>
+<li>Index will be created lazily by ElasticSeach when we post a document:<pre><code>curl -XPOST localhost:9200/ordering/order/1 -d &apos;
+{&quot;id&quot;: &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot;}&apos;
+</code></pre></li>
+<li>Type will be created lazily by the same operation</li>
+<li>To retrieve the document just posted:<pre><code>curl &apos;localhost:9200/ordering/order/_search?pretty=true&apos;
+</code></pre></li>
+<li>Expected result:<pre><code>{
 &quot;_index&quot; : &quot;ordering&quot;,
 &quot;_type&quot; : &quot;order&quot;,
 &quot;_id&quot; : &quot;1&quot;,
 &quot;_version&quot; : 1,
 &quot;found&quot; : true,
 &quot;_source&quot; : {
-&quot;id&quot; : &quot;1&quot;,
-&quot;placedOn&quot; : &quot;2016-10-17T13:03:30.830Z&quot;
+  &quot;id&quot; : &quot;1&quot;,
+  &quot;placedOn&quot; : &quot;2016-10-17T13:03:30.830Z&quot;
 }
-}</code></pre>
-</li></ul>
-</li></ul>
+}
+</code></pre></li>
+</ul>
 
                                 
                                 </section>
@@ -1936,7 +1936,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1959,7 +1959,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Index and Type Api","level":"4.4","depth":1,"next":{"title":"Transaction Log and Lucene Index","level":"4.5","depth":1,"path":"content/chapter-02/TranLogLucene.md","ref":"./content/chapter-02/TranLogLucene.md","articles":[]},"previous":{"title":"Type","level":"4.3","depth":1,"path":"content/chapter-02/Type.md","ref":"./content/chapter-02/Type.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/IndexTypeApi.md","mtime":"2016-11-06T13:55:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Index and Type Api","level":"4.4","depth":1,"next":{"title":"Transaction Log and Lucene Index","level":"4.5","depth":1,"path":"content/chapter-02/TranLogLucene.md","ref":"./content/chapter-02/TranLogLucene.md","articles":[]},"previous":{"title":"Type","level":"4.3","depth":1,"path":"content/chapter-02/Type.md","ref":"./content/chapter-02/Type.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/IndexTypeApi.md","mtime":"2016-11-06T13:55:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

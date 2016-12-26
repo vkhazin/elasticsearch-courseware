@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Range Aggregation &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Range Aggregation &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,7 +1890,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="range-aggregation">Range Aggregation</h1><ul><li><p>Statically defines buckets for aggregation, e.g. up-to ip address 10.0.0.5, and after ip address 10.0.0.5</p><pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
+                                <h1 id="range-aggregation">Range Aggregation</h1>
+<ul>
+<li>Statically defines buckets for aggregation, e.g. up-to ip address 10.0.0.5, and after ip address 10.0.0.5<pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
 {
 &quot;aggs&quot; : {
     &quot;order_amount_ranges&quot; : {
@@ -1904,32 +1906,32 @@
         }
     }
 }
-}</code></pre>
-<ul><li>Result:
-<pre><code>{
+}
+</code></pre></li>
+<li>Result:<pre><code>{
 ...
 &quot;aggregations&quot;: {
-&quot;order_amount_ranges&quot; : {
-  &quot;buckets&quot;: [
-    {
-        &quot;to&quot;: 50,
-        &quot;doc_count&quot;: 2
-    },
-    {
-        &quot;from&quot;: 50,
-        &quot;to&quot;: 100,
-        &quot;doc_count&quot;: 4
-    },
-    {
-        &quot;from&quot;: 100,
-        &quot;doc_count&quot;: 4
-    }
-  ]
+  &quot;order_amount_ranges&quot; : {
+    &quot;buckets&quot;: [
+      {
+          &quot;to&quot;: 50,
+          &quot;doc_count&quot;: 2
+      },
+      {
+          &quot;from&quot;: 50,
+          &quot;to&quot;: 100,
+          &quot;doc_count&quot;: 4
+      },
+      {
+          &quot;from&quot;: 100,
+          &quot;doc_count&quot;: 4
+      }
+    ]
+  }
 }
 }
-}</code></pre>
-</li></ul>
-</li></ul>
+</code></pre></li>
+</ul>
 
                                 
                                 </section>
@@ -1954,7 +1956,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1977,7 +1979,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Range Aggregation","level":"6.16","depth":1,"next":{"title":"Aggregation Exercise","level":"6.17","depth":1,"path":"content/chapter-04/AggregationEx.md","ref":"./content/chapter-04/AggregationEx.md","articles":[]},"previous":{"title":"Date Histogram Aggregation","level":"6.15","depth":1,"path":"content/chapter-04/DateHistogramAggregation.md","ref":"./content/chapter-04/DateHistogramAggregation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/RangeAggregation.md","mtime":"2016-11-07T13:33:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Range Aggregation","level":"6.16","depth":1,"next":{"title":"Aggregation Exercise","level":"6.17","depth":1,"path":"content/chapter-04/AggregationEx.md","ref":"./content/chapter-04/AggregationEx.md","articles":[]},"previous":{"title":"Date Histogram Aggregation","level":"6.15","depth":1,"path":"content/chapter-04/DateHistogramAggregation.md","ref":"./content/chapter-04/DateHistogramAggregation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/RangeAggregation.md","mtime":"2016-11-07T13:33:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -6,5 +6,5 @@
 * OS Configuration: disable memory swapping (not always possible in virtual environment)
 * Mapping and data-modeling selection: _all, _source, multi-fields
 * Search vs Filter - do you need to compute score based on the 'status:active' in your query?
-* Use <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/docs-bulk.html" target="_blank">_bulk Api</a> for indexing whenever possible
+* Use <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/docs-bulk.html" target="_blank">_bulk Api</a> for indexing whenever possible
 * Number of replicas and number of shards - reliability and scaling-out

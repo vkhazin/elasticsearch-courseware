@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Data Population &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Data Population &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,25 +1890,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="data-population">Data Population</h1><ul><li>ElasticSearch is best as a secondary store
-</li>
-<li>Bulk Api is a must for most applications
-</li>
-<li>Payload for bulk load is a bit less than self-explanatory
-</li>
-<li>It is json but it is not proper json, first line is meta-data and second line is Json data
-</li>
-<li>The json on each line must be on one line, between two lines &apos;\n&apos; character is expected
-</li>
-<li>&apos;\n&apos; character is expected after last line as well
-</li>
-<li><p>Example using curl requires creating a file with not-so-json payload: &apos;request&apos; first:</p><pre><code>echo &apos;{ &quot;index&quot; : { &quot;_index&quot; : &quot;ordering&quot;, &quot;_type&quot; : &quot;order&quot;, &quot;_id&quot; : &quot;1&quot; }}
+                                <h1 id="data-population">Data Population</h1>
+<ul>
+<li>ElasticSearch is best as a secondary store</li>
+<li>Bulk Api is a must for most applications</li>
+<li>Payload for bulk load is a bit less than self-explanatory</li>
+<li>It is json but it is not proper json, first line is meta-data and second line is Json data</li>
+<li>The json on each line must be on one line, between two lines &apos;\n&apos; character is expected</li>
+<li>&apos;\n&apos; character is expected after last line as well</li>
+<li>Example using curl requires creating a file with not-so-json payload: &apos;request&apos; first:<pre><code>echo &apos;{ &quot;index&quot; : { &quot;_index&quot; : &quot;ordering&quot;, &quot;_type&quot; : &quot;order&quot;, &quot;_id&quot; : &quot;1&quot; }}
 { &quot;id&quot; : &quot;1&quot;, &quot;placedOn&quot;: &quot;2016-10-17T13:03:30.830Z&quot; }
-&apos; &gt; request</code></pre>
-<ul><li>Posting request data requires --data-binary switch to instruct curl to post the data as is
-<pre><code>curl -s -XPOST localhost:9200/_bulk --data-binary &quot;@request&quot;</code></pre>
-</li></ul>
-</li></ul>
+&apos; &gt; request
+</code></pre></li>
+<li>Posting request data requires --data-binary switch to instruct curl to post the data as is<pre><code>curl -s -XPOST localhost:9200/_bulk --data-binary &quot;@request&quot;
+</code></pre></li>
+</ul>
 
                                 
                                 </section>
@@ -1933,7 +1929,7 @@
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1956,7 +1952,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Data Population","level":"8.15","depth":1,"next":{"title":"Data Synchronization","level":"8.16","depth":1,"path":"content/chapter-06/DataSynchronization.md","ref":"./content/chapter-06/DataSynchronization.md","articles":[]},"previous":{"title":"Tuning References","level":"8.14","depth":1,"path":"content/chapter-06/TuningReferences.md","ref":"./content/chapter-06/TuningReferences.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/DataPopulation.md","mtime":"2016-11-19T19:20:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Data Population","level":"8.15","depth":1,"next":{"title":"Data Synchronization","level":"8.16","depth":1,"path":"content/chapter-06/DataSynchronization.md","ref":"./content/chapter-06/DataSynchronization.md","articles":[]},"previous":{"title":"Tuning References","level":"8.14","depth":1,"path":"content/chapter-06/TuningReferences.md","ref":"./content/chapter-06/TuningReferences.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-06/DataPopulation.md","mtime":"2016-11-19T19:20:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

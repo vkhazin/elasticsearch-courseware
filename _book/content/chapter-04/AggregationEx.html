@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Aggregation Exercise &#xB7; GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Aggregation Exercise &#xB7; GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -1890,31 +1890,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="aggregation-exercise">Aggregation Exercise</h1><ul><li>Log-in into your ElasticSearch sandbox
-</li>
-<li><p>Populate few sample movie data:</p><pre><code>wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt
-curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@movies.txt&quot;</code></pre>
-<ul><li><p>Confirm there are some records to search on:</p><pre><code>curl &apos;localhost:9200/sample-data/movies/_search?pretty=true&apos;</code></pre>
-</li>
-<li><p>Let&apos;s aggregate on actor name</p><pre><code>curl &apos;localhost:9200/sample-data/movies/_search?pretty=true&apos; -d &apos;
+                                <h1 id="aggregation-exercise">Aggregation Exercise</h1>
+<ul>
+<li>Log-in into your ElasticSearch sandbox</li>
+<li>Populate few sample movie data:<pre><code>wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt
+curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@movies.txt&quot;
+</code></pre></li>
+<li>Confirm there are some records to search on:<pre><code>curl &apos;localhost:9200/sample-data/movies/_search?pretty=true&apos;
+</code></pre></li>
+<li>Let&apos;s aggregate on actor name<pre><code>curl &apos;localhost:9200/sample-data/movies/_search?pretty=true&apos; -d &apos;
 {
 &quot;size&quot;: 0,
 &quot;aggs&quot;: {
-&quot;actor_name&quot;: {
-  &quot;terms&quot;: {
-    &quot;field&quot;: &quot;Starring.CastCrewName&quot;
+  &quot;actor_name&quot;: {
+    &quot;terms&quot;: {
+      &quot;field&quot;: &quot;Starring.CastCrewName&quot;
+    }
   }
 }
-}
-}&apos;</code></pre>
-</li>
-<li><p>What buckets did you get?</p></li></ul>
-</li>
-<li>How do I get more than 10 buckets? <a href="http://stackoverflow.com/questions/22927098/show-all-elasticsearch-aggregation-results-buckets-and-not-just-10" target="_blank">Check StackOverflow posting!</a>
-</li>
-<li>What is &apos;sum_other_doc_count&apos; field?
-</li>
-<li><p>Let&apos;s find out average movie rating for the actor:</p><pre><code>curl &apos;localhost:9200/sample-data/movies/_search?pretty=true&apos; -d &apos;
+}&apos;
+</code></pre></li>
+<li>What buckets did you get?</li>
+<li>How do I get more than 10 buckets? <a href="http://stackoverflow.com/questions/22927098/show-all-elasticsearch-aggregation-results-buckets-and-not-just-10" target="_blank">Check StackOverflow posting!</a></li>
+<li>What is &apos;sum_other_doc_count&apos; field?</li>
+<li>Let&apos;s find out average movie rating for the actor:<pre><code>curl &apos;localhost:9200/sample-data/movies/_search?pretty=true&apos; -d &apos;
 {
 &quot;size&quot;: 0,
 &quot;aggs&quot;: {
@@ -1932,10 +1931,10 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@movies.txt&quo
   }
 }
 }
-&apos;</code></pre>
-<ul><li>Take a moment to understand the variety of <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html" target="_blank">aggregation types</a>
-</li></ul>
-</li></ul>
+&apos;
+</code></pre></li>
+<li>Take a moment to understand the variety of <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/search-aggregations.html" target="_blank">aggregation types</a></li>
+</ul>
 
                                 
                                 </section>
@@ -1960,7 +1959,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@movies.txt&quo
                     </div>
                 
             <p align="center">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </p></div>
@@ -1983,7 +1982,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@movies.txt&quo
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Aggregation Exercise","level":"6.17","depth":1,"next":{"title":"Summary","level":"6.18","depth":1,"path":"content/chapter-04/Summary.md","ref":"./content/chapter-04/Summary.md","articles":[]},"previous":{"title":"Range Aggregation","level":"6.16","depth":1,"path":"content/chapter-04/RangeAggregation.md","ref":"./content/chapter-04/RangeAggregation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/AggregationEx.md","mtime":"2016-11-22T19:51:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-12-26T18:12:44.781Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Aggregation Exercise","level":"6.17","depth":1,"next":{"title":"Summary","level":"6.18","depth":1,"path":"content/chapter-04/Summary.md","ref":"./content/chapter-04/Summary.md","articles":[]},"previous":{"title":"Range Aggregation","level":"6.16","depth":1,"path":"content/chapter-04/RangeAggregation.md","ref":"./content/chapter-04/RangeAggregation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-04/AggregationEx.md","mtime":"2016-12-26T23:05:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-26T23:11:12.777Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
