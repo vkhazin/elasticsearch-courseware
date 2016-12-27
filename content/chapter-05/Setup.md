@@ -1,8 +1,8 @@
 # Setup and Configuration #
 
 * Kibana is an open source product installed separately from Elastic Search
-* Can be downloaded from <a href="https://www.elastic.co/downloads/kibana" target="_blank">Elastic.co</a> or install using <a href="https://www.elastic.co/guide/en/kibana/4.6/setup.html#setup-repositories" target="_blank">Linux Repositories</a>
-* Configuration file: kibana.yml
+* Can be downloaded from <a href="https://www.elastic.co/downloads/kibana" target="_blank">Elastic.co</a> or install using <a href="https://www.elastic.co/guide/en/kibana/5.1/setup.html#setup-repositories" target="_blank">Linux Repositories</a>
+* Configuration file: /etc/kibana/kibana.yml
 * Important settings:
 ```
 server.port: 5601

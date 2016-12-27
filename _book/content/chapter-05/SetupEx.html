@@ -1212,7 +1212,20 @@
             
         </li>
     
-        <li class="chapter " data-level="7.12" data-path="TileMap.html">
+        <li class="chapter " data-level="7.12" data-path="TagCloud.html">
+            
+                <a href="TagCloud.html">
+            
+                    
+                    Tag Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="TileMap.html">
             
                 <a href="TileMap.html">
             
@@ -1225,7 +1238,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.13" data-path="Dashboard.html">
+        <li class="chapter " data-level="7.14" data-path="Dashboard.html">
             
                 <a href="Dashboard.html">
             
@@ -1238,7 +1251,20 @@
             
         </li>
     
-        <li class="chapter " data-level="7.14" data-path="Summary.html">
+        <li class="chapter " data-level="7.15" data-path="Timelion.html">
+            
+                <a href="Timelion.html">
+            
+                    
+                    Timelion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16" data-path="Summary.html">
             
                 <a href="Summary.html">
             
@@ -1893,25 +1919,29 @@
                                 <h1 id="exercise-setup-kibana">Exercise: Setup Kibana</h1>
 <ul>
 <li>Log-in into your sand-box</li>
-<li>From terminal download and install Public Signing Key:<pre><code>wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+<li>From terminal download and install Public Signing Key:<pre><code>curl https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 </code></pre></li>
-<li>From terminal add repository definitions:<pre><code>echo &quot;deb https://packages.elastic.co/kibana/4.6/debian stable main&quot; | sudo tee -a /etc/apt/sources.list.d/kibana.list
+<li>From terminal add repository definitions:<pre><code>echo &quot;deb https://artifacts.elastic.co/packages/5.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 </code></pre></li>
-<li>Update repositories info and install Kibana:<pre><code>sudo apt-get update &amp;&amp; sudo apt-get -y install kibana
+<li>Update repositories info and install Kibana:<pre><code>sudo apt-get update &amp;&amp; sudo apt-get install kibana
 </code></pre></li>
-<li>Confirm Status or Start Kibana:<pre><code>sudo service kibana status
-</code></pre>or<pre><code>sudo service kibana start
+<li>Start Kibana service:<pre><code>sudo service kibana start
 </code></pre></li>
-<li>Populating sample data:<pre><code>wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json
+<li>Populate sample data:<pre><code>curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json -o logs.json
 curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot;
+</code></pre></li>
+<li>By default Kibana listens to localhost and it won&apos;t be really helpful in more environments</li>
+<li>Edit kibana.yml to set server.host: 0.0.0.0:<pre><code>sudo nano /etc/kibana/kibana.yml
+</code></pre></li>
+<li>Restart Kibana service:<pre><code>sudo service kibana restart
 </code></pre></li>
 <li>Open browser to <a href="http://public-ip-address-same-as-ssh:5601" target="_blank">http://public-ip-address-same-as-ssh:5601</a></li>
 <li>Kibana requires configuration before it display data: index name pattern is required</li>
 <li>To find out what indices we have in the cluster:<pre><code>curl localhost:9200/_cat/indices
 </code></pre></li>
 <li>After typing index name pattern with star as a wildcard tab out from the field to get the fields refreshed</li>
-<li>Kibana requires a date-time field to filter data on</li>
-<li>By default Kibana displays data for last 15 minutes and in simulated environment it is often an empty result set</li>
+<li>Kibana (by default) requires a date-time field to filter data on</li>
+<li>By default Kibana displays data for the last 15 minutes and in a simulated environment it is often an empty result set</li>
 <li>Look at the top-right corner to adjust the timeframe</li>
 <li>You should be able to see some data now, if not, common troubles are index pattern configuration and a timeframe selection</li>
 <li>There is a star icon at the top  of the page to preserve default settings</li>
@@ -1921,7 +1951,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot
 <li>Select &apos;add&apos; link next to few fields to present selected fields on the results pane</li>
 <li>Select any record and switch between text and json views</li>
 <li>Save search using icon under the time frame selector</li>
-<li>We will look into other tabs a bit later...</li>
+<li>We will look into other links a bit later...</li>
 </ul>
 
                                 
@@ -1972,7 +2002,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup Exercise","level":"7.4","depth":1,"next":{"title":"Discover","level":"7.5","depth":1,"path":"content/chapter-05/Discover.md","ref":"./content/chapter-05/Discover.md","articles":[]},"previous":{"title":"Sample Data Setup","level":"7.3","depth":1,"path":"content/chapter-05/SampleDataSetup.md","ref":"./content/chapter-05/SampleDataSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/SetupEx.md","mtime":"2016-11-23T11:57:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-27T19:45:41.985Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup Exercise","level":"7.4","depth":1,"next":{"title":"Discover","level":"7.5","depth":1,"path":"content/chapter-05/Discover.md","ref":"./content/chapter-05/Discover.md","articles":[]},"previous":{"title":"Sample Data Setup","level":"7.3","depth":1,"path":"content/chapter-05/SampleDataSetup.md","ref":"./content/chapter-05/SampleDataSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/SetupEx.md","mtime":"2016-12-27T20:17:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-27T21:09:38.411Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

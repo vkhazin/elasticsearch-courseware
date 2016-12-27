@@ -96,8 +96,10 @@
 * [Metric Exercise](./content/chapter-05/MetricEx.md)
 * [Vertical Bar Chart](./content/chapter-05/VerticalBarChart.md)
 * [Vertical Bar Chart Exercise](./content/chapter-05/VerticalBarChartEx.md)
+* [Tag Cloud](./content/chapter-05/TagCloud.md)
 * [Tile Map](./content/chapter-05/TileMap.md)
 * [Dashboard](./content/chapter-05/Dashboard.md)
+* [Timelion](./content/chapter-05/Timelion.md)
 * [Summary](./content/chapter-05/Summary.md)
 
 ## Chapter 6: Preparing for Production
