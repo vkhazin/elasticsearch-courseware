@@ -3,7 +3,7 @@
 * Login into your ElasticSearch sandbox
 * Populate few sample data borrowed from <a href="https://catalog.data.gov/dataset" target="_blank">data.gov</a>:
 ```
-wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/collisions.txt
+curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/collisions.txt -o collisions.txt
 curl -XPOST 'localhost:9200/_bulk' --data-binary "@collisions.txt"
 ```
 * Confirm there are some records to search on:

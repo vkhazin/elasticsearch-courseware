@@ -1,6 +1,10 @@
 # Query Exercise #
 
 * Login into your ElasticSearch sandbox
+* May need to start service:
+```
+sudo service elasticsearch start
+```
 * Populate few orders:
 ```
 curl -XPOST localhost:9200/ordering/order/2 -d '
