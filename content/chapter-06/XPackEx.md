@@ -1,15 +1,14 @@
-# Marvel Exercise #
+# XPack Exercise #
 
-* Installing license and marvel agent plug-ins for ElasticSearch:
+* Installing X-Pack plug-in for ElasticSearch:
 ```
 cd /usr/share/elasticsearch/
-sudo bin/plugin install license
-sudo bin/plugin install marvel-agent
+sudo ./bin/elasticsearch-plugin install x-pack
 ```
-* Install marvel plug-in for Kibana:
+* Install X-Pack plug-in for Kibana (will take some time):
 ```
-cd /opt/kibana/
-sudo ./bin/kibana plugin --install elasticsearch/marvel/2.4.1
+cd /usr/share/kibana/
+sudo ./bin/kibana-plugin install x-pack
 ```
 * Shutdown ElasticSearch and Kibana services:
 ```
@@ -22,7 +21,7 @@ sudo service elasticsearch start
 sudo service kibana start
 ```
 * Navigate to http://ip-address:5601
-* Switch to Marvel user interface by selecting 9-squares icon from top menu
-* Explore Marvel User Interface
+* Login with default credentials: elastic/change
+* Explore the 'Monitoring' and 'Management' links
 * Feel free to install other monitoring plug-ins to find out which one you like more
 * Links provided on the previous slide...

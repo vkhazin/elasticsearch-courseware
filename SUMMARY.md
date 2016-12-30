@@ -100,6 +100,7 @@
 * [Tile Map](./content/chapter-05/TileMap.md)
 * [Dashboard](./content/chapter-05/Dashboard.md)
 * [Timelion](./content/chapter-05/Timelion.md)
+* [Console] (./content/chapter-05/Console.md)
 * [Summary](./content/chapter-05/Summary.md)
 
 ## Chapter 6: Preparing for Production
@@ -112,7 +113,7 @@
 * [Performance Testing](./content/chapter-06/PerformanceTesting.md)
 * [Monitoring](./content/chapter-06/Monitoring.md)
 * [Monitoring Plug-ins](./content/chapter-06/MonitoringPlugins.md)
-* [Marvel Exercise](./content/chapter-06/MarvelEx.md)
+* [X-Pack Exercise](./content/chapter-06/XPackEx.md)
 * [Performance Tuning](./content/chapter-06/PerformanceTuning.md)
 * [Indices vs. Types](./content/chapter-06/IndexType.md)
 * [Query Choices](./content/chapter-06/QueryChoices.md)

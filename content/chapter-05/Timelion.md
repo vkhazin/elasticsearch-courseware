@@ -6,4 +6,6 @@
 * Brings together totally independent data sources into a single interface
 * Driven by a simple, one-line expression language 
 * Combined data retrieval, time series combination and transformation, plus visualization
-* 
+* Pulling data from ElasticSearch: .es(*)
+* Can pull data from from external source <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-api-country-queries" target="_blank">World Bank</a>
+* Functionality is so new/raw - can almost smell the fresh paint
