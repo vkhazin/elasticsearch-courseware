@@ -1264,14 +1264,14 @@
             
         </li>
     
-        <li class="chapter " data-level="7.16">
+        <li class="chapter " data-level="7.16" data-path="../chapter-05/Console.html">
             
-                <span>
+                <a href="../chapter-05/Console.html">
             
                     
-                    [Console] (./content/chapter-05/Console.md)
+                    Console
             
-                </span>
+                </a>
             
 
             
@@ -1939,13 +1939,13 @@
 </code></pre></li>
 <li>Filter search:<pre><code>curl -XPOST &apos;localhost:9200/ordering/order/_search?pretty=true&apos; -d &apos;
 {
- &quot;query&quot;: {
-   &quot;filtered&quot;: {
-     &quot;filter&quot;: {
-       &quot;term&quot;: { &quot;COUNTY_NAME&quot;: &quot;worcester&quot; }
-     }
-   }
- }
+&quot;query&quot;: {
+  &quot;bool&quot;: {
+    &quot;filter&quot;: {
+      &quot;term&quot;: { &quot;COUNTY_NAME&quot;: &quot;worcester&quot; }
+    }
+  }
+}
 }&apos;
 </code></pre></li>
 <li>Pss: convert term value to lower case!</li>
@@ -1979,12 +1979,6 @@
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </center>
-<!--</p>--><!--<p align="right" style="margin-right: 25px">-->
-<center>
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
-   </a>
-</center>
 <!--</p>--></div>
 
             
@@ -2005,7 +1999,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Filter Example","level":"5.15","depth":1,"next":{"title":"Filter Exercise","level":"5.16","depth":1,"path":"content/chapter-03/FilterEx.md","ref":"./content/chapter-03/FilterEx.md","articles":[]},"previous":{"title":"Filter","level":"5.14","depth":1,"path":"content/chapter-03/Filter.md","ref":"./content/chapter-03/Filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/FilterExample.md","mtime":"2016-11-22T19:45:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-05T21:08:59.284Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Filter Example","level":"5.15","depth":1,"next":{"title":"Filter Exercise","level":"5.16","depth":1,"path":"content/chapter-03/FilterEx.md","ref":"./content/chapter-03/FilterEx.md","articles":[]},"previous":{"title":"Filter","level":"5.14","depth":1,"path":"content/chapter-03/Filter.md","ref":"./content/chapter-03/Filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/FilterExample.md","mtime":"2017-01-09T09:51:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-10T09:56:59.230Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

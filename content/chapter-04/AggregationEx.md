@@ -3,7 +3,7 @@
 * Log-in into your ElasticSearch sandbox
 * Populate few sample movie data:
 ```
-wget https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt
+curl -o https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt 
 curl -XPOST 'localhost:9200/_bulk' --data-binary "@movies.txt"
 ```
 * Confirm there are some records to search on:
@@ -18,7 +18,7 @@ curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
   "aggs": {
     "actor_name": {
       "terms": {
-        "field": "Starring.CastCrewName"
+        "field": "Starring.CastCrewName.keyword"
       }
     }
   }
@@ -35,7 +35,7 @@ curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
   "aggs": {
     "actor_name": {
       "terms": {
-        "field": "Starring.CastCrewName"
+        "field": "Starring.CastCrewName.keyword"
       },
       "aggs": {
         "rating": {

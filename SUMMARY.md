@@ -100,7 +100,7 @@
 * [Tile Map](./content/chapter-05/TileMap.md)
 * [Dashboard](./content/chapter-05/Dashboard.md)
 * [Timelion](./content/chapter-05/Timelion.md)
-* [Console] (./content/chapter-05/Console.md)
+* [Console](./content/chapter-05/Console.md)
 * [Summary](./content/chapter-05/Summary.md)
 
 ## Chapter 6: Preparing for Production

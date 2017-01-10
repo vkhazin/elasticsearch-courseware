@@ -48,5 +48,5 @@ curl localhost:9200/_cat/indices
 * Use search box to locate some record
 * Select 'add' link next to few fields to present selected fields on the results pane
 * Select any record and switch between text and json views
-* Save search using icon under the time frame selector
+* Save search using link on top of the page
 * We will look into other links a bit later...

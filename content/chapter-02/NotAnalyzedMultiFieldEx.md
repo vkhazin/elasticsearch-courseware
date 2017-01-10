@@ -1,7 +1,6 @@
 # Not Analyzed & Multi-Fields Exercise #
 
 * Login into you virtual box
-* Your sandbox is asleep: start workstation and then start project
 * We have not yet configured elasticsearch service to start automatically, start using terminal window:
 ```
 sudo service elasticsearch start

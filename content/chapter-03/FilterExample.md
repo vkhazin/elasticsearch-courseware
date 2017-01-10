@@ -12,13 +12,13 @@ curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' -d '{
 ```
  curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
  {
-   "query": {
-     "filtered": {
-       "filter": {
-         "term": { "COUNTY_NAME": "worcester" }
-       }
-     }
-   }
+  "query": {
+    "bool": {
+      "filter": {
+        "term": { "COUNTY_NAME": "worcester" }
+      }
+    }
+  }
  }'
 ```
 * Pss: convert term value to lower case!
