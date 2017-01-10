@@ -84,7 +84,7 @@
 * [Aggregation Exercise](./content/chapter-04/AggregationEx.md)
 * [Summary](./content/chapter-04/Summary.md)
 
-## Chapter 5: Kibana 4 ##
+## Chapter 5: Kibana 5 ##
 * [Introduction](./content/chapter-05/Intro.md)
 * [Setup](./content/chapter-05/Setup.md)
 * [Sample Data Setup](./content/chapter-05/SampleDataSetup.md)
@@ -139,18 +139,18 @@
 * [What we learned](./content/chapter-08/Summary.md)
 
 ## Extras ##
+* [Filebeat Intro](./content/extras/Filebeat/Intro.md)
+* [Filebeat Setup Exercise](./content/extras/Filebeat/SetupEx.md)
 * [Lucene Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
-* [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-explain.html)
+* [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html)
 * [Suggest](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html)
 * [Mapping templates](./content/extras/MappingTemplates.md)
-* [Search templates](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-template.html)
+* [Search templates](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-template.html)
 * [Percentile Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-aggregation.html)
 * [Shield](https://www.elastic.co/products/x-pack/security)
 * [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
 * [Encryption at Rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
 * [Postman](https://www.getpostman.com/apps)
-* [Sense](https://www.elastic.co/guide/en/sense/current/installing.html)
-* [In-class Notes](https://docs.google.com/presentation/d/1GX4lY9yZyhRxuG5kCBZFgRTWpra9ny8R7KkI_6FMGEE/edit?usp=sharing)
 * [Cluster Diagram](https://drive.google.com/file/d/0BzVXruaTwGfldmM2NUlnSjM1R1U/view?usp=sharing)
 
 ## Exercise Tips ##

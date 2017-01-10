@@ -1,7 +1,7 @@
 # Capacity Planning #
 
 * How many nodes?
-* The basic starting point is two nodes with 2 cores and 4GB of memory
+* The basic starting point is two nodes with 2 cores and 4GB of memory on each node
 * For fault tolerance perspective three nodes is more appropriate for any <a href="http://stackoverflow.com/questions/2330562/do-i-absolutely-need-a-minimum-of-3-nodes-servers-for-a-cassandra-cluster-or-wil" target="_blank">cluster</a>
 * What's better more nodes or bigger nodes?
 * More nodes equals IO, Memory, and GC (garbage collector) distributed processing

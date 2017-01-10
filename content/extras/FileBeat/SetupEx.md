@@ -12,10 +12,6 @@ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee 
 ```
 sudo apt-get update && sudo apt-get install filebeat
 ```
-* Start Filebeat service:
-```
-sudo service filebeat start
-```
 * Configure the logs location:
 ```
 sudo nano /etc/filebeat/filebeat.yml
@@ -27,5 +23,14 @@ sudo nano /etc/filebeat/filebeat.yml
     - /var/log/*.log
 
 output.elasticsearch:
-     hosts: ["localhost:9200"]
+  hosts: ["localhost:9200"]
+  template.enabled: true
+  template.path: "/etc/filebeat/filebeat.template.json"
+  template.overwrite: false
+  index: "filebeat"     
 ```
+* Start Filebeat service and check the status:
+```
+sudo service filebeat start && sudo service filebeat status
+```
+* Query ElasticSearch using Kibana console to confirm new index has been created: 'filebeat'
