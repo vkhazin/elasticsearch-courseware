@@ -4,8 +4,12 @@
 * Requires mappings to be configured with geo_point type
 * For previously populated log data cannot modify mapping for coordinates
 * We will have to delete the indices created, re-create indices with mapping, and to re-populate data
-* Shell script prepared for you <a href="../../examples/data-sets/geoMappings.sh">right click and save</a>
-* Download and run the script (chmod +x maybe required) or copy-paste commands into terminal
+* Shell script prepared for you <a href="../../examples/data-sets/geoMappings.sh">right-click and save</a>
+* Or download the script to the sandbox by running following command:
+```
+curl -o geoMapipngs.sh https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/geoMappings.sh
+```
+* 'chmod +x' will be required to grant execution permission
 * Go back to Visualize tab and select 'Tile map'
 * Here it is a bit tricky - may need to go back to settings and refresh the fields
 * Select 'Geo Coordinates' and select 'geo.coordinates' field
