@@ -5,6 +5,6 @@
 * Log location vs. data location
 * Data volumes - encrypted or not
 * ElasticSearch defaults to anonymous read/write access
-* Maybe you don't what your cluster on <a href="https://www.shodan.io/search?query=elasticsearch+%27You+Know%2C+for+Search%27" target="_blank">this list</a>
+* Maybe you don't want your cluster on <a href="https://www.shodan.io/search?query=elasticsearch+%27You+Know%2C+for+Search%27" target="_blank">this list</a>
 * Network protection anyone?
 * Don't trust humans - automate configuration and deployment
