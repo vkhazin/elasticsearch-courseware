@@ -1931,7 +1931,7 @@
                                 
                                 <h1 id="not-analyzed--multi-fields">Not Analyzed &amp; Multi-Fields</h1>
 <ul>
-<li>Lucene and hence ElasticSearch break strings into terms using <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/analysis-tokenizers.html" target="_blank">built-in</a> or custom tokenizers </li>
+<li>Lucene and hence ElasticSearch break strings into terms using <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html" target="_blank">built-in</a> or custom tokenizers </li>
 <li>Some strings don&apos;t make sense to tokenize e.g. <a href="https://www.google.ca/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#newwindow=1&amp;q=define:+guid" target="_blank">uuid or guid</a> often used as equivalent of a primary key and/or unique identifier</li>
 <li>not_analyzed: ElasticSearch mapping option to suppress tokenization:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos; -d &apos;
 {
@@ -1947,7 +1947,7 @@
 </code></pre></li>
 <li>What you think difference will be searching or aggregating tokenized uuid/guid vs. non-tokenized uuid/guid property?</li>
 <li>What if I need both tokenized and non-tokenized option for the same field?</li>
-<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/multi-fields.html" target="_blank">Multi-Fields</a> Mapping allows double indexing the same data:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos; -d &apos;
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/multi-fields.html" target="_blank">Multi-Fields</a> Mapping allows double indexing the same data:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos; -d &apos;
 {  
  &quot;order&quot;:{  
     &quot;properties&quot;: {  
@@ -1994,6 +1994,24 @@
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
 </center>
+<!--</p>--><!--<p align="right" style="margin-right: 25px">-->
+<center>
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+   </a>
+</center>
+<!--</p>--><!--<p align="right" style="margin-right: 25px">-->
+<center>
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+   </a>
+</center>
+<!--</p>--><!--<p align="right" style="margin-right: 25px">-->
+<center>
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+   </a>
+</center>
 <!--</p>--></div>
 
             
@@ -2014,7 +2032,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields","level":"4.11","depth":1,"next":{"title":"Not Analyzed & Multi-Fields Exercise","level":"4.12","depth":1,"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","ref":"./content/chapter-02/NotAnalyzedMultiFieldEx.md","articles":[]},"previous":{"title":"Mapping Exercise","level":"4.10","depth":1,"path":"content/chapter-02/MappingEx.md","ref":"./content/chapter-02/MappingEx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiField.md","mtime":"2016-12-26T23:05:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-30T22:26:56.340Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Not Analyzed & Multi-Fields","level":"4.11","depth":1,"next":{"title":"Not Analyzed & Multi-Fields Exercise","level":"4.12","depth":1,"path":"content/chapter-02/NotAnalyzedMultiFieldEx.md","ref":"./content/chapter-02/NotAnalyzedMultiFieldEx.md","articles":[]},"previous":{"title":"Mapping Exercise","level":"4.10","depth":1,"path":"content/chapter-02/MappingEx.md","ref":"./content/chapter-02/MappingEx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/NotAnalyzedMultiField.md","mtime":"2017-04-30T22:53:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-30T22:26:56.340Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

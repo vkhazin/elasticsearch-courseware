@@ -20,4 +20,4 @@
   }
 }
 ```
-* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/nested.html" target="_blank">Additional options available for nested datatype mapping, querying, and aggregation<a>
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/nested.html" target="_blank">Additional options available for nested datatype mapping, querying, and aggregation<a>

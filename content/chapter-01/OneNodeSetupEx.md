@@ -32,15 +32,15 @@ curl localhost:9200
 * Expected response:
 ```
 {
-  "name" : "qRml_JO",
+  "name" : "TBvpgLP",
   "cluster_name" : "elasticsearch",
-  "cluster_uuid" : "eDZmkVrdRaSrGcJy2kAqow",
+  "cluster_uuid" : "A7_ZS4BbTkWpJuv9ev8s1w",
   "version" : {
-    "number" : "5.1.1",
-    "build_hash" : "5395e21",
-    "build_date" : "2016-12-06T12:36:15.409Z",
+    "number" : "5.3.2",
+    "build_hash" : "3068195",
+    "build_date" : "2017-04-24T16:15:59.481Z",
     "build_snapshot" : false,
-    "lucene_version" : "6.3.0"
+    "lucene_version" : "6.4.2"
   },
   "tagline" : "You Know, for Search"
 }

@@ -6,4 +6,4 @@
 * To minimize data loss each shard uses write ahead log or transaction log
 * In case of crash recent operations can be replayed back to Lucene index
 * Flush is performing Lucene commit and is starting new transaction log in the background
-* Flush and transaction log settings are configured in <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/index-modules-translog.html" target="_blank">elasticsearch.yml</a>
+* Flush and transaction log settings are configured in <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-translog.html" target="_blank">elasticsearch.yml</a>

@@ -16,4 +16,4 @@ index.auto_expand_replicas: 0-5
 ```
 index.max_result_window: 10000
 ``` 
-* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/index-modules.html" target="_blank">More index settings</a>
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html" target="_blank">More index settings</a>

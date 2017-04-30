@@ -49,4 +49,4 @@ curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
 }
 '
 ```
-* Take a moment to understand the variety of <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/search-aggregations.html" target="_blank">aggregation types</a>
+* Take a moment to understand the variety of <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html" target="_blank">aggregation types</a>
