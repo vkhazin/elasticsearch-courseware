@@ -11,4 +11,4 @@
 ## Localhost ##
 * Download and install on localhost - JRE is required
 * Run locally via command line
-* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/_installation.html" target="_blank">Download and setup instructions</a>
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html" target="_blank">Download and setup instructions</a>

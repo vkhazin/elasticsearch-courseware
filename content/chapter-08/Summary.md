@@ -7,7 +7,7 @@
 * What are components of ElasticSearch cluster?
 * How do we query ElasticSearch?
 * What's the different between query and filter?
-* What aggregation type s do you recall?
+* What aggregation types do you recall?
 * What user interface product available for ElasticSearch?
 * What are the roles of Discovery, Visualization, and Dashboards?
 * What are the consideration for capacity planning?
