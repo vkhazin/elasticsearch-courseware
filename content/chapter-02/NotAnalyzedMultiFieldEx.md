@@ -1,15 +1,6 @@
 # Not Analyzed & Multi-Fields Exercise #
 
 * Login into you virtual box
-* We have not yet configured elasticsearch service to start automatically, start using terminal window:
-```
-sudo service elasticsearch start
-``` 
-* Service will start but listener will a bit to start responding to incoming requests:
-```
-curl localhost:9200
-```
-* Give it few minutes before you get json response...
 * Delete previously created index and its mapping:
 ```
 curl -XDELETE 'localhost:9200/ordering?pretty=true'

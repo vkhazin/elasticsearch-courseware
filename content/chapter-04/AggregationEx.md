@@ -3,7 +3,7 @@
 * Log-in into your ElasticSearch sandbox
 * Populate few sample movie data:
 ```
-curl -o https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt 
+curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt -o movies.txt
 curl -XPOST 'localhost:9200/_bulk' --data-binary "@movies.txt"
 ```
 * Confirm there are some records to search on:
