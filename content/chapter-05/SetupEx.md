@@ -20,9 +20,9 @@ sudo service kibana start
 * Populate sample data:
 ```
 curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json -o logs.json
-curl -XPOST 'localhost:9200/_bulk' --data-binary "@logs.json"
+curl -XPOST 'ip or dns:9200/_bulk' --data-binary "@logs.json"
 ```
-* By default Kibana listens to localhost and it won't be really helpful in more environments
+* By default Kibana listens to ip or dns and it won't be really helpful in more environments
 * Edit kibana.yml to set server.host: 0.0.0.0:
 ```
 sudo nano /etc/kibana/kibana.yml
@@ -31,7 +31,7 @@ sudo nano /etc/kibana/kibana.yml
 ```
 sudo service kibana restart
 ```
-* Open browser to http://public-ip-address-same-as-ssh:5601
+* Open browser to http://ip or dns:5601
 * Kibana requires configuration before it display data: index name pattern is required
 * To find out what indices we have in the cluster:
 ```

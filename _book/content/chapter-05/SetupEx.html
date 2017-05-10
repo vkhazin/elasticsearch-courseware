@@ -1954,14 +1954,14 @@
 <li>Start Kibana service:<pre><code>sudo service kibana start
 </code></pre></li>
 <li>Populate sample data:<pre><code>curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/logs.json -o logs.json
-curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot;
+curl -XPOST &apos;ip or dns:9200/_bulk&apos; --data-binary &quot;@logs.json&quot;
 </code></pre></li>
-<li>By default Kibana listens to localhost and it won&apos;t be really helpful in more environments</li>
+<li>By default Kibana listens to ip or dns and it won&apos;t be really helpful in more environments</li>
 <li>Edit kibana.yml to set server.host: 0.0.0.0:<pre><code>sudo nano /etc/kibana/kibana.yml
 </code></pre></li>
 <li>Restart Kibana service:<pre><code>sudo service kibana restart
 </code></pre></li>
-<li>Open browser to <a href="http://public-ip-address-same-as-ssh:5601" target="_blank">http://public-ip-address-same-as-ssh:5601</a></li>
+<li>Open browser to <a href="http://ip" target="_blank">http://ip</a> or dns:5601</li>
 <li>Kibana requires configuration before it display data: index name pattern is required</li>
 <li>To find out what indices we have in the cluster:<pre><code>curl localhost:9200/_cat/indices
 </code></pre></li>
@@ -2028,7 +2028,7 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup Exercise","level":"7.4","depth":1,"next":{"title":"Discover","level":"7.5","depth":1,"path":"content/chapter-05/Discover.md","ref":"./content/chapter-05/Discover.md","articles":[]},"previous":{"title":"Sample Data Setup","level":"7.3","depth":1,"path":"content/chapter-05/SampleDataSetup.md","ref":"./content/chapter-05/SampleDataSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/SetupEx.md","mtime":"2017-05-02T13:33:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T06:12:46.757Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup Exercise","level":"7.4","depth":1,"next":{"title":"Discover","level":"7.5","depth":1,"path":"content/chapter-05/Discover.md","ref":"./content/chapter-05/Discover.md","articles":[]},"previous":{"title":"Sample Data Setup","level":"7.3","depth":1,"path":"content/chapter-05/SampleDataSetup.md","ref":"./content/chapter-05/SampleDataSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer"],"pluginsConfig":{"layout":{"footerPath":"layouts/footer.html"},"footer":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-05/SetupEx.md","mtime":"2017-05-10T13:33:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-10T13:45:24.347Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2036,10 +2036,6 @@ curl -XPOST &apos;localhost:9200/_bulk&apos; --data-binary &quot;@logs.json&quot
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

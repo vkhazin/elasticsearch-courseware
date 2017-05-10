@@ -14,11 +14,20 @@ sudo ./bin/elasticsearch-plugin install x-pack
 cd /usr/share/kibana/
 sudo ./bin/kibana-plugin install x-pack
 ```
+* Modify /etc/kibana/kibana.yml:
+```
+sudo nano /etc/kibana/kibana.yml
+```
+* Values to change:
+```
+elasticsearch.username: "elastic"
+elasticsearch.password: "changeme"
+```
 * Start ElasticSearch and Kibana services:
 ```
 sudo service elasticsearch start && sudo service kibana start
 ```
-* Navigate to http://ip-address:5601
+* Navigate to http://ip or dns:5601
 * Login with default credentials: elastic/changeme
 * Explore the 'Monitoring' and 'Management' links
 * Feel free to install other monitoring plug-ins to find out which one you like more

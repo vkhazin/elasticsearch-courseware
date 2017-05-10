@@ -7,7 +7,7 @@
 * Shell script prepared for you <a href="../../examples/data-sets/geoMappings.sh">right-click and save</a>
 * Or download the script to the sandbox by running following command:
 ```
-curl -o geoMapipngs.sh https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/geoMappings.sh
+curl -o geoMappings.sh https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/geoMappings.sh
 ```
 * 'chmod +x' will be required to grant execution permission
 * Go back to Visualize tab and select 'Tile map'
