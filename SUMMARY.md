@@ -154,4 +154,5 @@
 * [Cluster Diagram](https://drive.google.com/file/d/0BzVXruaTwGfldmM2NUlnSjM1R1U/view?usp=sharing)
 
 ## Exercise Tips ##
-* [Search](/content/extras/SearchExTips.md) 
+* [Search](/content/extras/SearchExTips.md)
+* [Filter](/content/extras/FilterExTips.md) 

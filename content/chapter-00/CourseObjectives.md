@@ -8,5 +8,5 @@
 * Build aggregation queries
 * Install and configure Kibana 5.x
 * Leverage Kibana's discover, visualize, and dashboard functionality
-* Install and explorer Marvel plug-in
+* Install and explorer X-Pack
 * Review production planning and operational principals
