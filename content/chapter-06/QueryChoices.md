@@ -14,7 +14,7 @@ curl 'localhost:9200/ordering/order/_search?pretty=true' -d '
 curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
 {
    "query": {
-      "filtered": {
+      "bool": {
          "filter": {
             "term": { "status": "pending" }
          }
