@@ -18,16 +18,16 @@ sudo nano /etc/filebeat/filebeat.yml
 ```
 * Important settings:
 ```
-- input_type: log
-  paths:
-    - /var/log/*.log
+- input_type: log  
+  paths:  
+    - /var/log/*.log  
 
-output.elasticsearch:
-  hosts: ["localhost:9200"]
-  template.enabled: true
-  template.path: "/etc/filebeat/filebeat.template.json"
-  template.overwrite: false
-  index: "filebeat"     
+output.elasticsearch:  
+  hosts: ["localhost:9200"]  
+  template.enabled: true  
+  template.path: "/etc/filebeat/filebeat.template.json"  
+  template.overwrite: false  
+  index: "filebeat"  
 ```
 * Start Filebeat service and check the status:
 ```
