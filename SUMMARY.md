@@ -140,7 +140,7 @@
 
 ## Extras ##
 * [Filebeat Intro](./content/extras/Filebeat/Intro.md)
-* [Filebeat Setup Exercise](./content/extras/Filebeat/SetupEx.md)
+* [Filebeat Setup Exercise](https://github.com/vkhazin/elasticsearch-courseware/blob/master/content/extras/FileBeat/SetupEx.md)
 * [Lucene Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
 * [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html)
 * [Suggest](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html)
