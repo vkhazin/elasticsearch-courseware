@@ -1,15 +1,10 @@
-# Setup and Configuration #
+# Setup #
 
-* Kibana is an open source product installed separately from Elastic Search
-* Can be downloaded from <a href="https://www.elastic.co/downloads/kibana" target="_blank">Elastic.co</a> or install using <a href="https://www.elastic.co/guide/en/kibana/5.1/setup.html#setup-repositories" target="_blank">Linux Repositories</a>
-* Configuration file: /etc/kibana/kibana.yml
-* Important settings:
-```
-server.port: 5601
-server.host: "0.0.0.0"
-elasticsearch.url: "http://ip or dns:9200"
-```
-* Additional settings are detailed <a href="https://www.elastic.co/guide/en/kibana/current/kibana-server-properties.html" target="_blank">here</a>
-* Kibana can be installed on the same nodes where Elastic Search is running, or on separate nodes
-* Kibana stores its configuration data in ElasticSearch 
-* Accessing Kibana from browser: http://ip-address:5601
+* Logstash requires Java 8 Oracle or OpenJDK, Java 9 is not supported
+* Linux distribution repository is available similary to other Elastic.co products
+* A [Docker image](https://www.elastic.co/guide/en/logstash/current/docker.html) has been made available by Elastic.co, more about docker later...
+* If installing manually - do not install into a directory path that contains colon (:) characters
+* Pipeline configuration files define the Logstash processing pipeline: ALL files in /etc/logstash/conf.d folder
+* Settings files specify options for Logstash startup and execution:
+    * /etc/logstash/logstash.yml - configuration flags
+    * /etc/logstash/startup.options - used by system-install to create logstash service or services
