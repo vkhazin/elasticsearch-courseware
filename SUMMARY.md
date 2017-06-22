@@ -86,9 +86,12 @@
 
 ## Chapter 5: Logstash ##
 * [Introduction](./content/chapter-05/Intro.md)
-* [Overview](./content/chapter-05/OverviewIntro.md)
+* [Overview](./content/chapter-05/Overview.md)
 * [Setup](./content/chapter-05/Setup.md)
 * [Setup Exercise](./content/chapter-05/SetupEx.md)
+* [Log Processing - Input](./content/chapter-05/LogProcessingInput.md)
+* [Log Processing - Grok](./content/chapter-05/LogProcessingGrok.md)
+* [Log Processing - Output](./content/chapter-05/LogProcessingOutput.md)
 * [Summary](./content/chapter-05/Summary.md)
 
 ## Chapter 6: Filebeat ##
@@ -160,7 +163,8 @@
 * [Summary](./content/chapter-10/Summary.md)
 
 ## Chapter 11: Course Summary ##
-* [What we learned](./content/chapter-11/Summary.md)
+* [What have we learned](./content/chapter-11/Summary.md)
+* [Thank you!](./content/chapter-11/ThankYou.md)
 
 ## Extras ##
 * [Lucene Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
@@ -171,7 +175,7 @@
 * [Percentile Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-aggregation.html)
 * [Shield](https://www.elastic.co/products/x-pack/security)
 * [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
-* [Encryption at Rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
+* [Encryption at rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
 * [Postman](https://www.getpostman.com/apps)
 * [Cluster Diagram](https://drive.google.com/file/d/0BzVXruaTwGfldmM2NUlnSjM1R1U/view?usp=sharing)
 

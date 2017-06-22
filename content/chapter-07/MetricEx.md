@@ -1,6 +1,6 @@
 # Metric Exercise #
 
-* Access Kibana user interface with browser: http://ip or dns:5601/
+* Access Kibana user interface with browser: http://domain-name:5601/
 * On discover tab construct some search with results
 * For the visualization we will need numeric data type
 * Save the search definitions to reuse in the Visualization

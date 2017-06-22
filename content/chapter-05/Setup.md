@@ -8,3 +8,5 @@
 * Settings files specify options for Logstash startup and execution:
     * /etc/logstash/logstash.yml - configuration flags
     * /etc/logstash/startup.options - used by system-install to create logstash service or services
+* Basic pipeline with Logstash
+![Basic Pipeline](../../media/basic_logstash_pipeline.png)

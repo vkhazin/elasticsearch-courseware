@@ -1,4 +1,4 @@
-# Logstash #
+# Chapter 5: Logstash #
 
 * Overview
 * Installation, configuration, and usage
