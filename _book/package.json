@@ -1,0 +1,16 @@
+{
+  "name": "elasticsearch-courseware",
+  "version": "1.0.0",
+  "description": "<p align=\"right\"><i><a href=\"https://www.linkedin.com/in/vkhazin\" target=\"_blank\">by Vlad Khazin</a></i></p>",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "gitbook": "^3.2.2",
+    "gitbook-plugin-footer": "^0.0.6"
+  },
+  "devDependencies": {},
+  "author": "Vlad Khazin",
+  "license": "by-nc-sa"
+}
