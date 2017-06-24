@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "gitbook": "^3.2.2",
-    "gitbook-plugin-footer": "^0.0.6"
+    "gitbook-plugin-footer": "^0.0.6",
+    "gitbook-plugin-ga": "^2.0.0"
   },
   "devDependencies": {},
   "author": "Vlad Khazin",

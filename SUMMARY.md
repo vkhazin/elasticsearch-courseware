@@ -173,12 +173,6 @@
 * [Mapping templates](./content/extras/MappingTemplates.md)
 * [Search templates](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-template.html)
 * [Percentile Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-aggregation.html)
-* [Shield](https://www.elastic.co/products/x-pack/security)
 * [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
 * [Encryption at rest](https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282)https://discuss.elastic.co/t/any-option-to-encrypt-data-at-rest-in-a-hosted-cluster/47282
 * [Postman](https://www.getpostman.com/apps)
-* [Cluster Diagram](https://drive.google.com/file/d/0BzVXruaTwGfldmM2NUlnSjM1R1U/view?usp=sharing)
-
-## Exercise Tips ##
-* [Search](/content/extras/SearchExTips.md)
-* [Filter](/content/extras/FilterExTips.md) 
