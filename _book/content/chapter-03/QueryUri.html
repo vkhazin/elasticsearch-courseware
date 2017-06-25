@@ -2239,7 +2239,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Query Uri","level":"5.10","depth":1,"next":{"title":"Aggregation","level":"5.11","depth":1,"path":"content/chapter-03/Aggregation.md","ref":"./content/chapter-03/Aggregation.md","articles":[]},"previous":{"title":"Query Pagination","level":"5.9","depth":1,"path":"content/chapter-03/QueryPagination.md","ref":"./content/chapter-03/QueryPagination.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"token":"UA-99005189-1"},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/QueryUri.md","mtime":"2017-06-19T18:04:49.973Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-24T23:39:28.625Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Query Uri","level":"5.10","depth":1,"next":{"title":"Aggregation","level":"5.11","depth":1,"path":"content/chapter-03/Aggregation.md","ref":"./content/chapter-03/Aggregation.md","articles":[]},"previous":{"title":"Query Pagination","level":"5.9","depth":1,"path":"content/chapter-03/QueryPagination.md","ref":"./content/chapter-03/QueryPagination.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"token":"UA-99005189-1"},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-03/QueryUri.md","mtime":"2017-06-19T18:04:49.973Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-25T02:16:18.873Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div><center>
@@ -2247,8 +2247,16 @@
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
    <br>
-   <a>Last modified: <script type="text/javascript">document.write(new Date(document.lastModified).toISOString());</script></a>
+   <div>
+     Last modified: <a id="timestampvalue"></a>
+   </div>
 </center>
+
+<script type="text/javascript">
+  var timestamp = new Date(document.lastModified).toISOString();
+  document.getElementById("timestampvalue").textContent = timestamp;
+</script>
+
 
         
     <script src="../../gitbook/gitbook.js"></script>

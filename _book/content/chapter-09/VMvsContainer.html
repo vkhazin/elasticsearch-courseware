@@ -2219,7 +2219,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VM vs Container","level":"11.20","depth":1,"next":{"title":"Data Population Exercise","level":"11.21","depth":1,"path":"content/chapter-09/DataPopulationEx.md","ref":"./content/chapter-09/DataPopulationEx.md","articles":[]},"previous":{"title":"Hosted vs Self-Managed","level":"11.19","depth":1,"path":"content/chapter-09/HostedVsSelfManaged.md","ref":"./content/chapter-09/HostedVsSelfManaged.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"token":"UA-99005189-1"},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-09/VMvsContainer.md","mtime":"2017-06-15T15:25:22.173Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-24T23:39:28.625Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"VM vs Container","level":"11.20","depth":1,"next":{"title":"Data Population Exercise","level":"11.21","depth":1,"path":"content/chapter-09/DataPopulationEx.md","ref":"./content/chapter-09/DataPopulationEx.md","articles":[]},"previous":{"title":"Hosted vs Self-Managed","level":"11.19","depth":1,"path":"content/chapter-09/HostedVsSelfManaged.md","ref":"./content/chapter-09/HostedVsSelfManaged.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"token":"UA-99005189-1"},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-09/VMvsContainer.md","mtime":"2017-06-15T15:25:22.173Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-25T02:16:18.873Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div><center>
@@ -2227,8 +2227,16 @@
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
    </a>
    <br>
-   <a>Last modified: <script type="text/javascript">document.write(new Date(document.lastModified).toISOString());</script></a>
+   <div>
+     Last modified: <a id="timestampvalue"></a>
+   </div>
 </center>
+
+<script type="text/javascript">
+  var timestamp = new Date(document.lastModified).toISOString();
+  document.getElementById("timestampvalue").textContent = timestamp;
+</script>
+
 
         
     <script src="../../gitbook/gitbook.js"></script>

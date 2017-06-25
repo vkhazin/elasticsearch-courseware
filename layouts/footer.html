@@ -7,5 +7,12 @@
             src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
    </a>
    <br/>
-   <a>Last modified: <script type="text/javascript">document.write(new Date(document.lastModified).toISOString());</script></a>
+   <div>
+     Last modified: <a id="timestampvalue"></a>
+   </div>
 </center>
+
+<script type="text/javascript">
+  var timestamp = new Date(document.lastModified).toISOString();
+  document.getElementById("timestampvalue").textContent = timestamp;
+</script>
