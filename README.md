@@ -1,4 +1,4 @@
-# Course: ElasticSearch and Kibana #
+# Course: Elastic.co Products #
 
 <p align="right"><i><a href="https://www.linkedin.com/in/vkhazin" target="_blank">by Vlad Khazin</a></i></p>
 
