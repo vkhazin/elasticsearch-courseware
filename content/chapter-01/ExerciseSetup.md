@@ -1,4 +1,4 @@
-# Exercise Setup - Alternatives #
+# Exercise Setup #
 
 ## Aws ##
 * EC2 t2.medium instances with Ubuntu 16.04
