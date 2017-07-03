@@ -2046,7 +2046,7 @@
                 <a href="../extras/MappingTemplates.html">
             
                     
-                    Mapping templates
+                    Dynamic templates
             
                 </a>
             
@@ -2276,7 +2276,7 @@
 }&apos;
 </code></pre></li>
 <li>Did it work? What&apos;s the difference?</li>
-<li>Let&apos;s modify data type for existing field:<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos; -d &apos;
+<li>Let&apos;s modify data type for existing field<pre><code>curl -XPUT &apos;localhost:9200/ordering/order/_mapping?pretty=true&apos; -d &apos;
 {
 &quot;order&quot; : {
   &quot;properties&quot; : {
@@ -2294,9 +2294,13 @@
 <li>Seriously, what now? Why? So much for the dynamic data mapping?</li>
 <li>What if we need to change data type after we have indexed the data?</li>
 <li>There is no (more) option to delete the mapping - delete and recreate index is the only option :-(<pre><code>curl -XDELETE localhost:9200/ordering
+curl -XPUT localhost:9200/ordering
 </code></pre></li>
+<li>User json data from the previous step to define the mapping</li>
 <li>Watch out! There is no warning or confirmation using curl!</li>
-<li>Psst: look out for the proper response too:<pre><code>{&quot;acknowledged&quot;:true}
+<li>Psst: look out for the proper response too:<pre><code>{
+&quot;acknowledged&quot;: true
+}
 </code></pre></li>
 </ul>
 
@@ -2342,7 +2346,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"4.10","depth":1,"next":{"title":"Not Analyzed & Multi-Fields","level":"4.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"previous":{"title":"Mapping","level":"4.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"token":"UA-99005189-1"},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2017-06-19T18:11:40.984Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-26T14:49:18.258Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mapping Exercise","level":"4.10","depth":1,"next":{"title":"Not Analyzed & Multi-Fields","level":"4.11","depth":1,"path":"content/chapter-02/NotAnalyzedMultiField.md","ref":"./content/chapter-02/NotAnalyzedMultiField.md","articles":[]},"previous":{"title":"Mapping","level":"4.9","depth":1,"path":"content/chapter-02/Mapping.md","ref":"./content/chapter-02/Mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["footer","livereload"],"pluginsConfig":{"livereload":{},"search":{},"layout":{"footerPath":"layouts/footer.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"token":"UA-99005189-1"},"footer":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/chapter-02/MappingEx.md","mtime":"2017-07-03T13:22:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-03T13:22:25.274Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div><center>

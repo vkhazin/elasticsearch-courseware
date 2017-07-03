@@ -1,4 +1,4 @@
-# Mapping Templates #
+# Dynamic Templates #
 
 * In-between option between dynamic mapping and strict mapping
 * Example:

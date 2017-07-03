@@ -126,12 +126,8 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 }'
 ```
 * Did it work? What's the difference?
-* Let's modify data type for existing field:
+* Let's modify data type for existing field
 ```
-# Create index
-curl -XPUT 'localhost:9200/ordering'
-
-# Define mappings
 curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
 {
   "order" : {
@@ -152,11 +148,15 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
 * There is no (more) option to delete the mapping - delete and recreate index is the only option :-(
 ```
 curl -XDELETE localhost:9200/ordering
+curl -XPUT localhost:9200/ordering
 ```
+* User json data from the previous step to define the mapping
 * Watch out! There is no warning or confirmation using curl!
 * Psst: look out for the proper response too:
 ```
-{"acknowledged":true}
+{
+  "acknowledged": true
+}
 ```
 
 

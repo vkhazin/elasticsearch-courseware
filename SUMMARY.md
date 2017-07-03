@@ -170,7 +170,7 @@
 * [Lucene Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
 * [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html)
 * [Suggest](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html)
-* [Mapping templates](./content/extras/MappingTemplates.md)
+* [Dynamic templates](./content/extras/MappingTemplates.md)
 * [Search templates](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-template.html)
 * [Percentile Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics-percentile-aggregation.html)
 * [Ssl](https://www.elastic.co/guide/en/shield/current/ssl-tls.html)
