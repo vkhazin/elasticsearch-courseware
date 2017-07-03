@@ -39,7 +39,7 @@ sudo service kibana restart
 * Kibana requires configuration before it display data: index name pattern is required
 * To find out what indices we have in the cluster:
 ```
-curl localhost:9200/_cat/indices
+curl 'localhost:9200/_cat/indices?format=json'
 ```
 * After typing index name pattern with star as a wildcard tab out from the field to get the fields refreshed
 * Kibana (by default) requires a date-time field to filter data on

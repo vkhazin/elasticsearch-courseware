@@ -128,6 +128,10 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 * Did it work? What's the difference?
 * Let's modify data type for existing field:
 ```
+# Create index
+curl -XPUT 'localhost:9200/ordering'
+
+# Define mappings
 curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
 {
   "order" : {
