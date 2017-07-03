@@ -41,6 +41,7 @@
 * [Shrink Index](./content/chapter-02/ShrinkIndex.md)
 * [Mapping](./content/chapter-02/Mapping.md)
 * [Mapping Exercise](./content/chapter-02/MappingEx.md)
+* [Analyzer](./content/chapter-02/Analyzer.md)
 * [Not Analyzed & Multi-Fields](./content/chapter-02/NotAnalyzedMultiField.md)
 * [Not Analyzed & Multi-Fields Exercise](./content/chapter-02/NotAnalyzedMultiFieldEx.md)
 * [Summary](./content/chapter-02/Summary.md)
