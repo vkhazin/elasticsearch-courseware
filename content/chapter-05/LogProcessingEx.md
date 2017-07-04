@@ -36,14 +36,15 @@
   ```
 * Restart logstash service and monitor messages:
   ```
-  sudo service logstash start && sudo tail -f -n 10 /var/log/logstash/logstash-plain.log &
+  sudo service logstash start && sudo tail -f -n 100 /var/log/logstash/logstash-plain.log &
   ```
 * Check the data has been populated into elastic search:
   ```
   curl localhost:9200/cloud-init/_search?pretty=true
   ```
-* Expected results is list of parsed log events
-* Logstash records position for each file processed, to restart processing locate sincedb files and delete them:
+* Expected results is a long list of parsed log events
+* Logstash records position for each file processed, to restart processing locate sincedb files:
 ```
 sudo find / -name *.*sincedb*
 ```
+* And delete desired sincedb files to restart the ingest process
