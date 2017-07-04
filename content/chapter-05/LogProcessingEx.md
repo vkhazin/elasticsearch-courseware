@@ -4,7 +4,7 @@
   ```
   sudo nano /etc/logstash/conf.d/cloud-init.conf
   ```
-* Copy-paste settings we have reviewed during previous exercise:
+* Copy-paste settings we have reviewed during previous slide:
   ```
   input {
     file {

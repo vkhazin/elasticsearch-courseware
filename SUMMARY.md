@@ -93,6 +93,7 @@
 * [Log Processing - Input](./content/chapter-05/LogProcessingInput.md)
 * [Log Processing - Grok](./content/chapter-05/LogProcessingGrok.md)
 * [Log Processing - Output](./content/chapter-05/LogProcessingOutput.md)
+* [Log Processing - Exercise](./content/chapter-05/LogProcessingEx.md)
 * [Summary](./content/chapter-05/Summary.md)
 
 ## Chapter 6: Filebeat ##
