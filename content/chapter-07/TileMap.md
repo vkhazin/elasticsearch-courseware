@@ -7,9 +7,13 @@
 * Shell script prepared for you <a href="../../examples/data-sets/geoMappings.sh">right-click and save</a>
 * Or download the script to the sandbox by running following command:
 ```
-curl -o geoMappings.sh https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/geoMappings.sh
+curl -o geoMappings.sh https://elasticsearch-courseware-2d.icssolutions.ca/examples/data-sets/geoMappings.sh
 ```
-* 'chmod +x' will be required to grant execution permission
+* ```chmod +x``` will be required to grant execution permission
+* Execute the script:
+```
+./geoMappings.sh
+```
 * Go back to Visualize tab and select 'Tile map'
 * Here it is a bit tricky - may need to go back to settings and refresh the fields
 * Select 'Geo Coordinates' and select 'geo.coordinates' field
