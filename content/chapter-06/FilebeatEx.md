@@ -35,6 +35,9 @@ sudo service filebeat start && sudo service filebeat status
 ```
 * Query ElasticSearch using culr to confirm new index has been created: 'filebeat':  
 ```
-curl 'localhost:9200/_cat/indices?format=json"
+curl 'localhost:9200/_cat/indices?format=json'
 ```
-* Query the data inside the newly created index  
+* Query the data inside the newly created index:
+```
+curl 'localhost:9200/filebeat/_search?pretty=true'
+```

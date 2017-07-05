@@ -1,5 +1,10 @@
 # Log Processing Exercise #
 
+* Log-in into your ElasticSearch sandbox
+* Make sure elastic search is running:
+```
+sudo service elasticsearch restart
+```
 * Create configuration file:
   ```
   sudo nano /etc/logstash/conf.d/cloud-init.conf
@@ -30,10 +35,6 @@
   }
   ```
 * Logstash loads all files in the /etc/logstash/conf.d directory, store no extra files there
-* Make sure ElasticSearch service is running:
-  ```
-  sudo service elasticsearch restart
-  ```
 * Restart logstash service and monitor messages:
   ```
   sudo service logstash start && sudo tail -f -n 100 /var/log/logstash/logstash-plain.log &

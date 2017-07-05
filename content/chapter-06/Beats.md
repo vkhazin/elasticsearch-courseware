@@ -6,4 +6,4 @@
 * Metricbeat collects metrics from systems and services using specific modules
 * Packetbeat is a lightweight network packet analyzer that sends data
 * Winlogbeat live streams any Windows Event log channel
-* Heartbeat asks the simple question from set of defined ICMP, TCP, and HTTP end-points: Are you alive?
+* Heartbeat asks the simple question from set of defined ICMP, TCP, and HTTP end-points: "Are you alive?"
