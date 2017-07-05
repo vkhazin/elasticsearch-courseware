@@ -6,6 +6,7 @@
   sudo service elasticsearch stop
   sudo service kibana stop
   sudo service filebeat stop
+  sudo service logstash stop
   ```
 * Since previously installed Elastic is running, we will use a different port: 9201 for api
 ```
