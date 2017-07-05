@@ -33,7 +33,7 @@ sudo nano /etc/filebeat/filebeat.yml
 ```
 sudo service filebeat start && sudo service filebeat status
 ```
-* Query ElasticSearch using culr to confirm new index has been created: 'filebeat':  
+* Query ElasticSearch using curl to confirm new index has been created: 'filebeat':  
 ```
 curl 'localhost:9200/_cat/indices?format=json'
 ```
