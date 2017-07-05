@@ -2,9 +2,9 @@
 
 * Log-in into your ElasticSearch sandbox
 * Make sure elastic search is running:
-```
-sudo service elasticsearch restart
-```
+  ```
+  sudo service elasticsearch restart
+  ```
 * Create configuration file:
   ```
   sudo nano /etc/logstash/conf.d/cloud-init.conf
