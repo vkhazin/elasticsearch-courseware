@@ -1,4 +1,4 @@
-# XPack Exercise #
+# X-Pack Exercise #
 
 * Stop ElasticSearch and Kibana:
 ```

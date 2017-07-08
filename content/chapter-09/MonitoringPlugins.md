@@ -7,5 +7,9 @@
 * Head's user interface is a bit dated but it appears to require no license
 * <a href="http://bigdesk.org/" target="_blank">BigDesk</a> comes with more appealing user interface
 * BigDesk doesn't appear to require a license and similar to head is <a href="https://github.com/lukas-vlcek/bigdesk" target="_blank">open source</a>
-* <a href="http://www.elastichq.org/" target="_blank">ElasticHQ</a> - not a plug-in, runs in browser and is connecting to ElasticSearch Api 
+* <a href="http://www.elastichq.org/" target="_blank">ElasticHQ</a> runs in browser and is connecting to ElasticSearch Api, requires adding cors support to /etc/elasticsearch/elasticsearch.yml:
+```
+http.cors.allow-origin: "*"
+http.cors.enabled: true
+```
 * Keep in mind 3rd party plugins are usually ElasticSearch and Kibana version specific
