@@ -103,7 +103,7 @@
 * [Filebeat Exercise](./content/chapter-06/FilebeatEx.md)
 * [Summary](./content/chapter-06/Summary.md)
 
-## Chapter 7: Kibana 5 ##
+## Chapter 7: Kibana ##
 * [Introduction](./content/chapter-07/Intro.md)
 * [Setup](./content/chapter-07/Setup.md)
 * [Sample Data Setup](./content/chapter-07/SampleDataSetup.md)
