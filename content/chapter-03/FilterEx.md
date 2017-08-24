@@ -1,6 +1,10 @@
 # Filter Exercise #
 
 * Login into your ElasticSearch sandbox
+* Make sure elastic search is running:
+```
+sudo service elasticsearch restart
+```
 * Populate few sample data borrowed from <a href="https://catalog.data.gov/dataset" target="_blank">data.gov</a>:
 ```
 curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/collisions.txt -o collisions.txt

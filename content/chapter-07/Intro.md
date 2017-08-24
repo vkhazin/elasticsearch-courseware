@@ -1,4 +1,7 @@
-# Chapter 07: Running in Production #
+# Chapter 7: Kibana #
 
-* Installation, configuration, and hardware
-* Monitoring and alerts
+* Setup and configuration
+* Discover
+* Visualize
+* Dashboard
+* Timelion

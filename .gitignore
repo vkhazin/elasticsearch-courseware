@@ -6,3 +6,10 @@ logs
 
 # Dependency directories
 node_modules/
+
+.DS_Store/
+.DS_Store
+
+# Generated files
+_book/
+_book

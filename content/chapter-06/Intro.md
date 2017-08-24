@@ -1,5 +1,5 @@
-# Chapter 6: Preparing for Production #
+# Chapter 6: Filebeat #
 
-* Discussion on capacity planning and data population
-* Performance tuning and monitoring
-* Hosted Elastic Search
+* Introduction to Beats
+* Setup of Filebeat
+* Filebeat Exercise

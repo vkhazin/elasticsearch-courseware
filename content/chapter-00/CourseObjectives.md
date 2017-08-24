@@ -6,6 +6,8 @@
 * Learn Query Dsl (domain specific language)
 * Understand difference between search and filter
 * Build aggregation queries
+* Run Filebeat to parse log file
+* Setup Logstash to transform log lines into json documents
 * Install and configure Kibana 5.x
 * Leverage Kibana's discover, visualize, and dashboard functionality
 * Install and explorer X-Pack

@@ -1,7 +1,5 @@
-# Chapter 5: Kibana #
+# Chapter 5: Logstash #
 
-* Setup and configuration
-* Discover
-* Visualize
-* Dashboard
-* Timelion
+* Overview
+* Installation, configuration, and usage
+* Data analysis and procesing

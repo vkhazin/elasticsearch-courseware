@@ -1,6 +1,10 @@
 # Aggregation Exercise #
 
 * Log-in into your ElasticSearch sandbox
+* Make sure elastic search is running:
+```
+sudo service elasticsearch restart
+```
 * Populate few sample movie data:
 ```
 curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt -o movies.txt

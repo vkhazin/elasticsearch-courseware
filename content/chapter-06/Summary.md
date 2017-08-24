@@ -1,7 +1,6 @@
 # Chapter 6: Summary #
 
-* What are the considerations for capacity planning?
-* What are pressures on memory?
-* What are requirements for storage?
-* What are anticipated impacts on Cpu?
-* What is Cluster State and what impact it may have on performance?
+* What are the beats?
+* What problem beats are looking to solve?
+* Can you enumerate beats and their purpose?
+* How to configure Filebeat to pick a specific file or folder?

@@ -1,7 +1,5 @@
 # Chapter 5: Summary #
 
-* What's Kibana?
-* How to install Kibana?
-* How many servers to allocate to Kibana?
-* What are the components in Kibana
-* What are the common pitfalls using searches?
+* What is the purpose of Logstash product?
+* What are the components of Logstash pipeline?
+* What filter plug-in we've used to extract data from log file?

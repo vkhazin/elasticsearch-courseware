@@ -1,5 +1,10 @@
 # Search Exercise #
 
+* Log-in into your ElasticSearch sandbox
+* Make sure elastic search is running:
+```
+sudo service elasticsearch restart
+```
 * We have covered following data-model approaches: aggregation, nested objects, and parent-child relationship
 * There is likely not enough time to cover all options in a single exercise
 * Let's come up with a business data to map and discuss what's the best way to define mapping

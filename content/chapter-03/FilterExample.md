@@ -21,4 +21,4 @@ curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' -d '{
   }
  }'
 ```
-* Pss: convert term value to lower case!
+* Psst: convert term value to lower case!
