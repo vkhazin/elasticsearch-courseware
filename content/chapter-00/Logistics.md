@@ -10,4 +10,4 @@
 * Exercises are mini-hackathons, not step-by-step instructions
 * Questions, open discussions, and comments are encouraged
 * Keep it professional and polite
-* Let's have fun
+* Let's have fun!

@@ -1,4 +1,4 @@
-# CAP Theorem and Beyond#
+# CAP Theorem and Beyond
 
 ## Pick two out of three ##
 * Consistency - all nodes see all the data at the same time
