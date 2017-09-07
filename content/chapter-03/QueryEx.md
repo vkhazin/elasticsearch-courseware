@@ -26,7 +26,7 @@ curl 'localhost:9200/ordering/order/_search?pretty=true'
 * How do you know whether got all the documents or just first page of records?
 * How do you find all orders that were shipped?
 * What is the order of results?
-* How do you <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html" target="_blank">sort</a> result using arbitrary field?
+* How do you <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html" target="_blank">sort</a> result using an arbitrary field?
 * Pick couple of options and run your sort query
 * Reformat your query to use query uri instead of query json
 * You will be asked to present your sort findings to others...

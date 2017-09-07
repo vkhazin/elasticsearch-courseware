@@ -6,7 +6,7 @@
 * What data modeling options we have discussed to replace Rdbms joins?
 * What are components of ElasticSearch cluster?
 * How do we query ElasticSearch?
-* What's the different between a query and a filter?
+* What's the different between a search and a filter?
 * What aggregation types do you recall?
 * What data ingest options available from Elastic.co?
 * What are three stages of data ingest with Logstash?

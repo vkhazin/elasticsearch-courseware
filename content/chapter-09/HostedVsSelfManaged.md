@@ -1,4 +1,4 @@
-# Hosted vs Self-Managed #
+# Hosted vs. Self-Managed #
 
 * Using a self-managed cluster appears cheaper as far as monthly quoted costs go
 * Self-managed clusters allows greater control over configuration settings
