@@ -18,7 +18,6 @@ curl 'localhost:9200/politics/party/_search?pretty=true' -d '{
 * Search for children by parent:
 ```
 curl 'localhost:9200/politics/supporter/_search?pretty=true' -d '{
-{
   "query": {
     "has_parent": {
       "type": "party", 
@@ -26,7 +25,6 @@ curl 'localhost:9200/politics/supporter/_search?pretty=true' -d '{
         "match": {
           "name": "The Heartless"
         }
-      }
     }
   }
 }'

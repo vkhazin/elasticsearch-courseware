@@ -1,7 +1,9 @@
 # Exercise Setup #
 
 ## Aws ##
-* EC2 t2.medium instances with Ubuntu 16.04
+* AWS Regions and Availability Zones
+* Elastic Search cluster should be setup in one region and using multiple availability zones
+* EC2 t2.medium instances with Ubuntu 16.04, could have been any Linux Distribution
 * Root access via ssh using public/private key
 * For Windows user please download <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">putty
 * For Mac and Linux users - ssh is available via terminal window
