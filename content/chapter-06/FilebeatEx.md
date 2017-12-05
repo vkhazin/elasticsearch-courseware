@@ -2,7 +2,7 @@
 
 * Download public key for the repository:
 ```
-curl -O - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+curl -O https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 * Add repository to the list:
 ```
