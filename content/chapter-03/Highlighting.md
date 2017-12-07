@@ -2,7 +2,7 @@
 
 * Highlights search result on one or more fields:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -H 'content-type: application/json' -d '
 {
     "query" : {
         "match": { "id": "1" }

@@ -3,7 +3,7 @@
 * Query results are limited to page size of 10 by default
 * Query pagination and page number controlled by From/Size parameters:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -H 'content-type: application/json' -d '
 { "from":0, "size":2, "query": {"match_all":{}}}'
 ```
 * Expected result:

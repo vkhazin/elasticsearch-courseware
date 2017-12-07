@@ -8,7 +8,7 @@ sudo service elasticsearch restart
 * Populate few sample movie data:
 ```
 curl https://elasticsearch-courseware.icssolutions.ca/examples/data-sets/movies.txt -o movies.txt
-curl -XPOST 'localhost:9200/_bulk' --data-binary "@movies.txt"
+curl -XPOST 'localhost:9200/_bulk' -H 'content-type: application/json' --data-binary "@movies.txt"
 ```
 * Confirm there are some records to search on:
 ```

@@ -11,11 +11,11 @@ sudo apt-get install default-jre -y
 ```
 * Download and install Public Signing Key:
 ```
-curl -o - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+curl https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 * Add repository definition:
 ```
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 ```
 * Install Elastic Search:
 ```
@@ -32,28 +32,47 @@ curl localhost:9200
 * Expected response:
 ```
 {
-  "name" : "TBvpgLP",
+  "name" : "A28UK7n",
   "cluster_name" : "elasticsearch",
-  "cluster_uuid" : "A7_ZS4BbTkWpJuv9ev8s1w",
+  "cluster_uuid" : "6-nG7QniTiuSFtPtJOdJsg",
   "version" : {
-    "number" : "5.3.2",
-    "build_hash" : "3068195",
-    "build_date" : "2017-04-24T16:15:59.481Z",
+    "number" : "6.0.0",
+    "build_hash" : "8f0685b",
+    "build_date" : "2017-11-10T18:41:22.859Z",
     "build_snapshot" : false,
-    "lucene_version" : "6.4.2"
+    "lucene_version" : "7.0.1",
+    "minimum_wire_compatibility_version" : "5.6.0",
+    "minimum_index_compatibility_version" : "5.0.0"
   },
   "tagline" : "You Know, for Search"
 }
 ```
 * Posting first document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d ' {
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -H 'content-type: application/json' -d '{
   "id": "1", 
   "placedOn": "2016-10-17T13:03:30.830Z"
 }'
 ```
 * Expected Response:  
-{"_index":"ordering","_type":"order","_id":"1","_version":1,"_shards":{"total":2,"successful":1,"failed":0},"created":true}
+```json
+  {
+    "_index" : "ordering",
+    "_type" : "order",
+    "_id" : "1",
+    "_version" : 2,
+    "result" : "created",
+    "_shards" : {
+      "total" : 2,
+      "successful" : 1,
+      "failed" : 0
+    },
+    "_seq_no" : 0,
+    "_primary_term" : 1
+  }
+```
+* ```_seq_no```: unique sequence of indexing operation
+* ```_primary_term```: shard id where primary copy stored
 * First query:
 ```
 curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:1'

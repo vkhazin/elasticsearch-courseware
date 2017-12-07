@@ -7,15 +7,15 @@ sudo service elasticsearch restart
 ```
 * Populate few orders:
 ```
-curl -XPOST localhost:9200/ordering/order/2 -d '
+curl -XPOST localhost:9200/ordering/order/2 -H 'content-type: application/json' -d '
 {"id": "2", "placedOn": "2017-01-01T00:00:00Z", "status": "pending"}'
 ```
 ```
-curl -XPOST localhost:9200/ordering/order/3 -d '
+curl -XPOST localhost:9200/ordering/order/3 -H 'content-type: application/json' -d '
 {"id": "3", "placedOn": "2016-10-01T00:00:00Z", "status": "shipped"}'
 ```
 ```
-curl -XPOST localhost:9200/ordering/order/4 -d '
+curl -XPOST localhost:9200/ordering/order/4 -H 'content-type: application/json' -d '
 {"id": "4", "placedOn": "2016-01-01T00:00:00Z", "status": "received"}'
 ```
 * Confirm there are some records to search on:

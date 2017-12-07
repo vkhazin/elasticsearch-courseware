@@ -2,7 +2,7 @@
 
 * Download and install the Public Signing Key:  
 ```
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+curl -o - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 * Add repository definition:  
 ```
@@ -10,7 +10,7 @@ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee 
 ```
 * Install logstash from repository:  
 ```
-sudo apt-get install logstash
+sudo apt-get update && sudo apt-get install logstash
 ```
 * Create a manual pipeline for Logstash
     ```
@@ -21,9 +21,9 @@ sudo apt-get install logstash
 * stdin: file handle that process reads to get information from you, human
 * stdout: process writes log information to this file handle
 * After pipeline has started, type:
-    ```
-    Hello World!
-    ```
+  ```
+  Hello World!
+  ```
 * And press enter
 * Expected response:
     ```

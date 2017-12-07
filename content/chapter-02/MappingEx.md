@@ -12,7 +12,7 @@ curl localhost:9200
 * Give it few minutes before you get json response
 * Post new document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d '{
+curl -XPOST localhost:9200/ordering/order/1 -H 'content-type: application/json' -d '{
   "id": "1", 
   "placedOn": "2016-10-17T13:03:30.830Z"
 }'
@@ -48,7 +48,7 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 ```
 * Try modifying existing mapping:
 ```
-curl -XPUT 'localhost:9200/ordering/_mapping?pretty=true' -d '
+curl -XPUT 'localhost:9200/ordering/_mapping?pretty=true' -H 'content-type: application/json' -d '
 {
   "ordering" : {
     "mappings" : {
@@ -76,7 +76,7 @@ curl -XPUT 'localhost:9200/ordering/_mapping?pretty=true' -d '
 * What's the outcome? And why?
 * Try modifying existing type mapping:
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -H 'content-type: application/json' -d '
 {
   "ordering" : {
     "mappings" : {
@@ -104,7 +104,7 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 * What now? Why?
 * Let us try again:
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -H 'content-type: application/json' -d '
 {
   "order" : {
     "properties" : {
@@ -128,7 +128,7 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 * Did it work? What's the difference?
 * Let's modify data type for existing field
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -H 'content-type: application/json' -d '
 {
   "order" : {
     "properties" : {

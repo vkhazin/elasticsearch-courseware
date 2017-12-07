@@ -14,5 +14,5 @@ echo '{ "index" : { "_index" : "ordering", "_type" : "order", "_id" : "1" }}
 ```
 * Posting request data requires --data-binary switch to instruct curl to post the data as is
 ```
-curl -s -XPOST localhost:9200/_bulk --data-binary "@request"
+curl -s -XPOST localhost:9200/_bulk -H 'content-type: application/json' --data-binary "@request"
 ```

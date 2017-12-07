@@ -2,7 +2,7 @@
 
 * Recall first aggregation query: 
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -H 'content-type: application/json' -d '
 {
   "size": 0, 
   "aggregations": {

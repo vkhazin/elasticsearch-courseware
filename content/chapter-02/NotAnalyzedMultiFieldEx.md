@@ -7,7 +7,7 @@ curl -XDELETE 'localhost:9200/ordering?pretty=true'
 ```
 * Post new document:
 ```
-curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -d \
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -H 'content-type: application/json' -d \
 '{"id": "1", "placedOn": "2016-10-17T13:03:30.830Z"}'
 ```
 * Fetch mapping:
@@ -41,7 +41,7 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 ```
 * Add mapping for a new field
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d \
+curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -H 'content-type: application/json' -d \
 '{
   "order" : {
     "properties" : {
@@ -66,7 +66,7 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d \
 ```
 * Populate new order with spaces in id and trackingId fields/properties:  
 ```
-curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -d \
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -H 'content-type: application/json' -d \
 '{
   "id": "orderId with spaces", 
   "placedOn": "2016-10-17T13:03:30.830Z",
@@ -86,7 +86,7 @@ curl 'localhost:9200/ordering/order/_search?pretty=true&q=trackingId:trackingId'
 * What's the difference in behaviour and why?  
 * Adding mapping for multi-field:
 ```
-curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
+curl -XPUT localhost:9200/ordering/order/_mapping -H 'content-type: application/json' -d '
 {
   "order" : {
     "properties":{  
@@ -105,7 +105,7 @@ curl -XPUT localhost:9200/ordering/order/_mapping -d \ '
 ```
 * Re-populate the data:
 ```
-curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -d '
+curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -H 'content-type: application/json' -d '
 {
   "id": "string with spaces", 
   "placedOn": "2016-10-17T13:03:30.830Z",

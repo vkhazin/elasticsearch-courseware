@@ -3,7 +3,7 @@
 * Aggregation that can be applied on date/time field values extracted from the documents
 * Builds fixed size buckets based on the interval dynamically:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -H 'content-type: application/json' -d '
 {
   "size": 0,
   "aggs": {

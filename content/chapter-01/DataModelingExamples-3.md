@@ -1,12 +1,12 @@
 # Data Examples - Parent-Child #
 
-* Docs are stored, indexed, and searched individually - children are associated with parent
+* Docs are stored, indexed, and searched individually - children are associated with a parent in the same index
 ```
-POST http://localhost:9200/ordering/customers/123
+POST http://localhost:9200/orders/order/123
 {
 	"id": "123",
-	"firstName": "John",
-	"lastName": "Smith"
+	"placedOn": "2018-01-01T13:35:03.034Z",
+	"amount": 12.45
 }
 ```
 ```
