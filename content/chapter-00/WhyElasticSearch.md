@@ -7,4 +7,5 @@
 * Open source with enterprise support
 * Lucene based
 * Impressive scalability and performance
+* Rest not Restful API
 * Fast version release cycle

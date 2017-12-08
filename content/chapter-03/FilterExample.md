@@ -2,7 +2,7 @@
 
 * Query search:
 ```
-curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' \
+curl -XPOST 'localhost:9200/collisions/collisions/_search?pretty=true' \
   -H 'content-type:application/json' \
   -d '{
   "query": {
@@ -12,7 +12,7 @@ curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' \
 ```
 * Filter search:
 ```
- curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' \
+ curl -XPOST 'localhost:9200/collisions/collisions/_search?pretty=true' \
   -H 'content-type:application/json' \
   -d '
  {

@@ -12,11 +12,13 @@ curl -XPOST 'localhost:9200/_bulk' -H 'content-type: application/json' --data-bi
 ```
 * Confirm there are some records to search on:
 ```
-curl 'localhost:9200/sample-data/movies/_search?pretty=true'
+curl 'localhost:9200/movies/movies/_search?pretty=true'
 ```
 * Let's aggregate on actor name
 ```
-curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/movies/movies/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '
 {
   "size": 0,
   "aggs": {
@@ -33,7 +35,9 @@ curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
 * What is 'sum_other_doc_count' field?
 * Let's find out average movie rating for the actor:
 ```
-curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/movies/movies/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '
 {
   "size": 0,
   "aggs": {
@@ -54,3 +58,4 @@ curl 'localhost:9200/sample-data/movies/_search?pretty=true' -d '
 '
 ```
 * Take a moment to understand the variety of <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html" target="_blank">aggregation types</a>
+* Pick an aggregation we did not cover in the slides and make it work

@@ -12,7 +12,7 @@ curl -XPOST 'localhost:9200/_bulk' -H 'content-type:application/json' --data-bin
 ```
 * Confirm there are some records to search on:
 ```
-curl 'localhost:9200/sample-data/collisions/_search?pretty=true'
+curl 'localhost:9200/collisions/collisions/_search?pretty=true'
 ```
 * How many documents did you find?
 * Pick couple of options to search on: different leaf and compound clauses, different field types

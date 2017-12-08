@@ -6,9 +6,12 @@
 * validate es setup lab
 * /chapter-02/Type.html - what to do with it?
 * /chapter-02/IndexConfig.html defaults are no more in elasticsearch.yml
-* X-Pack exercise add instructions for JMeter
+* X-Pack exercise add instructions for JMeter, or see another note in this list
 * Watcher restart filebeat
 * Extract X-Pack to it's own chapter and add Watcher?
 * Remove Vlad's aspect of the course?
 * Not RESTful Rest Api
-* Do not add public key and repository to the list in every exercise
+* Do not add public key and repository to the list in for every product
+* Capacity planning - turn into stress test and monitor exercise?
+* Split timelion into its own chapter?
+* Add graph chapter
