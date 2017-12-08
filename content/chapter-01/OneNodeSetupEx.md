@@ -25,6 +25,7 @@ sudo apt-get update && sudo apt-get install elasticsearch
 ```
 sudo service elasticsearch start
 ```
+* We will be using 'curl' to troubleshoot setup and to run our first queries before we install and configure Kibana
 * Give it a moment to finish the initialization and verify it is running:
 ```
 curl localhost:9200
@@ -49,16 +50,19 @@ curl localhost:9200
 ```
 * Posting first document:
 ```
-curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -H 'content-type: application/json' -d '{
+curl -XPOST 'localhost:9200/orders/orders/1?pretty=true' \
+    -H 'content-type: application/json' \
+    -d '{
   "id": "1", 
-  "placedOn": "2016-10-17T13:03:30.830Z"
+  "placedOn": "2016-10-17T13:03:30.830Z",
+  "status": "shipped"
 }'
 ```
 * Expected Response:  
 ```json
   {
-    "_index" : "ordering",
-    "_type" : "order",
+    "_index" : "orders",
+    "_type" : "orders",
     "_id" : "1",
     "_version" : 2,
     "result" : "created",
@@ -75,6 +79,6 @@ curl -XPOST 'localhost:9200/ordering/order/1?pretty=true' -H 'content-type: appl
 * ```_primary_term```: shard id where primary copy stored
 * First query:
 ```
-curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:1'
+curl 'localhost:9200/orders/orders/_search?pretty=true&q=id:1'
 ```
 * Please review results - where are: doc id, document data, index name, type name, and search score? 

@@ -8,3 +8,7 @@
 * /chapter-02/IndexConfig.html defaults are no more in elasticsearch.yml
 * X-Pack exercise add instructions for JMeter
 * Watcher restart filebeat
+* Extract X-Pack to it's own chapter and add Watcher?
+* Remove Vlad's aspect of the course?
+* Not RESTful Rest Api
+* Do not add public key and repository to the list in every exercise

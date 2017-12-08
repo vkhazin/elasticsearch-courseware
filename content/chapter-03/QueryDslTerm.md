@@ -7,7 +7,9 @@ select * from orders where id = "1"
 ```
 * Example
 ```
-curl 'localhost:9200/ordering/orders/_search?pretty=true' -d '{
+curl -XPOST 'localhost:9200/orders/orders/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '{
   "query" : {
     "term": {
       "id": "1"
@@ -17,9 +19,11 @@ curl 'localhost:9200/ordering/orders/_search?pretty=true' -d '{
 ```
 * Note that 'from orders' part of the statement is part of the url rather than body
 * Capable of handling numbers, booleans, dates, and text.
-* Often used as a filter rather than for scoring, commonly used with 'constant_score':
+* Often used as a filter rather than for scoring, commonly used with ```constant_score```:
 ```
-curl 'localhost:9200/ordering/orders/_search?pretty=true' -d '{
+curl -XPOST 'localhost:9200/orders/orders/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '{
   "query" : {
     "constant_score" : { 
       "filter" : {

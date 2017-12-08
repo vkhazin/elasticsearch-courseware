@@ -1,6 +1,6 @@
 # Data Examples #
 
-* Hello World example
+* Simple document
 ```
 POST http://localhost:9200/index-name/type-name/document-id {
 	"message": "Hello World!"
