@@ -14,7 +14,7 @@ curl 'localhost:9200/index*/_search?q=id:*'
 ```
 * Index alias - create an alias for index or for group of indexes:
 ```
-curl -XPOST 'http://localhost:9200/_aliases' -d '
+curl -XPOST 'http://localhost:9200/_aliases' -H 'Content-Type: application/json' -d '
 {
     "actions" : [
         { "add" : { "index" : "test1", "alias" : "alias1" } },
