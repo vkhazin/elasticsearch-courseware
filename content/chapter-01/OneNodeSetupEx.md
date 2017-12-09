@@ -47,13 +47,13 @@ curl localhost:9200
 ```
 * Posting first document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d ' {
+curl -XPOST localhost:9200/orders/order/1 -H 'Content-Type: application/json' -d '{
   "id": "1", 
   "placedOn": "2016-10-17T13:03:30.830Z"
 }'
 ```
 * Expected Response:  
-{"_index":"ordering","_type":"order","_id":"1","_version":1,"_shards":{"total":2,"successful":1,"failed":0},"created":true}
+{"_index":"orders","_type":"order","_id":"1","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}
 * First query:
 ```
 curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:1'
