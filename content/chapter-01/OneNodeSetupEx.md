@@ -56,6 +56,6 @@ curl -XPOST localhost:9200/orders/order/1 -H 'Content-Type: application/json' -d
 {"_index":"orders","_type":"order","_id":"1","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}
 * First query:
 ```
-curl 'localhost:9200/ordering/order/_search?pretty=true&q=id:1'
+curl 'localhost:9200/orders/order/_search?pretty=true&q=id:1'
 ```
 * Please review results - where are: doc id, document data, index name, type name, and search score? 
