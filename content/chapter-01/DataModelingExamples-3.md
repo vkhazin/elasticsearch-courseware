@@ -10,10 +10,13 @@ POST http://localhost:9200/ordering/customers/123
 }
 ```
 ```
-POST http://localhost:9200/ordering/orders/1?parent=123
+PUT orders/order/4?routing=123&refresh
 {
-	"id": "1",
-	"placedOn": "2016-10-17T13:03:30.830Z"
+  "text": "This is another answer",
+  "my_join_field": {
+    "name": "customer",
+    "parent": "123"
+  }
 }
 ```
 * <a style="color:red">Important</a>: index mappings must be defined before hand! Discussed later...

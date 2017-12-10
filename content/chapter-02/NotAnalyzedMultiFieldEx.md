@@ -118,7 +118,7 @@ curl 'localhost:9200/ordering/order/_search?pretty=true&q=streetName:name'
 ```
 * Let's search for the street name on not-parsed field:
 ```
-curl 'localhost:9200/ordering/order/_search?pretty=true&q=streetName.notparsed:name'
+curl 'localhost:9200/orders/order/_search?pretty=true&q=streetName.notparsed:name'
 ```
 * Let's search for the street name on not-parsed field again:
 ```
