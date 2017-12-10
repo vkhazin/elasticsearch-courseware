@@ -4,13 +4,13 @@
 * Some strings don't make sense to tokenize e.g. <a href="https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=define:+guid" target="_blank">uuid or guid</a> often used as equivalent of a primary key and/or unique identifier
 * not_analyzed: ElasticSearch mapping option to suppress tokenization:
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
+curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=true' -H 'Content-Type: application/json' -d '
 {
    "order": {
       "properties": {
          "id": {
             "type": "text",
-            "index": "not_analyzed"
+            "index": false
          }
       }
    }

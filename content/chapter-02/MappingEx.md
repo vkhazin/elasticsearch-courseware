@@ -146,8 +146,8 @@ curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=true' -H 'Content-Type: 
 * What if we need to change data type after we have indexed the data?
 * There is no (more) option to delete the mapping - delete and recreate index is the only option :-(
 ```
-curl -XDELETE localhost:9200/ordering
-curl -XPUT localhost:9200/ordering
+curl -XDELETE localhost:9200/orders
+curl -XPUT localhost:9200/orders
 ```
 * User json data from the previous step to define the mapping
 * Watch out! There is no warning or confirmation using curl!
