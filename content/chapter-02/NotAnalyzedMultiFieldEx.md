@@ -56,8 +56,7 @@ curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=true' \
         "format" : "strict_date_optional_time||epoch_millis"
       },
       "trackingId" : {
-        "type" : "keyword",
-        "index" : false
+        "type" : "keyword"
       }
     }
   }
@@ -95,14 +94,13 @@ curl -XPUT localhost:9200/orders/orders/_mapping \
   -H 'Content-Type: application/json' \
   -d '
 {
-  "order" : {
+  "orders" : {
     "properties":{  
        "streetName":{  
           "type":"text",
           "fields":{  
              "notparsed":{  
-                "type":"keyword",
-                "index":false
+                "type":"keyword"
              }
           }
        }
@@ -112,7 +110,7 @@ curl -XPUT localhost:9200/orders/orders/_mapping \
 ```
 * Re-populate the data:
 ```
-curl -XPOST 'localhost:9200/orders/order/1?pretty=true' \
+curl -XPOST 'localhost:9200/orders/orders/1?pretty=true' \
   -H 'Content-Type: application/json' \
   -d '
 {
