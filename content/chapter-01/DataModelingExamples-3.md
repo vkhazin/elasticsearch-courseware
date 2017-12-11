@@ -10,10 +10,10 @@ POST http://localhost:9200/ordering/customers/123
 }
 ```
 ```
-PUT orders/order/4?routing=123&refresh
+PUT orders/order/4?routing=123&refresh=true
 {
   "text": "This is another answer",
-  "my_join_field": {
+  "customer2customer": {
     "name": "customer",
     "parent": "123"
   }
