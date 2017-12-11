@@ -22,6 +22,7 @@
 * [Data Modeling](./content/chapter-01/DataModeling.md)
 * [Data Examples](./content/chapter-01/DataExamples.md)
 * [App Side Joins](./content/chapter-01/AppSideJoins.md)
+* [Parent Chile](./content/chapter-01/ParentChild.md)
 * [Exercise Setup](./content/chapter-01/ExerciseSetup.md)
 * [One Node Setup Exercise](./content/chapter-01/OneNodeSetupEx.md)
 * [Distributed Database](./content/chapter-01/DistributedDb.md)
