@@ -7,7 +7,9 @@ number_of_replicas: 1
 ```
 * Each index can be configured with desired number of shard during creation:
 ```
-curl -XPUT 'localhost:9200/orders' -H 'Content-Type: application/json' -d'
+curl -XPUT 'localhost:9200/orders' \
+  -H 'Content-Type: application/json' \
+  -d'
 {
   "settings": {
     "number_of_shards": 1,
