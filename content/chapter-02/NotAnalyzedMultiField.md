@@ -8,7 +8,7 @@ curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=true' \
    -H 'Content-Type: application/json' \
    -d '
 {
-   "order": {
+   "orders": {
       "properties": {
          "id": {
             "type": "text",
