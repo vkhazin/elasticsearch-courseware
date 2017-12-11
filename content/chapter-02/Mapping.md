@@ -19,7 +19,7 @@ curl 'localhost:9200/orders/orders/_mapping?pretty=true'
 {
   "orders" : {
     "mappings" : {
-      "order" : {
+      "orders" : {
         "properties" : {
           "id" : {
             "type" : "text",
