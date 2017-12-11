@@ -19,7 +19,7 @@ curl -XPOST localhost:9200/orders/order/1 -H 'Content-Type: application/json' -d
 ```
 * Fetch mapping:
 ```
-curl 'localhost:9200/orders/order/_mapping?pretty=true'
+curl 'localhost:9200/orders/orders/_mapping?pretty=true'
 ```
 * Expected response:
 ```
@@ -48,7 +48,9 @@ curl 'localhost:9200/orders/order/_mapping?pretty=true'
 ```
 * Try modifying existing mapping:
 ```
-curl -XPUT 'localhost:9200/orders/_mapping?pretty=true' -H 'Content-Type: application/json' -d '
+curl -XPUT 'localhost:9200/orders/_mapping?pretty=true' \
+  -H 'Content-Type: application/json' \
+  -d '
 {
 "orders" : {
   "mappings" : {
@@ -76,7 +78,9 @@ curl -XPUT 'localhost:9200/orders/_mapping?pretty=true' -H 'Content-Type: applic
 * What's the outcome? And why?
 * Try modifying existing type mapping:
 ```
-curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=mapping' -H 'Content-Type: application/json' -d '{
+curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=mapping' \
+  -H 'Content-Type: application/json' \
+  -d '{
   "orders" : {
     "mappings" : {
       "order" : {
@@ -103,7 +107,9 @@ curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=mapping' -H 'Content-Typ
 * What now? Why?
 * Let us try again:
 ```
-curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=mapping' -H 'Content-Type: application/json' -d '
+curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=mapping' \
+  -H 'Content-Type: application/json' \
+  -d '
 {
   "order" : {
     "properties" : {
@@ -127,7 +133,9 @@ curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=mapping' -H 'Content-Typ
 * Did it work? What's the difference?
 * Let's modify data type for existing field
 ```
-curl -XPUT 'localhost:9200/orders/order/_mapping?pretty=true' -H 'Content-Type: application/json' -d '
+curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=true' \
+  -H 'Content-Type: application/json' 
+  -d '
 {
   "order" : {
     "properties" : {
