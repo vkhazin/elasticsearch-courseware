@@ -12,7 +12,7 @@ curl localhost:9200
 * Give it few minutes before you get json response
 * Post new document:
 ```
-curl -XPOST localhost:9200/orders/order/1 -H 'Content-Type: application/json' -d '{
+curl -XPOST localhost:9200/orders/orders/1 -H 'Content-Type: application/json' -d '{
   "id": "1", 
   "placedOn": "2016-10-17T13:03:30.830Z"
 }'
@@ -54,7 +54,7 @@ curl -XPUT 'localhost:9200/orders/_mapping?pretty=true' \
 {
 "orders" : {
   "mappings" : {
-    "order" : {
+    "orders" : {
       "properties" : {
         "id" : {
           "type" : "text",
@@ -83,7 +83,7 @@ curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=mapping' \
   -d '{
   "orders" : {
     "mappings" : {
-      "order" : {
+      "orders" : {
         "properties" : {
           "id" : {
             "type" : "text",
@@ -111,7 +111,7 @@ curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=mapping' \
   -H 'Content-Type: application/json' \
   -d '
 {
-  "order" : {
+  "orders" : {
     "properties" : {
       "id" : {
         "type" : "text",
@@ -137,7 +137,7 @@ curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=true' \
   -H 'Content-Type: application/json' 
   -d '
 {
-  "order" : {
+  "orders" : {
     "properties" : {
       "id" : {
         "type" : "double"
