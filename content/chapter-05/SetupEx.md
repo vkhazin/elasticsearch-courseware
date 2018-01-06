@@ -29,7 +29,7 @@ type:
   ```
   Hello World!
   ```
-* And press enter
+And press enter
 * Expected response:
     ```
     2017-06-20T01:22:14.405+0000 ubuntu Hello World!
