@@ -1,9 +1,9 @@
 # Log Processing Exercise #
 
-* Log-in into your ElasticSearch sandbox
-* Make sure elastic search is running:
+* Log-in into your Elasticsearch sandbox
+* Make sure elasticsearch is running:
   ```
-  sudo service elasticsearch restart
+  curl localhost:9200/_cluster/health?pretty
   ```
 * Create configuration file:
   ```
@@ -29,7 +29,7 @@
 
   output {
     elasticsearch {
-      hosts => ["http://localhost:9200"]
+      hosts => ["localhost:9200"]
       index => "cloud-init"
     }
   }
@@ -44,8 +44,4 @@
   curl localhost:9200/cloud-init/_search?pretty=true
   ```
 * Expected results is a long list of parsed log events
-* Logstash records position for each file processed, to restart processing locate sincedb files:
-```
-sudo find / -name *.*sincedb*
-```
-* And delete desired sincedb files to restart the ingest process
+* New lines added to the log file will be posted into the index
