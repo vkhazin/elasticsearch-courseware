@@ -22,7 +22,9 @@ sudo apt-get update && sudo apt-get install logstash
 * stdin: file handle that process reads to get information from you, human
 * stdout: process writes log information to this file handle
 * After pipeline has started  
-`The stdin plugin is now waiting for input:`,  
+```
+The stdin plugin is now waiting for input:
+```
 type:
   ```
   Hello World!
