@@ -4,10 +4,9 @@
  * Configuration:
   ```
   output {
-    elasticsearch {
-      protocol => "http"
-      host => "localhost:9200"
-      index => "cloud-init"
-    }
+  elasticsearch {
+    hosts => ["localhost:9200"]
+    index => "cloud-init"
   }
+}
   ```
