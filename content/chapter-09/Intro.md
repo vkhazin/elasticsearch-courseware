@@ -1,6 +1,6 @@
-# Chapter 8: Running in a Container #
+# Chapter 9: Running in a Container #
 
 * High-level Introduction to Docker
-* Composing Docker image for Elastic Search
+* Composing Docker image for Elasticsearch
 * Running Docker container
 * Container Specific Considerations
