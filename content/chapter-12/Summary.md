@@ -1,4 +1,4 @@
-# Chapter 11: What have we learned?
+# Chapter 12: What have we learned?
 
 * What are the design differences between NoSql and Rdbms?
 * What is the principal difference between database and search engine?
