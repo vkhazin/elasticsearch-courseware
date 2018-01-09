@@ -1,7 +1,7 @@
-# Chapter 9: Summary #
+# Chapter 8: Summary #
 
-* What are the considerations for capacity planning?
-* What are pressures on memory?
-* What are requirements for storage?
-* What are anticipated impacts on Cpu?
-* What is Cluster State and what impact it may have on performance?
+* What's Docker?
+* How can you create a Docker image?
+* How do you run a Docker image?
+* How do you scale from one Docker host to many?
+* What are the cloud hosting options for Docker Images?
