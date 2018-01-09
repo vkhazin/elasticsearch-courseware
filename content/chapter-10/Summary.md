@@ -1,4 +1,4 @@
-# Chapter 9: Summary #
+# Chapter 10: Summary #
 
 * What are the considerations for capacity planning?
 * What are pressures on memory?
