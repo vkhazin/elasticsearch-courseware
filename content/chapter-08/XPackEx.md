@@ -41,7 +41,7 @@ sudo cp -R ubuntu3/ /etc/elasticsearch/certs
 ```
 NOTE: You may need to install `unzip` utility with `sudo apt install unzip`
 
-* Add lines in `/etc/elasticsearch/elasticsearch.yml`  
+* Add lines in `/etc/elasticsearch/elasticsearch.yml` (example for `ubuntu3` host)  
 ```
 xpack.ssl.key: certs/ubuntu3/ubuntu3.key 
 xpack.ssl.certificate: certs/ubuntu3/ubuntu3.crt 
