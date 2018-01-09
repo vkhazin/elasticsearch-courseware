@@ -1,4 +1,4 @@
-# Chapter 8: Summary #
+# Chapter 9: Summary #
 
 * What's Docker?
 * How can you create a Docker image?
