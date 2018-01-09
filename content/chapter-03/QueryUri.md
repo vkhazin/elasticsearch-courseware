@@ -4,32 +4,29 @@
 * Support is more limited than json Dsl, but Kibana seems to be just fine with it
 * <b>q</b> parameter allows to specify query in lucene formatted query:
 ```
-curl 'localhost:9200/ordering/order/_search?q=status:shipped&pretty=true'
+curl 'localhost:9200/orders/orders/_search?q=placedOn:*&pretty=true'
 ```
 * Expected result:
 ```
 {
-  "took" : 19,
-  "timed_out" : false,
-  "_shards" : {
-    "total" : 5,
-    "successful" : 5,
-    "failed" : 0
-  },
+  ...
   "hits" : {
     "total" : 1,
     "max_score" : 0.30685282,
-    "hits" : [ {
-      "_index" : "ordering",
-      "_type" : "order",
-      "_id" : "3",
-      "_score" : 0.30685282,
-      "_source" : {
-        "id" : "3",
-        "placedOn" : "2016-10-01T00:00:00Z",
-        "status" : "shipped"
-      }
-    } ]
+    "hits" : [ 
+      {
+        "_index" : "ordering",
+        "_type" : "order",
+        "_id" : "3",
+        "_score" : 0.30685282,
+        "_source" : {
+          "id" : "3",
+          "placedOn" : "2016-10-01T00:00:00Z",
+          "status" : "shipped"
+        }
+      }, 
+      ...
+    ]
   }
 }
 ```

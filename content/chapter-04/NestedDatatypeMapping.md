@@ -1,6 +1,6 @@
 # Nested Datatype Mapping #
 
-* To maintain granularity of 'user' array indexing - 'nested' datatype can be used to index each object as independent, hidden document:
+* To maintain granularity of 'user' array indexing - 'nested' datatype can be used to index each object as an independent, hidden document:
 ```
 {
      "mappings": {
@@ -14,4 +14,4 @@
      }
 }
 ```
-* With above mapping user 'John White' won't be found.
+* With above mapping user ```user.first:john AND user.last:white``` won't be found, with special query syntax

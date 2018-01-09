@@ -1,14 +1,16 @@
-# Aggregation #
+# Aggregation Query #
 
 * First aggregation query: 
 ```
-curl -XPOST 'http://localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'http://localhost:9200/orders/orders/_search?pretty=true' \
+  -H 'content-type: application/json' \
+  -d '
 {
   "size": 0, 
   "aggregations": {
     "order-status": {
       "terms": {
-        "field": "status"
+        "field": "status.keyword"
       }
     }
   }
@@ -18,3 +20,4 @@ curl -XPOST 'http://localhost:9200/ordering/order/_search?pretty=true' -d '
 * "aggregations" or "aggs" - part of ElasticSearch Dsl
 * "order-status" - an arbitrary name for aggregation
 * "terms" - type of aggregation to use
+* "status.keyword" - multi-field mapping for text fields

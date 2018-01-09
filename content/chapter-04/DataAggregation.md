@@ -1,8 +1,9 @@
 # Data Aggregation #
 
 * Main entity includes or aggregates related data in it
+* Movie data - hierarchical and verbose
 * Directors, crew, producers, images, and etc... How to index it all?
-* Example of movie data:
+* Example of a movie data:
 ```
 {
   "AssetId" : "86c1bba8-d18f-4bbc-9cb4-a90a4220f59c",

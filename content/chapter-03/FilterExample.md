@@ -2,7 +2,9 @@
 
 * Query search:
 ```
-curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' -d '{
+curl -XPOST 'localhost:9200/collisions/collisions/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '{
   "query": {
     "term": { "COUNTY_NAME": "worcester" }
   }
@@ -10,7 +12,9 @@ curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' -d '{
 ```
 * Filter search:
 ```
- curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+ curl -XPOST 'localhost:9200/collisions/collisions/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '
  {
   "query": {
     "bool": {
@@ -21,4 +25,4 @@ curl -XPOST 'localhost:9200/sample-data/collisions/_search?pretty=true' -d '{
   }
  }'
 ```
-* Psst: convert term value to lower case!
+* Psst: convert the term value to lower case, or face an empty hits.hits response

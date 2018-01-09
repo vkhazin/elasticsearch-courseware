@@ -2,13 +2,15 @@
 
 * Example of nested aggregation query, terms and histogram:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/orders/orders/_search?pretty=true' \
+  -H 'content-type: application/json' \
+  -d '
 {
   "size": 0,
   "aggs": {
     "order-status": {
       "terms": {
-      "field": "status"
+      "field": "status.keyword"
       },
       "aggs": {
         "placedOnMonth": {

@@ -1,6 +1,6 @@
 # Nested Datatype Querying #
 
-* The query against nested objects is executed as if the nested documents were indexed independently from the parent document:
+* The query against nested objects is executed as if the nested documents were indexed independently from the parent document using special query Dsl syntax:
 ```
 {
   "nested" : {

@@ -6,5 +6,5 @@
 * Node is a single server in a cluster, nodes discover each other with unicast and by cluster name defined in /etc/elasticsearch/elasticsearch.yml
 * Node can be configured as master-eligible, data, client, tribe, or left default: master-eligible and data node
 * Index is a collection of documents and equivalent of Rdbms (Relational Database Management System) database or schema
-* Type is a collection of documents of a specific type inside index, a loose equivalent of table in Rdbms
+* Type is a leftover from previous version as collection of documents of a specific type inside index, v6 supports one type per index only
 * Document is a basic unit of operation for indexing, replications, and searching. An approximate equivalent of a row/record in Rdbms. Document can be searched for in an index, but when being indexed must be assigned to a type

@@ -12,21 +12,24 @@ curl localhost:9200
 * Give it few minutes before you get json response
 * Post new document:
 ```
-curl -XPOST localhost:9200/ordering/order/1 -d '{
+curl -XPOST localhost:9200/orders/orders/1 \
+  -H 'content-type: application/json' \
+  -d '
+{
   "id": "1", 
   "placedOn": "2016-10-17T13:03:30.830Z"
 }'
 ```
 * Fetch mapping:
 ```
-curl 'localhost:9200/ordering/order/_mapping?pretty=true'
+curl 'localhost:9200/orders/orders/_mapping?pretty=true'
 ```
 * Expected response:
 ```
 {
-  "ordering" : {
+  "orders" : {
     "mappings" : {
-      "order" : {
+      "orders" : {
         "properties" : {
           "id" : {
             "type" : "text",
@@ -48,39 +51,42 @@ curl 'localhost:9200/ordering/order/_mapping?pretty=true'
 ```
 * Try modifying existing mapping:
 ```
-curl -XPUT 'localhost:9200/ordering/_mapping?pretty=true' -d '
+curl -XPUT 'localhost:9200/orders/_mapping?pretty=true' \
+  -H 'content-type: application/json' \
+  -d '
 {
-  "ordering" : {
-    "mappings" : {
-      "order" : {
-        "properties" : {
-          "id" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
+"orders" : {
+  "mappings" : {
+    "orders" : {
+      "properties" : {
+        "id" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
             }
-          },
-          "placedOn" : {
-            "type" : "date",
-            "format" : "strict_date_optional_time||epoch_millis"
           }
+        },
+        "placedOn" : {
+          "type" : "date",
+          "format" : "strict_date_optional_time||epoch_millis"
         }
       }
     }
   }
+}
 }'
 ```
 * What's the outcome? And why?
 * Try modifying existing type mapping:
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
-{
-  "ordering" : {
+curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=mapping' \
+  -H 'content-type: application/json' \
+  -d '{
+  "orders" : {
     "mappings" : {
-      "order" : {
+      "orders" : {
         "properties" : {
           "id" : {
             "type" : "text",
@@ -104,9 +110,11 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 * What now? Why?
 * Let us try again:
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
+curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=mapping' \
+  -H 'content-type: application/json' \
+  -d '
 {
-  "order" : {
+  "orders" : {
     "properties" : {
       "id" : {
         "type" : "text",
@@ -128,9 +136,11 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=mapping' -d '
 * Did it work? What's the difference?
 * Let's modify data type for existing field
 ```
-curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
+curl -XPUT 'localhost:9200/orders/orders/_mapping?pretty=true' \
+  -H 'content-type: application/json' 
+  -d '
 {
-  "order" : {
+  "orders" : {
     "properties" : {
       "id" : {
         "type" : "double"
@@ -147,8 +157,8 @@ curl -XPUT 'localhost:9200/ordering/order/_mapping?pretty=true' -d '
 * What if we need to change data type after we have indexed the data?
 * There is no (more) option to delete the mapping - delete and recreate index is the only option :-(
 ```
-curl -XDELETE localhost:9200/ordering
-curl -XPUT localhost:9200/ordering
+curl -XDELETE localhost:9200/orders
+curl -XPUT localhost:9200/orders
 ```
 * User json data from the previous step to define the mapping
 * Watch out! There is no warning or confirmation using curl!

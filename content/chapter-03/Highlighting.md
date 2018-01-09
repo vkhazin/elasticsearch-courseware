@@ -1,8 +1,11 @@
 # Highlighting #
 
-* Highlights search result on one or more fields:
+* Due to the elastic search text analyzers it is not always obvious why document was a match
+* Highlights search result on one or more document fields:
 ```
-curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
+curl -XPOST 'localhost:9200/orders/orders/_search?pretty=true' \
+	-H 'content-type: application/json' \
+	-d '
 {
     "query" : {
         "match": { "id": "1" }
@@ -17,19 +20,13 @@ curl -XPOST 'localhost:9200/ordering/order/_search?pretty=true' -d '
 * Expected result:
 ```
 {
-	"took" : 13,
-	"timed_out" : false,
-	"_shards" : {
-	  "total" : 5,
-	  "successful" : 5,
-	  "failed" : 0
-	},
+...
 	"hits" : {
 		"total" : 1,
 		"max_score" : 0.71231794,
 		"hits" : [ {
-		  "_index" : "ordering",
-		  "_type" : "order",
+		  "_index" : "orders",
+		  "_type" : "orders",
 		  "_id" : "1",
 		  "_score" : 0.71231794,
 		  "_source" : {

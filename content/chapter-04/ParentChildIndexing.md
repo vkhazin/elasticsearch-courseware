@@ -2,14 +2,14 @@
 
 * Index parent first:
 ```
-curl -XPOST 'localhost:9200/politics/party/1' -d '
+curl -XPOST 'localhost:9200/politics/party/1' -H 'content-type: application/json' -d '
 {
    "id": 1,
    "name": "The Heartless"
 }'
 ```
 ```
-curl -XPOST 'localhost:9200/politics/party/2' -d '
+curl -XPOST 'localhost:9200/politics/party/2' -H 'content-type: application/json' -d '
 {
    "id": 2,
    "name": "The Brainless"
@@ -17,7 +17,7 @@ curl -XPOST 'localhost:9200/politics/party/2' -d '
 ```
 * Index child/children second:
 ```
-curl -XPUT 'localhost:9200/politics/supporter/101?parent=1&pretty=true' -d '
+curl -XPUT 'localhost:9200/politics/supporter/101?parent=1&pretty=true' -H 'content-type: application/json' -d '
 {
   "id": "101",
   "name":  "Jane Smith",
@@ -25,7 +25,7 @@ curl -XPUT 'localhost:9200/politics/supporter/101?parent=1&pretty=true' -d '
 }'
 ```
 ```
-curl -XPUT 'localhost:9200/politics/supporter/201?parent=2&pretty=true' -d '
+curl -XPUT 'localhost:9200/politics/supporter/201?parent=2&pretty=true' -H 'content-type: application/json' -d '
 {
   "id": "201",
   "name":  "John Smith",

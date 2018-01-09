@@ -10,4 +10,5 @@
 * Exercises are mini-hackathons, not step-by-step instructions
 * Questions, open discussions, and comments are encouraged
 * Keep it professional and polite
+* Exercises are progressively turning from the step-by-step instructions into a general guidance
 * Let's have fun!

@@ -7,20 +7,39 @@ sudo service elasticsearch restart
 ```
 * Populate few orders:
 ```
-curl -XPOST localhost:9200/ordering/order/2 -d '
-{"id": "2", "placedOn": "2017-01-01T00:00:00Z", "status": "pending"}'
+curl -XPOST localhost:9200/orders/orders/2 \
+  -H 'content-type: application/json' \
+  -d '
+{
+  "id": "2", 
+  "placedOn": "2017-01-01T00:00:00Z", 
+  "status": "pending"
+}'
 ```
 ```
-curl -XPOST localhost:9200/ordering/order/3 -d '
-{"id": "3", "placedOn": "2016-10-01T00:00:00Z", "status": "shipped"}'
+curl -XPOST localhost:9200/orders/orders/3 \
+  -H 'content-type: application/json' \
+  -d '
+{
+  "id": "3", 
+  "placedOn": 
+  "2016-10-01T00:00:00Z", 
+  "status": "shipped"
+}'
 ```
 ```
-curl -XPOST localhost:9200/ordering/order/4 -d '
-{"id": "4", "placedOn": "2016-01-01T00:00:00Z", "status": "received"}'
+curl -XPOST localhost:9200/orders/orders/4 \
+  -H 'content-type: application/json' \
+  -d '
+{
+  "id": "4", 
+  "placedOn": "2016-01-01T00:00:00Z", 
+  "status": "received"
+}'
 ```
 * Confirm there are some records to search on:
 ```
-curl 'localhost:9200/ordering/order/_search?pretty=true'
+curl 'localhost:9200/orders/orders/_search?pretty=true'
 ```
 * How many documents did you find?
 * How do you know whether got all the documents or just first page of records?

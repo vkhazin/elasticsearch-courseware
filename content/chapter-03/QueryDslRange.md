@@ -7,7 +7,9 @@ select * from orders where id >= 1 and id <= 2
 ```
 * Example
 ```
-curl 'localhost:9200/ordering/orders/_search?pretty=true' -d '{
+curl -XPOST 'localhost:9200/orders/orders/_search?pretty=true' \
+  -H 'content-type:application/json' \
+  -d '{
    "query" : {
       "range" : {
         "id" : {
@@ -18,4 +20,4 @@ curl 'localhost:9200/ordering/orders/_search?pretty=true' -d '{
     }
 }'
 ```
-* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/term-level-queries.html" taget="_blank">More leaf query options</a>
+* <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/term-level-queries.html" taget="_blank">More leaf query options...</a>
