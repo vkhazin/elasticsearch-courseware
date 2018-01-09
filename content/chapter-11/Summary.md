@@ -1,4 +1,4 @@
-# Chapter 10: Summary #
+# Chapter 11: Summary #
 
 * What installation option would you prefer?
 * What logic you are odd to use determining desired cluster configuration?
