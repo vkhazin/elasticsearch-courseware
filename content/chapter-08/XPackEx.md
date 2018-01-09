@@ -2,7 +2,7 @@
 
 * Stop Elasticsearch and Kibana:
 ```
-sudo systemctl stop kibana.service && systemctl stop elasticsearch.service
+sudo systemctl stop kibana.service && sudo systemctl stop elasticsearch.service
 ```
 * Installing X-Pack plug-in for Elasticsearch:
 ```
