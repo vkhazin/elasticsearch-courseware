@@ -1,7 +1,6 @@
 # Chapter 8: Summary #
 
-* What's Docker?
-* How can you create a Docker image?
-* How do you run a Docker image?
-* How do you scale from one Docker host to many?
-* What are the cloud hosting options for Docker Images?
+* What features of X-Pack can you name?
+* What are the functions of Watcher?
+* What are components of Watcher configuration?
+* What actions type are available in Watcher?
