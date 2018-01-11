@@ -1,4 +1,4 @@
-# Data Modeling Best Practices#
+# Data Modeling Best Practices
 
 * Document is a unit of storage, indexing, search, and aggregation
 * 3rd norm of <a href="https://en.wikipedia.org/wiki/Database_normalization" target="_blank">normalization</a> (or beyond)  does not apply to ElasticSearch
