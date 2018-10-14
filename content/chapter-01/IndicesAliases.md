@@ -1,5 +1,6 @@
 # Multi-Index Operations and Aliases #
 
+* ElasticSearch is not a traditional database, searches can be executed acorss indices with no known performance implications
 * Entire cluster search:
 ```
 curl 'localhost:9200/_search?q=id:1'
@@ -22,4 +23,4 @@ curl -XPOST 'http://localhost:9200/_aliases' -H 'content-type: application/json'
     ]
 }'
 ```
-* Why bother? Logical data partitioning, archiving by index, access control...
+* Why bother creating aliases? Logical data partitioning, archiving by index, access control...

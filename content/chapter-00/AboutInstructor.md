@@ -1,13 +1,10 @@
-# About Instructor #
+# About Instructor/Author #
 
-* <a href="https://www.linkedin.com/in/vkhazin" target="_blank">Vlad Khazin - Hands-on Architect</a>
 * Real-world ElasticSearch experience
-* Enterprise and start-up environments
-* Polyglot developer: C#, Java, Node.js, Scala
-* Sql and NoSql knowledge: Sql Server, Oracle, MySql, PostgreSql, Couchbase, Cassandra, ElasticSearch
-* Passionate about building High-performance and High-availability solutions
-* Data processing and reporting for over 25 years
-* Sees role of an instructor differently:
+* Large/Medium Enterprise and start-up environments
+* Full-Stack Development
+* Variety of Database Environment: Transactional Processing, Data Analytics, Reporting, and Searching
+* Sees training approach differently:
   * Objective of the course is to shorten runway to get flying, fast!
   * In nowadays information is readily available using web search engine, hence overloading course materials with lot's of details is not overly helpful
   * Materials are here to provide general guidance with references & links for more details
